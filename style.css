@@ -51,6 +51,22 @@ body {
     align-items: flex-start;
 }
 
+.profile-left {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 226px; /* Height to match profile image + gap + buttons */
+}
+
 .profile-img {
     flex-shrink: 0;
     position: relative;
@@ -58,14 +74,27 @@ body {
     height: 150px;
 }
 
+.contact-section {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
 .profile-img img {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--primary-color);
+    border: 1px solid var(--border);
     position: relative;
     z-index: 2;
+}
+
+/* Hide the fallback circle when image is present */
+.profile-img:has(img[src]:not([src=""]):not([src="#"])) ::before {
+    display: none;
 }
 
 /* Fallback gradient circle when no image */
@@ -74,8 +103,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
     display: flex;
@@ -90,9 +119,6 @@ body {
 }
 
 /* Show gradient circle only when no image is present */
-.profile-img:not(:has(img[src]:not([src=""]):not([src="#"]))) ::before {
-    display: flex;
-}
 
 .profile-info {
     flex: 1;
@@ -122,7 +148,15 @@ body {
 .location {
     color: var(--text-muted);
     font-size: 0.95rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-summary {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
+    margin-top: auto; /* Push to bottom */
 }
 
 .location i {
@@ -133,40 +167,38 @@ body {
 /* Contact Buttons */
 .contact-buttons {
     display: flex;
+    flex-direction: column;
     gap: 0.75rem;
-    flex-wrap: wrap;
+    width: 150px; /* Match profile image width */
 }
 
 .btn {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    padding: 0.6rem 1.2rem;
-    border-radius: 30px;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.9rem;
     transition: all 0.3s ease;
-    border: 2px solid;
+    border: 1px solid var(--border);
+    background: white;
 }
 
 .btn-primary {
-    background: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .btn-primary:hover {
-    background: var(--primary-hover);
-    border-color: var(--primary-hover);
+    background: var(--primary-color);
+    color: white;
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--text-secondary);
 }
 
 .btn-secondary:hover {
@@ -471,11 +503,52 @@ body {
         flex-direction: column;
         text-align: center;
         gap: 1.5rem;
+        align-items: center;
+    }
+    
+    .profile-info {
+        min-height: auto;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
+    .about-summary {
+        margin-top: 0;
+    }
+    
+    .profile-left {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .contact-buttons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: auto;
+    }
+    
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
     }
     
     .profile-img img {
         width: 120px;
         height: 120px;
+    }
+    
+    .profile-img::before {
+        font-size: 2.5rem;
+    }
+    
+    .contact-buttons {
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin: 0 auto;
     }
     
     .name {
@@ -499,16 +572,29 @@ body {
     .social-links {
         flex-direction: column;
     }
-    
-    .contact-buttons {
-        justify-content: center;
-    }
 }
 
 @media (max-width: 480px) {
+    .profile-img {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    
     .profile-img img {
         width: 100px;
         height: 100px;
+    }
+    
+    .profile-img::before {
+        font-size: 2rem;
+    }
+    
+    .contact-buttons {
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin: 0 auto;
     }
     
     .name {
