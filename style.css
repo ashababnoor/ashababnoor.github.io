@@ -776,7 +776,7 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: calc(var(--breakpoint-tablet) * 1px)) {
+@media (max-width: 768px) {
     .container {
         padding: var(--section-padding-tablet);
     }
@@ -800,12 +800,12 @@ body {
     
     .location {
         display: block;
-        margin-bottom: var(--spacing-sm);
+        margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-8));
     }
     
     .email-contact {
         display: block;
-        margin-bottom: var(--spacing-sm);
+        margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-8));
     }
     
     .separator {
@@ -855,13 +855,21 @@ body {
         font-size: calc(var(--font-3xl) * var(--modifier-tablet-text));
     }
     
+    .section-title {
+        font-size: calc(var(--font-2xl) * var(--modifier-tablet-text));
+    }
+    
+    .title {
+        font-size: calc(var(--font-lg) * var(--modifier-tablet-text));
+    }
+    
     .section {
         padding: var(--section-padding-tablet);
     }
     
     .company-header {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        text-align: left;
         gap: var(--spacing-md);
     }
     
@@ -888,7 +896,25 @@ body {
     }
 }
 
-@media (max-width: calc(var(--breakpoint-mobile) * 1px)) {
+@media (max-width: 480px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-lg);
+        align-items: center;
+        display: flex;
+    }
+    
+    .profile-left {
+        width: 100%;
+        align-items: center;
+    }
+    
+    .profile-info {
+        width: 100%;
+        text-align: center;
+    }
+    
     .profile-img {
         width: var(--profile-img-mobile);
         height: var(--profile-img-mobile);
@@ -915,12 +941,26 @@ body {
         font-size: calc(var(--font-3xl) * var(--modifier-mobile-text));
     }
     
+    .section-title {
+        font-size: calc(var(--font-2xl) * var(--modifier-mobile-text));
+    }
+    
+    .title {
+        font-size: calc(var(--font-lg) * var(--modifier-mobile-text));
+    }
+    
     .section {
         padding: var(--section-padding-mobile);
     }
     
     .company-card {
         padding: var(--section-padding-mobile);
+    }
+    
+    .company-header {
+        flex-direction: row;
+        text-align: left;
+        gap: var(--spacing-md);
     }
     
     .publication-card {
@@ -937,5 +977,14 @@ body {
     
     .publication-date {
         font-size: calc(var(--font-xs) * var(--modifier-0-8));
+    }
+}
+
+@media (max-width: 400px) {
+    .company-header {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        gap: var(--spacing-md);
     }
 }
