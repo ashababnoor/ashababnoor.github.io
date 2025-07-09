@@ -340,9 +340,10 @@ body {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: calc(var(--spacing-xs) * var(--modifier-1-5));
     padding: calc(var(--spacing-xs) * var(--modifier-1-5)) var(--spacing-md);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-md);
     text-decoration: none;
     font-weight: 500;
     font-size: var(--font-xs);
