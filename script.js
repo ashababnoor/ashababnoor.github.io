@@ -53,4 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentPositionElement) {
         currentPositionElement.textContent = `Jul 2024 - Present · ${currentPositionDuration}`;
     }
+    
+    // Update copyright year
+    const currentYearElement = document.getElementById('current-year');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
 });
