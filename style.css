@@ -412,10 +412,10 @@ body {
     transition: all var(--transition-normal) ease;
 }
 
-.company-card:hover {
+/* .company-card:hover {
     box-shadow: var(--shadow-hover);
     transform: translateY(var(--transform-hover-y));
-}
+} */
 
 .company-card:last-child {
     margin-bottom: 0;
