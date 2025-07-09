@@ -551,9 +551,10 @@ body {
     gap: calc(var(--spacing-sm) * var(--modifier-0-8));
 }
 
-.skill-tag {
-    background: var(--primary-color);
-    color: var(--white);
+/* Skills Used in Experience Section */
+.skills-used .skill-tag {
+    background: var(--surface);
+    color: var(--text-secondary); /* Dark grey instead of black */
     padding: calc(var(--spacing-xs) * var(--modifier-1-5)) var(--spacing-sm);
     border-radius: var(--radius-xl);
     font-size: calc(var(--font-xs) * var(--modifier-0-9));
@@ -562,21 +563,44 @@ body {
     display: inline-flex;
     align-items: center;
     gap: calc(var(--spacing-xs) * var(--modifier-1-5));
+    border: var(--base-border-width) solid var(--border);
 }
 
-.skill-tag i {
+.skills-used .skill-tag:hover {
+    background: var(--border);
+    transform: translateY(var(--transform-skill-hover-y));
+}
+
+/* Skills Section Tags */
+.skill-tags .skill-tag {
+    background: var(--white);
+    color: var(--text-primary);
+    padding: calc(var(--spacing-xs) * var(--modifier-1-5)) var(--spacing-sm);
+    border-radius: var(--radius-xl);
+    font-size: calc(var(--font-xs) * var(--modifier-0-9));
+    font-weight: 500;
+    transition: all var(--transition-normal) ease;
+    display: inline-flex;
+    align-items: center;
+    gap: calc(var(--spacing-xs) * var(--modifier-1-5));
+    border: var(--base-border-width) solid var(--border);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.skill-tags .skill-tag i {
     font-size: var(--font-xs);
 }
 
-.skill-tag .skill-icon {
+.skill-tags .skill-tag .skill-icon {
     width: calc(var(--font-sm) * var(--modifier-0-9));
     height: calc(var(--font-sm) * var(--modifier-0-9));
-    filter: brightness(0) invert(1); /* Makes SVG icons white */
+    /* No filter - shows colorful SVG icons */
 }
 
-.skill-tag:hover {
-    background: var(--primary-hover);
+.skill-tags .skill-tag:hover {
+    background: var(--surface);
     transform: translateY(var(--transform-skill-hover-y));
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Social Links */
