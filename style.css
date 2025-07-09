@@ -493,6 +493,10 @@ body {
     font-size: 0.9rem;
 }
 
+.footer img {
+    vertical-align: middle;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
