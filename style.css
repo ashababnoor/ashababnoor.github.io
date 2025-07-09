@@ -575,7 +575,7 @@ body {
 .skill-tags .skill-tag {
     background: var(--white);
     color: var(--text-primary);
-    padding: calc(var(--spacing-xs) * var(--modifier-1-5)) var(--spacing-sm);
+    padding: calc(var(--spacing-xs) * var(--modifier-1-5)) calc(var(--spacing-sm) * var(--modifier-1-2));
     border-radius: var(--radius-xl);
     font-size: calc(var(--font-xs) * var(--modifier-0-9));
     font-weight: 500;
