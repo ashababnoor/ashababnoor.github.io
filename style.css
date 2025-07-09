@@ -93,6 +93,8 @@
     --modifier-0-8: 0.8;
     --modifier-0-9: 0.9;
     --modifier-0-95: 0.95;
+    --modifier-1-0: 1;
+    --modifier-1-1: 1.1;
     --modifier-1-2: 1.2;
     --modifier-1-5: 1.5;
     --modifier-tablet-text: 0.875;
@@ -476,14 +478,14 @@ body {
 
 .position-duration {
     color: var(--text-secondary);
-    font-size: var(--font-xs);
+    font-size: calc(var(--font-xs) * var(--modifier-1-0));
     margin-bottom: calc(var(--spacing-xs) * var(--modifier-0-8));
     font-weight: 500;
 }
 
 .position-type {
     color: var(--text-muted);
-    font-size: calc(var(--font-xs) * var(--modifier-0-9));
+    font-size: calc(var(--font-xs) * var(--modifier-1-1));
     margin-bottom: var(--spacing-md);
 }
 
