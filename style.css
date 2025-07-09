@@ -59,8 +59,8 @@
     
     /* Profile Image Scale Modifiers */
     --profile-img-scale-desktop: 7.5;
-    --profile-img-scale-tablet: 6.25;
-    --profile-img-scale-mobile: 5;
+    --profile-img-scale-tablet: 8.5;
+    --profile-img-scale-mobile: 9.5;
     
     /* Logo and Icon Scale Modifiers */
     --company-logo-scale: 3.125;
@@ -220,7 +220,7 @@ body {
     height: 100%;
     border-radius: var(--radius-full);
     object-fit: cover;
-    border: var(--base-border-width) solid var(--border);
+    /* border: var(--base-border-width) solid var(--border); */
     position: relative;
     z-index: var(--z-index-above);
 }
@@ -246,7 +246,7 @@ body {
     font-size: calc(var(--profile-img-desktop) * var(--fallback-text-scale));
     font-weight: 700;
     color: var(--white);
-    border: calc(var(--base-border-width) * var(--border-multiplier-fallback)) solid var(--primary-color);
+    /* border: calc(var(--base-border-width) * var(--border-multiplier-fallback)) solid var(--primary-color); */
     box-sizing: border-box;
     z-index: var(--z-index-below);
 }
