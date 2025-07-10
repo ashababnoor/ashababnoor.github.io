@@ -906,6 +906,43 @@ body {
         padding: var(--section-padding-mobile);
     }
     
+    /* Keep header box but make it stand out */
+    .header {
+        background: var(--white);
+        border-radius: var(--radius-md); /* Match inner cards' border radius */
+        padding: var(--section-padding-mobile);
+        margin-bottom: var(--spacing-xl);
+        border: var(--base-border-width) solid var(--border);
+        box-shadow: none; /* Remove shadow on mobile */
+    }
+    
+    /* Remove outer boxes for sections to save space */
+    .section {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin-bottom: var(--spacing-lg); /* Reduced spacing between sections */
+    }
+    
+    /* Remove border and adjust section title styling */
+    .section-title {
+        border-bottom: none;
+        padding-bottom: 0;
+        padding-left: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+        font-size: calc(var(--font-2xl) * var(--modifier-0-95)); /* Bigger on mobile */
+    }
+    
+    /* Remove shadows from all cards and adjust padding */
+    .company-card,
+    .publication-card,
+    .skill-category {
+        box-shadow: none;
+        border-radius: var(--radius-md);
+        padding: var(--spacing-lg); /* Increased padding from medium to large */
+    }
+    
     .profile-section {
         flex-direction: column;
         text-align: center;
@@ -954,12 +991,25 @@ body {
         font-size: calc(var(--font-lg) * var(--modifier-mobile-text));
     }
     
+    /* Make position list items more compact */
+    .position-description li {
+        margin-bottom: calc(var(--spacing-xs) * var(--modifier-1-2));
+    }
+    
+    /* Adjust company header for more compact layout */
     .company-header {
         flex-direction: row;
         text-align: left;
         gap: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        padding-bottom: var(--spacing-sm);
     }
     
+    .company-name {
+        font-size: calc(var(--font-xl) * var(--modifier-1-0));
+    }
+    
+    /* Style adjustments for publication cards */
     .publication-title {
         font-size: var(--font-xs);
     }
@@ -971,6 +1021,13 @@ body {
     .publication-date {
         font-size: calc(var(--font-xs) * var(--modifier-0-8));
     }
+    
+    /* Remove hover shadows */
+    .social-link:hover,
+    .btn:hover,
+    .skill-tag:hover {
+        box-shadow: none;
+    }
 }
 
 @media (max-width: 400px) {
@@ -978,6 +1035,11 @@ body {
         flex-direction: column;
         text-align: left;
         align-items: flex-start;
-        gap: var(--spacing-md);
+        gap: var(--spacing-sm); /* Reduced gap */
+    }
+    
+    /* Further adjustments for very small screens */
+    .section-title {
+        padding-left: 0; /* Remove padding on very small screens */
     }
 }
