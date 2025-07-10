@@ -902,6 +902,10 @@ body {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: var(--section-padding-mobile);
+    }
+    
     .profile-section {
         flex-direction: column;
         text-align: center;
@@ -946,30 +950,14 @@ body {
         font-size: calc(var(--font-3xl) * var(--modifier-mobile-text));
     }
     
-    .section-title {
-        font-size: calc(var(--font-2xl) * var(--modifier-mobile-text));
-    }
-    
     .title {
         font-size: calc(var(--font-lg) * var(--modifier-mobile-text));
-    }
-    
-    .section {
-        padding: var(--section-padding-mobile);
-    }
-    
-    .company-card {
-        padding: var(--section-padding-mobile);
     }
     
     .company-header {
         flex-direction: row;
         text-align: left;
         gap: var(--spacing-md);
-    }
-    
-    .publication-card {
-        padding: var(--section-padding-mobile);
     }
     
     .publication-title {
