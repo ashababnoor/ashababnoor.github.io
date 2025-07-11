@@ -66,7 +66,7 @@
                 </div>
                 
                 <div class="positions">
-                    <!-- Position 1 -->
+                    <!-- 3rd Position (latest) -->
                     <div class="position">
                         <div class="position-header">
                             <div class="position-info">
@@ -77,22 +77,64 @@
                         </div>
                         <div class="position-description">
                             <ul>
-                                <li>Lead development of scalable data pipelines processing 10M+ daily events using Apache Airflow and Python</li>
-                                <li>Architected and implemented real-time analytics infrastructure on Google Cloud Platform</li>
-                                <li>Built dbt models and data marts serving 50+ stakeholders across product and business teams</li>
-                                <li>Optimized BigQuery performance resulting in 40% cost reduction and 60% faster query execution</li>
+                                <li>Designed and developed a dynamic funnel analytics system for user activity across verticals.
+                                    <ul>
+                                        <li>Data aggregator merges data from various sources including Firebase, Pub/Sub, and transactional DBs (Postgres/MySQL) with deduplication at user-second granularity.</li>
+                                        <li>Dynamic set of queries generate funnels with different visualizations; 500M+ data points processed (and growing).</li>
+                                        <li>Smart queries can validate user input when running without dedicated backend or front-end validation.</li>
+                                        <li>Saved ~$400K USD annually in the first year (vs. market alternatives) and 120+ man-hours/month.</li>
+                                    </ul>
+                                </li>
+                                <li>Completely redesigned and rebuilt the transliteration system as a standalone Go library.
+                                    <ul>
+                                        <li>Created a microservice for text transliteration with a real-time testing interface </li>
+                                        <li>Supports bidirectional Bangla-English transliteration.</li>
+                                        <li>Integrated into Food Search (15.3× more Bangla search coverage, 15.1× more order confirmations) and Ride Location Search (Bangla coverage improved from 78.8% to 96.2%, 17.4% gain).</li>
+                                    </ul>
+                                </li>
+                                <li>Developed a personalization microservice in Go for allowing users to have personalized user experiences accross verticals.
+                                    <ul>
+                                        <li>Developed personalization algorithm for food home-screen restaurant collections, showing users restaurants that better match their preferences. This led to users taking 32.53% less time when navigating to checkout page.</li>
+                                        <li>Developed data pipelines with ETL to generate preference data and user profiles.</li>
+                                        <li>Enabled smart caching for faster data retrieval and lowered latency.</li>
+                                    </ul>
+                                </li>
+                                <li>Developed data pipelines for generating restaurant, dish, and cuisine features for the food search auto-suggestion system.</li>
+                                <li>Built a POC food search auto-suggestion microservice demonstrating feasibility and ROI.</li>
+                                <li>Built food search performance and benchmark dashboard for KPI tracking and system performance monitoring.</li>
+                                <li>Applied genetic algorithm to find optimal weights for internal string matching algorithms, which are used in address parsing service, increasing address parser area-level coverage by 2%.</li>
+                                <li>Enhanced missing place finder tool with new features.
+                                    <ul>
+                                        <li>Added multi-token support for finding missing complex place/road names.</li>
+                                        <li>Developed Google Sheets utility package for generating beautified address data reports.</li>
+                                        <li>Implemented rich email notifications for pipeline failure and successe.</li>
+                                    </ul>
+                                </li>
+                                <li>Upgraded address history pipeline to integrate partial orders data, adding ~2.7M new users' addresses and ~20M total addresses. Added custom date range support for address history ingestor. </li>
+                                <li>Developed driver location ping analysis tools with map visualizations.</li>
+                                <li>Created monitoring dashboards for ETL pipelines and ETL system health checking.</li>
+                                <li>Assisted internal fraud analytics and investigations.</li>
+                                <li>Regularly review and merge pull requests from team members on company self-hosted Gitlab.</li>
                             </ul>
                         </div>
                         <div class="skills-used">
+                            <span class="skill-tag">Go</span>
                             <span class="skill-tag">Python</span>
-                            <span class="skill-tag">BigQuery</span>
+                            <span class="skill-tag">SQL</span>
                             <span class="skill-tag">dbt</span>
-                            <span class="skill-tag">Apache Airflow</span>
-                            <span class="skill-tag">GCP</span>
+                            <span class="skill-tag">BigQuery</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">ETL</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">Data Modeling</span>
+                            <span class="skill-tag">Dashboarding</span>
                         </div>
                     </div>
-                    
-                    <!-- Position 2 -->
+                    <!-- 2nd Position -->
                     <div class="position">
                         <div class="position-header">
                             <div class="position-info">
@@ -103,42 +145,98 @@
                         </div>
                         <div class="position-description">
                             <ul>
-                                <li>Developed ETL pipelines for customer analytics and business intelligence reporting</li>
-                                <li>Implemented data quality monitoring and alerting systems using Python and SQL</li>
-                                <li>Collaborated with product teams to design and implement event tracking architecture</li>
-                                <li>Created automated data validation frameworks reducing manual QA time by 70%</li>
+                                <li>Designed and implemented machine learning models for accurate ETA prediction in Dhaka and Chittagong.
+                                    <ul>
+                                        <li>Created prediction models for both pickup ETA and drop-off ETA</li>
+                                        <li>Improved Chittagong’s within-threshold rides from 20% to 60%.</li>
+                                        <li>Built specialized ETA models for holidays (Eid, Ramadan).</li>
+                                        <li>Built comprehensive dashboards for monitoring ETA performance and debugging ETA related issues.</li>
+                                    </ul>
+                                </li>
+                                <li>Contributed as a team member in developing a robust address parsing service for courier operations.
+                                    <ul>
+                                        <li>Implemented an algorithm that uses customer historical data to perform address match and accurately parse addresses, which improved hub-level coverage by 10%, accuracy by 1.5%.</li>
+                                        <li>Improved overall accuracy by 7.5% which led to cost savings of ~102K BDT per month.</li>
+                                        <li>Built data pipelines for generating courier customer profile and address history.</li>
+                                        <li>Built dockerized ETL pipeline for transferring data from BigQuery to Redis with automated email notifications, capable of handing millions of rows concurrently.</li>
+                                        <li>Optimized data storage for Redis, reducing memory consumption by 72%, saving $120 USD per month per VM.</li>
+                                        <li>Created CLI helper tools for data validation, testing, and debugging, and scripts for automation.</li>
+                                        <li>Improved logger usability substantially.</li>
+                                    </ul>
+                                </li>
+                                <li>Developed a Python-based Bangla-to-English transliteration algorithm for address parsing. After integrating with address parsing service, improved hub-level coverage by 8%, district-level by 1%. (Overall, for addresses written in Bangal and English)</li>
+                                <li>Developed missing place finder, a dockerized tool for finding places data that are missing in our system, using natural language processing on user provided address data, finding 784 new landmarks in 2 major cities.</li>
+                                <li>Managed fraud detection systems for food vertical.
+                                    <ul>
+                                        <li>Developed and maintained tools for helping identify fraudelent activities in food vertical.</li>
+                                        <li>Maintained device connectivity system and assisted operations team with finding fraudelent entity groups.</li>
+                                        <li>Created dashboard for checking fraudelent user status and action taken against them.</li>
+                                        <li>Created comprehensive documentation for legacy fraud detection systems that were handed over.</li>
+                                    </ul>
+                                </li>
+                                <li>Conducted suspicious activity analysis to find possible DDoS (Distributed Denial of Service) attacks.
+                                    <ul>
+                                        <li>Analyzed traffic patterns and user behavior to identify anomalies indicative of DDoS attacks.</li>
+                                        <li>Applied machine learning algorithms to cluster users for identifying potentially suspicious user groups.</li>
+                                        <li>Developed tools for generating 2D and 3D visualizations that show user clusters and key insights for easier understanding and decision-making.</li>
+                                    </ul>
+                                </li>
+                                <li>Redesigned and implemented data pipeline for managing user behavioral data originating from Firebase.
+                                    <ul>
+                                        <li>Developed dbt data models for cleaning and transforming Firebase data making it easier to analyze.</li>
+                                        <li>Developed a session generator that can fill missing Google Analytics session identifiers.</li>
+                                        <li>Extended the pipeline to process data generated from different sources, i.e., Pathao user app, driver app, courier agent app, courier merchant app/web-panel.</li>
+                                        <li>Processes roughly 50~60 million rows per day (and growing).</li>
+                                    </ul>
+                                </li>
+                                <li>Conducted A/B test analysis to help stakeholders make data-driven decisions.
+                                    <ul>
+                                        <li>Performed A/B test analysis on user engagement metrics on 3rd party service providers, helping stakeholders make decisions to save $1,000 USD per month. </li>
+                                        <li>Performed A/B test analysis on Google Maps vs internal ETA identifying ~750K BDT/month (6K USD) potential savings.</li>
+                                    </ul>
+                                </li>
+                                <li>Developed modular and reusable data models using dbt, while focusing on data quality, maintainability, and scalability. Additionally, optimized queries to reduce data scanning for cost savings.</li>
+                                <li>Developed dashboards for location search performance monitoring.</li>
+                                <li>Developed machine learning solutions for address data deduplication for in-house map service.</li>
+                                <li>Taken data protection measures by hashing sensitive data.</li>
                             </ul>
                         </div>
                         <div class="skills-used">
                             <span class="skill-tag">Python</span>
                             <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">dbt</span>
+                            <span class="skill-tag">GCP</span>
+                            <span class="skill-tag">BigQuery</span>
                             <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Data Modeling</span>
+                            <span class="skill-tag">Dashboarding</span>
                         </div>
                     </div>
-                    
-                    <!-- Position 3 -->
+                    <!-- 1st Position -->
                     <div class="position">
                         <div class="position-header">
                             <div class="position-info">
-                                <h4 class="position-title">Data Engineer Intern</h4>
-                                <p class="position-duration">Oct 2022 - Jan 2023 · 4 mos</p>
+                                <h4 class="position-title">Data Engineering Intern</h4>
+                                <p class="position-duration">Oct 2022 - Feb 2023 · 5 mos</p>
                                 <p class="position-type">Internship</p>
                             </div>
                         </div>
                         <div class="position-description">
                             <ul>
-                                <li>Assisted in building data pipelines and ETL processes for internal analytics</li>
-                                <li>Learned and applied data engineering best practices under senior mentorship</li>
-                                <li>Contributed to data quality initiatives and documentation improvements</li>
-                                <li>Gained hands-on experience with Python, SQL, and cloud-based data tools</li>
+                                <li>Built command-line tools for data dictionary workflows and log management.</li>
+                                <li>Developed first ever machine learning solution for ride pickup ETA prediction for Dhaka city.</li>
+                                <li>Researched and evaluated solutions for data governance (column-level access, advanced search and tagging).</li>
+                                <li>Contributed to enhancements of the in-house map system.</li>
+                                <li>Worked on fraud detection using machine learning.</li>
                             </ul>
                         </div>
                         <div class="skills-used">
                             <span class="skill-tag">Python</span>
                             <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">Data Pipelines</span>
-                            <span class="skill-tag">GCP</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Data Governance</span>
                         </div>
                     </div>
                 </div>
@@ -247,8 +345,8 @@
                         <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" class="skill-icon" alt="Pandas"> Pandas</span>
                         <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" class="skill-icon" alt="NumPy"> NumPy</span>
                         <span class="skill-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" class="skill-icon" alt="Scikit-learn"> Scikit-learn</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" class="skill-icon" alt="Matplotlib"> Matplotlib</span>
                         <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" class="skill-icon" alt="Jupyter"> Jupyter</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" class="skill-icon" alt="Matplotlib"> Matplotlib</span>
                     </div>
                 </div>
                 
