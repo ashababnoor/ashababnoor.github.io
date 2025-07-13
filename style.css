@@ -1056,9 +1056,9 @@ body {
 
 @media (max-width: 320px) {
     .company-header {
-        flex-direction: column;
-        text-align: left;
-        align-items: flex-start;
+        /* flex-direction: column; */
+        /* text-align: left; */
+        /* align-items: flex-start; */
         gap: var(--spacing-sm); /* Reduced gap */
     }
     
