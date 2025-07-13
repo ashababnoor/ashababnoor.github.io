@@ -439,7 +439,7 @@ body {
     height: auto; /* keep auto to match image size */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     align-self: center; /* ensure this flex item centers vertically in parent */
 }
 
@@ -1054,7 +1054,7 @@ body {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 320px) {
     .company-header {
         flex-direction: column;
         text-align: left;
