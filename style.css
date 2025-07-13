@@ -3,6 +3,7 @@
     --primary-color: #0A66C2;
     --primary-hover: #004182;
     --secondary-color: #666;
+    --secondary-light-color: #999;
     --background: #fafbfc;
     --surface: #f8f9fa;
     --border: #e1e5e9;
@@ -269,7 +270,7 @@ body {
     font-size: var(--font-lg);
     font-weight: 500;
     color: var(--text-secondary);
-    margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-8));
+    /* margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-8)); */
 }
 
 .tagline {
@@ -315,9 +316,9 @@ body {
     color: var(--primary-color);
 }
 
-.email-contact i {
+/* .email-contact i {
     color: var(--text-muted);
-}
+} */
 
 .email-link {
     color: var(--text-muted);
@@ -494,7 +495,7 @@ body {
 
 .position-description ul {
     list-style: none;
-    margin-bottom: var(--spacing-md);
+    /* margin-bottom: var(--spacing-md); */
     margin-left: calc(var(--spacing-sm) * var(--modifier-0-8));
 }
 
@@ -518,6 +519,19 @@ body {
 
 .position-description li:last-child {
     margin-bottom: 0;
+}
+
+.position-description li ul {
+    margin-top: calc(var(--spacing-sm) * var(--modifier-0-8));
+    margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-8));
+}
+
+.position-description ul ul li:before {
+    color: var(--secondary-light-color);
+}
+
+.position-description li:hover {
+    color: var(--text-primary);
 }
 
 /* Skills Used */
