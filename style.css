@@ -435,25 +435,34 @@ body {
     border-bottom: var(--base-border-width) solid var(--border);
 }
 
+.company-logo {
+    height: auto; /* keep auto to match image size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center; /* ensure this flex item centers vertically in parent */
+}
+
 .company-logo img {
     width: var(--company-logo-size);
     height: var(--company-logo-size);
     border-radius: var(--radius-md);
     object-fit: cover;
+    margin: auto 0;
 }
 
 .company-name {
     font-size: calc(var(--font-2xl) * 0.85);
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: calc(var(--spacing-xs) * var(--modifier-0-8));
+    /* margin-bottom: calc(var(--spacing-xs) * var(--modifier-0-8)); */
 }
 
 .company-duration {
     color: var(--text-secondary);
     font-size: var(--font-xs);
     font-weight: 500;
-    margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-8));
+    margin-bottom: calc(var(--spacing-xs) * var(--modifier-0-8));
 }
 
 .company-description {
@@ -478,7 +487,7 @@ body {
     font-size: var(--font-lg);
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: calc(var(--spacing-xs) * var(--modifier-0-8));
+    /* margin-bottom: calc(var(--spacing-xs) * var(--modifier-0-8)); */
 }
 
 .position-duration {
