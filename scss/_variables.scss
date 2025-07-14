@@ -1,0 +1,57 @@
+// Color Variables
+$primary-color: #0A66C2;
+$primary-hover: #004182;
+$secondary-color: #666;
+$secondary-light-color: #999;
+$background: #fafbfc;
+$surface: #f8f9fa;
+$border: #e1e5e9;
+$text-primary: #000000;
+$text-secondary: #666666;
+$text-muted: #999999;
+$success: #057642;
+$linkedin-blue: #0A66C2;
+$github-dark: #24292e;
+$scholar-blue: #4285f4;
+$email-red: #ea4335;
+$position-separator: #f0f0f0;
+$white: #ffffff;
+
+// Shadow Variables
+$shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+// Spacing & Typography
+$base-font-size: 16px;
+$base-spacing: 1rem;
+$base-radius: 8px;
+$base-border-width: 1px;
+
+// Breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
+// Spacing Scale
+$spacing-xs: $base-spacing * 0.25;
+$spacing-sm: $base-spacing * 0.5;
+$spacing-md: $base-spacing * 0.75;
+$spacing-lg: $base-spacing;
+$spacing-xl: $base-spacing * 1.25;
+$spacing-2xl: $base-spacing * 1.5;
+$spacing-3xl: $base-spacing * 2;
+
+// Font Sizes
+$font-xs: $base-font-size * 0.75;
+$font-sm: $base-font-size * 0.875;
+$font-md: $base-font-size;
+$font-lg: $base-font-size * 1.125;
+$font-xl: $base-font-size * 1.25;
+$font-2xl: $base-font-size * 1.5;
+$font-3xl: $base-font-size * 2;
+
+// Border Radius
+$radius-sm: $base-radius * 0.5;
+$radius-md: $base-radius;
+$radius-lg: $base-radius * 1.5;
+$radius-xl: $base-radius * 2.25;
+$radius-full: 50%;

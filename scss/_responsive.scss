@@ -1,0 +1,199 @@
+/* Responsive Styles */
+
+@media (max-width: $breakpoint-tablet) {
+  .container {
+    padding: $spacing-xl;
+  }
+
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+    gap: $spacing-xl;
+    align-items: center;
+  }
+
+  .profile-info {
+    min-height: auto;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .about-summary {
+    margin-top: 0;
+  }
+
+  .location,
+  .email-contact {
+    display: block;
+    margin-bottom: $spacing-sm * 0.5;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .profile-left {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contact-buttons {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .profile-img {
+    width: $spacing-2xl * 3.4;
+    height: $spacing-2xl * 3.4;
+    margin: 0 auto;
+  }
+
+  .name {
+    font-size: $font-3xl * 0.875;
+  }
+
+  .section-title {
+    font-size: $font-2xl * 0.875;
+  }
+
+  .title {
+    font-size: $font-lg * 0.875;
+  }
+
+  .section {
+    padding: $spacing-xl;
+  }
+
+  .company-header {
+    flex-direction: row;
+    text-align: left;
+    gap: $spacing-md;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-links {
+    flex-direction: column;
+  }
+
+  .publication-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-xs * 0.8;
+  }
+
+  .publication-title {
+    font-size: $font-sm;
+  }
+
+  .publication-venue {
+    font-size: $font-xs;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .container {
+    padding: $spacing-lg;
+  }
+
+  .header {
+    background: $white;
+    border-radius: $radius-md;
+    padding: $spacing-lg;
+    margin-bottom: $spacing-xl;
+    box-shadow: none;
+  }
+
+  .section {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: $spacing-lg;
+  }
+
+  .section-title {
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-left: $spacing-sm;
+    margin-bottom: $spacing-md;
+    font-size: $font-2xl * $modifier-0-95;
+  }
+
+  .company-card,
+  .publication-card,
+  .skill-category {
+    box-shadow: none;
+    border-radius: $radius-md;
+    padding: $spacing-lg;
+  }
+
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+    gap: $spacing-lg;
+    align-items: center;
+  }
+
+  .profile-left,
+  .profile-info {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-img {
+    width: $spacing-3xl * 3.8;
+    height: $spacing-3xl * 3.8;
+    margin: 0 auto;
+  }
+
+  .name {
+    font-size: $font-3xl * $modifier-mobile-text;
+  }
+
+  .title {
+    font-size: $font-lg * $modifier-mobile-text;
+  }
+
+  .position-description li {
+    margin-bottom: $spacing-xs * 0.6;
+  }
+
+  .company-header {
+    margin-bottom: $spacing-md;
+    padding-bottom: $spacing-sm;
+  }
+
+  .company-name {
+    font-size: $font-xl * 1;
+  }
+
+  .publication-title {
+    font-size: $font-xs;
+  }
+
+  .publication-venue {
+    font-size: $font-xs * 0.9;
+  }
+
+  .publication-date {
+    font-size: $font-xs * 0.8;
+  }
+}
+
+@media (max-width: 320px) {
+  .company-header {
+    gap: $spacing-sm;
+  }
+
+  .section-title {
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,43 @@
+// Mixins
+@mixin transition($property: all, $duration: $transition-normal, $timing: ease) {
+  transition: #{$property} #{$duration} #{$timing};
+}
+
+@mixin button-base($bg: $white, $color: $text-secondary) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs * 1.5;
+  padding: $spacing-xs * 1.5 $spacing-md;
+  border-radius: $radius-md;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: $font-xs;
+  border: $base-border-width solid $border;
+  background: $bg;
+  color: $color;
+  @include transition(all);
+  cursor: pointer;
+
+  &:hover {
+    background: $primary-color;
+    color: $white;
+    transform: translateY($transform-hover-y);
+  }
+}
+
+// Placeholder for link-style button
+%button-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: $font-sm;
+  color: $primary-color;
+  cursor: pointer;
+  @include transition(color);
+
+  &:hover {
+    text-decoration: underline;
+    color: $primary-hover;
+  }
+}

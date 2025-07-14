@@ -1,0 +1,65 @@
+/* Technologies & Tools Section */
+.section.skills {
+  background: $surface;
+  border-radius: $radius-lg;
+  padding: $spacing-2xl;
+  margin-bottom: $spacing-2xl;
+  box-shadow: $shadow;
+  border: $base-border-width solid $border;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(90ch * 0.3), 1fr));
+  gap: $spacing-xl;
+}
+
+.skill-category {
+  background: $white;
+  padding: $spacing-xl;
+  border-radius: $radius-md;
+  border: $base-border-width solid $border;
+}
+
+.skill-category h3 {
+  font-size: $font-md;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: $spacing-md;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm * 0.8;
+}
+
+.skill-tags .skill-tag {
+  background: $white;
+  color: $text-primary;
+  padding: $spacing-xs * 1.5 $spacing-sm * 1.2;
+  border-radius: $radius-xl;
+  font-size: $font-xs * 0.9;
+  font-weight: 500;
+  @include transition(all);
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs * 1.5;
+  border: $base-border-width solid $border;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.skill-tags .skill-tag i {
+  font-size: $font-xs;
+}
+
+.skill-tags .skill-tag .skill-icon {
+  width: $font-sm * 0.9;
+  height: $font-sm * 0.9;
+}
+
+.skill-tags .skill-tag:hover {
+  background: $surface;
+  transform: translateY($transform-skill-hover-y);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
