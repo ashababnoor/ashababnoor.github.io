@@ -26,7 +26,7 @@
 </urlset>
 ```
 
-### Explanation:
+### Explanation
 | Tag | Meaning |
 |-----|---------|
 | `<?xml … ?>` | XML header |
@@ -59,23 +59,23 @@
 
 ## During Development: How to Encourage Crawlers to Re-crawl Often?
 
-You’re in two phases:
+You’re in two phases
 - 🔧 Initial Development: pushing hourly → want frequent crawling.
 - 🚀 Stable Production: monthly updates → want occasional crawling.
 
 ### ✅ Things to Do in Development Phase
-1. Update sitemap:
+1. Update sitemap
 ```xml
 <changefreq>hourly</changefreq>
 <lastmod>2025-07-15T14:00:00+00:00</lastmod>
 ```
 
-2. Use **Google Search Console**:
+2. Use **Google Search Console**
    - Go to [Google Search Console](https://search.google.com/search-console/).
    - Verify your site.
    - Use **URL Inspection > Request Indexing** after big updates.
 
-3. Ping Search Engines:
+3. Ping Search Engines
    - Notify them when your sitemap changes.
    ```bash
    curl "https://www.google.com/ping?sitemap=https://yourdomain.com/sitemap.xml"
@@ -97,19 +97,19 @@ You’re in two phases:
 
 ## TL;DR
 
-✅ During development:  
+**During development:**  
 – `<changefreq>hourly</changefreq>`  
 – Update `<lastmod>` often.  
 – Ping search engines.  
 – Use Search Console’s “Request Indexing” if needed.  
 
-✅ After launch:  
+**After launch:**  
 – Adjust to realistic frequency (`weekly`/`monthly`).  
 – Keep sitemap maintained.
 
 ---
 
 ### Optional: Automation
-If you want, you can also:
+If you want, you can also
 - Write a script to regenerate your sitemap and ping search engines after each deployment.
 - Use CI/CD tools to automate sitemap updates and pings.
