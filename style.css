@@ -544,6 +544,65 @@ body {
     color: var(--text-primary);
 }
 
+/* Expandable Content Styles */
+.expandable-content {
+    position: relative;
+}
+
+.expandable-content.collapsed .expandable-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-slow) ease-in-out, opacity var(--transition-normal) ease-in-out;
+    opacity: 0;
+}
+
+.expandable-content.expanded .expandable-list {
+    max-height: 2000px; /* Large enough to accommodate content */
+    overflow: visible;
+    transition: max-height var(--transition-slow) ease-in-out, opacity var(--transition-normal) ease-in-out var(--transition-fast);
+    opacity: 1;
+}
+
+.expand-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing-sm) * var(--modifier-0-8));
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: calc(var(--font-sm) * var(--modifier-0-95));
+    font-weight: 500;
+    cursor: pointer;
+    padding: calc(var(--spacing-sm) * var(--modifier-0-8)) 0;
+    transition: color var(--transition-normal) ease;
+    font-family: inherit;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.expand-toggle:hover {
+    color: var(--primary-color);
+}
+
+.expand-toggle:focus {
+    outline: none;
+}
+
+.expand-toggle i {
+    font-size: calc(var(--font-xs) * var(--modifier-1-1));
+    transition: transform var(--transition-normal) ease;
+}
+
+.expand-toggle-text {
+    user-select: none;
+}
+
+.expand-toggle-end {
+    margin-top: calc(var(--spacing-sm) * var(--modifier-0-8));
+}
+
 /* Skills Used */
 .skills-used {
     display: flex;
