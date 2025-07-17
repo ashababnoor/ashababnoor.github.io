@@ -1,3 +1,4 @@
+import copy
 import subprocess
 import xml.etree.ElementTree as ET
 from datetime import datetime
@@ -22,6 +23,61 @@ SITEMAP_FILE = "sitemap.xml"
 NUM_COMMITS_TO_CHECK = 10
 DEFAULT_PRIORITY = "1.0"
 
+
+def normalize_text(text):
+    """Trim whitespace or return empty string if None"""
+    return (text or "").strip()
+
+
+def sorted_children(element):
+    """Return children sorted by (tag, attrib)"""
+    return sorted(
+        element,
+        key=lambda e: (e.tag, sorted(e.attrib.items()))
+    )
+
+
+def compare_elements(e1, e2, path="/", diffs=None):
+    if diffs is None:
+        diffs = []
+
+    this_path = f"{path}/{e1.tag}"
+
+    # Compare tags
+    if e1.tag != e2.tag:
+        diffs.append(f"❌ Tag mismatch at {this_path}: {e1.tag} ≠ {e2.tag}")
+        return diffs
+
+    # Compare text
+    t1 = normalize_text(e1.text)
+    t2 = normalize_text(e2.text)
+    if t1 != t2:
+        diffs.append(f"❌ Text mismatch at {this_path}: '{t1}' ≠ '{t2}'")
+
+    # Compare attributes
+    if e1.attrib != e2.attrib:
+        diffs.append(f"❌ Attributes mismatch at {this_path}: {e1.attrib} ≠ {e2.attrib}")
+
+    # Compare children
+    c1 = sorted_children(e1)
+    c2 = sorted_children(e2)
+
+    if len(c1) != len(c2):
+        diffs.append(f"❌ Children count mismatch at {this_path}: {len(c1)} ≠ {len(c2)}")
+
+    # Compare corresponding children
+    for child1, child2 in zip(c1, c2):
+        compare_elements(child1, child2, path=this_path, diffs=diffs)
+
+    # If one list is longer than the other
+    if len(c1) > len(c2):
+        for extra in c1[len(c2):]:
+            diffs.append(f"❌ Extra child in first at {this_path}: <{extra.tag}>")
+    elif len(c2) > len(c1):
+        for extra in c2[len(c1):]:
+            diffs.append(f"❌ Extra child in second at {this_path}: <{extra.tag}>")
+
+    return diffs
 
 def path_exists(path):
     return os.path.exists(path)
@@ -120,6 +176,8 @@ def update_sitemap():
     ET.register_namespace("", ns_uri)
 
     tree = load_existing_sitemap(SITEMAP_FILE)
+    pre_root = copy.deepcopy(tree.getroot())
+    
     if tree:
         root = tree.getroot()
     else:
@@ -196,8 +254,17 @@ def update_sitemap():
             print(f"✅ Added {path} → changefreq: {changefreq}, lastmod: {lastmod_str or 'N/A'}")
 
     tree = ET.ElementTree(root)
+    post_root = copy.deepcopy(tree.getroot())
+    
     write_pretty_xml(tree, SITEMAP_FILE)
     print(f"📄 Sitemap written to `{SITEMAP_FILE}`")
+    
+    print("\n🔍 Comparing pre-update and post-update sitemaps...")
+    diffs = compare_elements(pre_root, post_root)
+    if diffs:
+        print("❗ Differences found in the sitemap. Git commit and push these changes.")
+    else:
+        print("✅ No differences found in the sitemap.")
 
 
 if __name__ == "__main__":
