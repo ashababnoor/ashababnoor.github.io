@@ -1,0 +1,85 @@
+/* Social Links */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing-sm) * var(--modifier-0-8));
+    padding: calc(var(--spacing-sm) * var(--modifier-1-2)) var(--spacing-md);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--font-xs);
+    transition: all var(--transition-normal) ease;
+    border: var(--base-border-width) solid var(--border);
+    background: var(--white);
+    white-space: nowrap;
+    flex: 1;
+    min-width: max-content;
+}
+
+.social-link:hover {
+    transform: translateY(var(--transform-hover-y));
+    box-shadow: var(--shadow-hover);
+}
+
+.social-link.linkedin {
+    color: var(--linkedin-blue);
+}
+
+.social-link.linkedin:hover {
+    background: var(--linkedin-blue);
+    color: var(--white);
+}
+
+.social-link.github {
+    color: var(--github-dark);
+}
+
+.social-link.github:hover {
+    background: var(--github-dark);
+    color: var(--white);
+}
+
+.social-link.scholar {
+    color: var(--scholar-blue);
+}
+
+.social-link.scholar:hover {
+    background: var(--scholar-blue);
+    color: var(--white);
+}
+
+.social-link.email {
+    color: var(--email-red);
+}
+
+.social-link.email:hover {
+    background: var(--email-red);
+    color: var(--white);
+}
+
+.social-link i {
+    font-size: calc(var(--font-md) * var(--modifier-0-95));
+}
+
+.social-link i {
+    font-size: calc(var(--font-md) * 0.95);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: var(--section-padding-desktop) 0;
+    color: var(--text-muted);
+    font-size: var(--font-xs);
+}
+
+.footer img {
+    vertical-align: middle;
+}

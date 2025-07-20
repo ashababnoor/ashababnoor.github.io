@@ -1,0 +1,151 @@
+:root {
+    /* Colors */
+    --primary-color: #2563eb;
+    --primary-hover: #1e40af;
+    --primary-light-color: #60a5fa;
+    --secondary-color: #666;
+    --secondary-light-color: #999;
+    --background: #fafbfc;
+    --surface: #f8f9fa;
+    --border: #e1e5e9;
+    --text-primary: #000000;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --success: #057642;
+    --linkedin-blue: #0A66C2;
+    --github-dark: #24292e;
+    --scholar-blue: #4285f4;
+    --email-red: #ea4335;
+    --position-separator: #f0f0f0;
+    --white: #ffffff;
+    
+    /* Shadows */
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
+    
+    /* Base Sizing */
+    --base-font-size: 16px;
+    --base-spacing: 1rem;
+    --base-radius: 8px;
+    --base-border-width: 1px;
+    
+    /* Breakpoints */
+    --breakpoint-tablet: 768px;
+    --breakpoint-mobile: 480px;
+    
+    /* Spacing Scale Modifiers */
+    --spacing-scale-xs: 0.25;
+    --spacing-scale-sm: 0.5;
+    --spacing-scale-md: 0.75;
+    --spacing-scale-lg: 1;
+    --spacing-scale-xl: 1.25;
+    --spacing-scale-2xl: 1.5;
+    --spacing-scale-3xl: 2;
+    
+    /* Font Scale Modifiers */
+    --font-scale-xs: 0.75;
+    --font-scale-sm: 0.875;
+    --font-scale-md: 1;
+    --font-scale-lg: 1.125;
+    --font-scale-xl: 1.25;
+    --font-scale-2xl: 1.5;
+    --font-scale-3xl: 2;
+    --font-scale-4xl: 2.5;
+    
+    /* Border Radius Scale Modifiers */
+    --radius-scale-sm: 0.5;
+    --radius-scale-md: 1;
+    --radius-scale-lg: 1.5;
+    --radius-scale-xl: 2.25;
+    --radius-scale-2xl: 2.5;
+    
+    /* Profile Image Scale Modifiers */
+    --profile-img-scale-desktop: 7.5;
+    --profile-img-scale-tablet: 8.5;
+    --profile-img-scale-mobile: 9.5;
+    
+    /* Logo and Icon Scale Modifiers */
+    --company-logo-scale: 3.125;
+    --fallback-text-scale: 0.2;
+    --border-multiplier-fallback: 3;
+    --section-title-border-multiplier: 2;
+    
+    /* Typography Modifiers */
+    --line-height-tight: 1.35;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.6;
+    --line-height-loose: 1.7;
+    
+    /* Animation & Transition */
+    --transition-fast: 0.2s;
+    --transition-normal: 0.3s;
+    --transition-slow: 0.5s;
+    --transform-hover-y: -2px;
+    --transform-skill-hover-y: -1px;
+    
+    /* Z-Index Scale */
+    --z-index-below: 1;
+    --z-index-above: 2;
+    
+    /* Opacity Scale */
+    --opacity-disabled: 0.6;
+    --opacity-muted: 0.8;
+    
+    /* Custom Spacing Modifiers (for fine-tuning) */
+    --modifier-0-5: 0.5;
+    --modifier-0-7: 0.7;
+    --modifier-0-8: 0.8;
+    --modifier-0-9: 0.9;
+    --modifier-0-95: 0.95;
+    --modifier-1-0: 1;
+    --modifier-1-1: 1.1;
+    --modifier-1-2: 1.2;
+    --modifier-1-5: 1.5;
+    --modifier-tablet-text: 0.875;
+    --modifier-mobile-text: 0.75;
+    
+    /* Grid and Layout */
+    --skills-grid-min-width-scale: 0.3;
+    
+    /* Calculated Values */
+    /* Spacing Scale */
+    --spacing-xs: calc(var(--base-spacing) * var(--spacing-scale-xs));
+    --spacing-sm: calc(var(--base-spacing) * var(--spacing-scale-sm));
+    --spacing-md: calc(var(--base-spacing) * var(--spacing-scale-md));
+    --spacing-lg: calc(var(--base-spacing) * var(--spacing-scale-lg));
+    --spacing-xl: calc(var(--base-spacing) * var(--spacing-scale-xl));
+    --spacing-2xl: calc(var(--base-spacing) * var(--spacing-scale-2xl));
+    --spacing-3xl: calc(var(--base-spacing) * var(--spacing-scale-3xl));
+    
+    /* Font Sizes */
+    --font-xs: calc(var(--base-font-size) * var(--font-scale-xs));
+    --font-sm: calc(var(--base-font-size) * var(--font-scale-sm));
+    --font-md: calc(var(--base-font-size) * var(--font-scale-md));
+    --font-lg: calc(var(--base-font-size) * var(--font-scale-lg));
+    --font-xl: calc(var(--base-font-size) * var(--font-scale-xl));
+    --font-2xl: calc(var(--base-font-size) * var(--font-scale-2xl));
+    --font-3xl: calc(var(--base-font-size) * var(--font-scale-3xl));
+    --font-4xl: calc(var(--base-font-size) * var(--font-scale-4xl));
+    
+    /* Border Radius */
+    --radius-sm: calc(var(--base-radius) * var(--radius-scale-sm));
+    --radius-md: calc(var(--base-radius) * var(--radius-scale-md));
+    --radius-lg: calc(var(--base-radius) * var(--radius-scale-lg));
+    --radius-xl: calc(var(--base-radius) * var(--radius-scale-xl));
+    --radius-2xl: calc(var(--base-radius) * var(--radius-scale-2xl));
+    --radius-full: 50%;
+    
+    /* Profile Image Sizes */
+    --profile-img-desktop: calc(var(--base-spacing) * var(--profile-img-scale-desktop));
+    --profile-img-tablet: calc(var(--base-spacing) * var(--profile-img-scale-tablet));
+    --profile-img-mobile: calc(var(--base-spacing) * var(--profile-img-scale-mobile));
+    
+    /* Company Logo Size */
+    --company-logo-size: calc(var(--base-spacing) * var(--company-logo-scale));
+    
+    /* Container & Section Sizes */
+    --container-max-width: 90ch;
+    --section-padding-desktop: var(--spacing-2xl);
+    --section-padding-tablet: var(--spacing-xl);
+    --section-padding-mobile: var(--spacing-lg);
+}
