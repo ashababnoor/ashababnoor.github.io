@@ -1,0 +1,13 @@
+/* Main Stylesheet - Imports all modular CSS files */
+
+/* Import all CSS modules in the correct order */
+@import url('./style/variables.css');  /* CSS custom properties and design tokens */
+@import url('./style/base.css');       /* Base styles and reset */
+@import url('./style/header.css');     /* Header and profile section */
+@import url('./style/sections.css');   /* General section styles */
+@import url('./style/experience.css'); /* Experience section specific styles */
+@import url('./style/skills.css');     /* Skills section styles */
+@import url('./style/publications.css'); /* Publications section styles */
+@import url('./style/education.css');  /* Education section styles */
+@import url('./style/social.css');     /* Social links and footer */
+@import url('./style/responsive.css'); /* Responsive design and media queries */
