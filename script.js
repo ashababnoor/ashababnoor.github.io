@@ -54,9 +54,9 @@ function initializeExpandableContent() {
     
     // ================================================
     
-    const positionDescriptions = document.querySelectorAll('.position-description');
+    const descriptions = document.querySelectorAll('.position-description, .education-description');
     
-    positionDescriptions.forEach(description => {
+    descriptions.forEach(description => {
         const mainList = description.querySelector('ul');
         if (!mainList) return;
         
