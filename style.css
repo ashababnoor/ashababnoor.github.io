@@ -1,7 +1,8 @@
 :root {
     /* Colors */
-    --primary-color: #0A66C2;
-    --primary-hover: #004182;
+    --primary-color: #2563eb;
+    --primary-hover: #1e40af;
+    --primary-light-color: #60a5fa;
     --secondary-color: #666;
     --secondary-light-color: #999;
     --background: #fafbfc;
@@ -532,7 +533,7 @@ body {
 
 .position-description li:before {
     content: "•";
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -994,7 +995,7 @@ body {
 
 .education-description li:before {
     content: "•";
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: bold;
     position: absolute;
     left: 0;
