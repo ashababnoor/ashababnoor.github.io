@@ -43,7 +43,7 @@
 }
 
 .company-name {
-    font-size: calc(var(--font-2xl) * 0.85);
+    font-size: calc(var(--font-2xl) * var(--modifier-0-85));
     font-weight: 700;
     color: var(--text-primary);
     /* margin-bottom: calc(var(--spacing-xs) * var(--modifier-0-8)); */
