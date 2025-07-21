@@ -6,7 +6,6 @@
   "display": "standalone",
   "display_override": ["standalone", "browser"],
   "background_color": "#fafbfc",
-  "theme_color": "#0A66C2",
   "orientation": "portrait",
   "lang": "en",
   "icons": [
