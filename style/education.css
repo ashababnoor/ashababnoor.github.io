@@ -1,0 +1,148 @@
+/* Education Section */
+.education-card {
+    border: var(--base-border-width) solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    background: var(--white);
+    transition: all var(--transition-normal) ease;
+}
+
+/* .education-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(var(--transform-hover-y));
+} */
+
+.education-card:last-child {
+    margin-bottom: 0;
+}
+
+.education-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.education-logo {
+    flex-shrink: 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.education-logo img {
+    width: var(--company-logo-size);
+    height: var(--company-logo-size);
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    margin: auto 0;
+}
+
+.education-info {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.institution-name {
+    /* font-size: calc(var(--font-2xl) * 0.85); */
+    font-size: var(--font-lg);
+    font-weight: 700;
+    margin-bottom: calc(var(--spacing-xs) * var(--modifier-0-8));
+    line-height: var(--line-height-tight);
+}
+
+.degree-title {
+    /* font-size: var(--font-lg); */
+    font-size: calc(var(--font-md) * var(--modifier-0-95));
+    font-weight: 500;
+    /* color: var(--text-secondary); */
+    margin-bottom: calc(var(--spacing-xs) * var(--modifier-0-8));
+    line-height: var(--line-height-tight);
+}
+
+.education-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: var(--font-xs);
+    font-weight: 500;
+    margin-bottom: calc(var(--spacing-xs) * var(--modifier-0-8));
+}
+
+.education-duration {
+    color: var(--text-secondary);
+}
+
+.education-result {
+    font-size: var(--font-xs);
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.education-separator {
+    color: var(--text-muted);
+    margin: 0 calc(var(--spacing-xs) * var(--modifier-0-5));
+}
+
+.institution-description {
+    font-size: calc(var(--font-sm) * var(--modifier-0-95));
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.education-content {
+    margin-top: var(--spacing-lg);
+}
+
+.education-description {
+    margin-bottom: var(--spacing-lg);
+}
+
+.education-description ul {
+    list-style: none;
+    margin-left: calc(var(--spacing-sm) * var(--modifier-0-8));
+}
+
+.education-description li {
+    color: var(--text-secondary);
+    margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-8));
+    padding-left: var(--spacing-lg);
+    position: relative;
+    line-height: var(--line-height-tight);
+    font-size: var(--font-sm);
+    text-align: justify;
+}
+
+.education-description li:before {
+    content: "•";
+    color: var(--secondary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.education-description li:last-child {
+    margin-bottom: 0;
+}
+
+.education-description li ul {
+    margin-top: calc(var(--spacing-sm) * var(--modifier-0-8));
+    margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-8));
+}
+
+.education-description ul ul li:before {
+    color: var(--secondary-light-color);
+}
+
+.education-description li:hover {
+    color: var(--text-primary);
+}
+
+.education-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing-sm) * var(--modifier-0-8));
+}

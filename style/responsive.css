@@ -1,0 +1,303 @@
+/* Mobile responsive adjustments for education */
+@media (max-width: 768px) {
+    .education-header {
+        flex-direction: row;
+        text-align: left;
+        gap: var(--spacing-md);
+    }
+
+    .degree-title {
+        font-size: calc(var(--font-md) * var(--modifier-0-9));
+    }
+}
+
+@media (max-width: 480px) {
+    .education-card {
+        box-shadow: none;
+        border-radius: var(--radius-md);
+        padding: var(--spacing-lg);
+    }
+    
+    .education-header {
+        flex-direction: row;
+        text-align: left;
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .institution-name {
+        font-size: calc(var(--font-lg) * var(--modifier-0-9));
+    }
+
+    .degree-title {
+        font-size: calc(var(--font-md) * var(--modifier-0-9));
+    }
+    
+     .education-description li {
+        margin-bottom: calc(var(--spacing-xs) * var(--modifier-1-2));
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: var(--section-padding-tablet);
+    }
+    
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-xl);
+        align-items: center;
+    }
+    
+    .profile-info {
+        min-height: auto;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
+    .about-summary {
+        margin-top: 0;
+    }
+    
+    .location {
+        display: block;
+        margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-5));
+    }
+    
+    .email-contact {
+        display: block;
+        margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-5));
+    }
+    
+    .separator {
+        display: none;
+    }
+    
+    .email-contact i {
+        color: var(--primary-color);
+    }
+    
+    .profile-left {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .contact-buttons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: auto;
+    }
+    
+    .profile-img {
+        width: var(--profile-img-tablet);
+        height: var(--profile-img-tablet);
+        margin: 0 auto;
+    }
+    
+    .profile-img img {
+        width: var(--profile-img-tablet);
+        height: var(--profile-img-tablet);
+    }
+    
+    .profile-img::before {
+        font-size: calc(var(--profile-img-tablet) * var(--fallback-text-scale));
+    }
+    
+    .contact-buttons {
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin: 0 auto;
+    }
+    
+    .name {
+        font-size: calc(var(--font-3xl) * var(--modifier-tablet-text));
+    }
+    
+    .section-title {
+        font-size: calc(var(--font-2xl) * var(--modifier-tablet-text));
+    }
+    
+    .title {
+        font-size: calc(var(--font-lg) * var(--modifier-tablet-text));
+    }
+    
+    .section {
+        padding: var(--section-padding-tablet);
+    }
+    
+    .company-header {
+        flex-direction: row;
+        text-align: left;
+        gap: var(--spacing-md);
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-links {
+        flex-direction: column;
+    }
+    
+    .publication-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(var(--spacing-xs) * var(--modifier-0-8));
+    }
+    
+    .publication-title {
+        font-size: var(--font-sm);
+    }
+    
+    .publication-venue {
+        font-size: var(--font-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: var(--section-padding-mobile);
+    }
+    
+    /* Keep header box but make it stand out */
+    .header {
+        background: var(--white);
+        border-radius: var(--radius-md); /* Match inner cards' border radius */
+        padding: var(--section-padding-mobile);
+        margin-bottom: var(--spacing-xl);
+        border: var(--base-border-width) solid var(--border);
+        box-shadow: none; /* Remove shadow on mobile */
+    }
+    
+    /* Remove outer boxes for sections to save space */
+    .section {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin-bottom: var(--spacing-lg); /* Reduced spacing between sections */
+    }
+    
+    /* Remove border and adjust section title styling */
+    .section-title {
+        border-bottom: none;
+        padding-bottom: 0;
+        padding-left: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+        font-size: calc(var(--font-2xl) * var(--modifier-0-95)); /* Bigger on mobile */
+    }
+    
+    /* Remove shadows from all cards and adjust padding */
+    .company-card,
+    .publication-card,
+    .skill-category {
+        box-shadow: none;
+        border-radius: var(--radius-md);
+        padding: var(--spacing-lg); /* Increased padding from medium to large */
+    }
+    
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-lg);
+        align-items: center;
+        display: flex;
+    }
+    
+    .profile-left {
+        width: 100%;
+        align-items: center;
+    }
+    
+    .profile-info {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .profile-img {
+        width: var(--profile-img-mobile);
+        height: var(--profile-img-mobile);
+        margin: 0 auto;
+    }
+    
+    .profile-img img {
+        width: var(--profile-img-mobile);
+        height: var(--profile-img-mobile);
+    }
+    
+    .profile-img::before {
+        font-size: calc(var(--profile-img-mobile) * var(--fallback-text-scale));
+    }
+    
+    .contact-buttons {
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin: 0 auto;
+    }
+    
+    .name {
+        font-size: calc(var(--font-3xl) * var(--modifier-mobile-text));
+    }
+    
+    .title {
+        font-size: calc(var(--font-lg) * var(--modifier-mobile-text));
+    }
+    
+    /* Make position list items more compact */
+    .position-description li {
+        margin-bottom: calc(var(--spacing-xs) * var(--modifier-1-2));
+    }
+    
+    /* Adjust company header for more compact layout */
+    .company-header {
+        flex-direction: row;
+        text-align: left;
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        padding-bottom: var(--spacing-sm);
+    }
+    
+    .company-name {
+        font-size: calc(var(--font-xl) * var(--modifier-1-0));
+    }
+    
+    /* Style adjustments for publication cards */
+    /* .publication-title {
+        font-size: var(--font-xs);
+    }
+    
+    .publication-venue {
+        font-size: calc(var(--font-xs) * var(--modifier-0-9));
+    }
+    
+    .publication-date {
+        font-size: calc(var(--font-xs) * var(--modifier-0-8));
+    } */
+    
+    /* Remove hover shadows */
+    .social-link:hover,
+    .btn:hover,
+    .skill-tag:hover {
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .company-header {
+        /* flex-direction: column; */
+        /* text-align: left; */
+        /* align-items: flex-start; */
+        gap: var(--spacing-sm); /* Reduced gap */
+    }
+    
+    /* Further adjustments for very small screens */
+    .section-title {
+        padding-left: 0; /* Remove padding on very small screens */
+    }
+}

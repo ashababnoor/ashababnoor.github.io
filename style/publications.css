@@ -1,0 +1,86 @@
+/* Publications Section */
+.publications-grid {
+    display: grid;
+    gap: var(--spacing-md);
+    grid-template-columns: 1fr;
+}
+
+.publication-card {
+    border: var(--base-border-width) solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    background: var(--white);
+    transition: all var(--transition-normal) ease;
+}
+
+/* .publication-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(var(--transform-hover-y));
+} */
+
+.publication-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-9));
+}
+
+.publication-content {
+    flex: 1;
+}
+
+.publication-title {
+    font-size: var(--font-md);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: calc(var(--spacing-xs) * var(--modifier-1-2));
+    line-height: var(--line-height-tight);
+}
+
+.publication-venue {
+    color: var(--text-secondary);
+    font-size: var(--font-sm);
+    font-weight: 500;
+    line-height: var(--line-height-normal);
+    display: block;
+}
+
+.publication-date {
+    color: var(--text-muted);
+    font-size: var(--font-xs);
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.publication-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.publication-link {
+    display: inline-flex;
+    align-items: center;
+    gap: calc(var(--spacing-xs) * var(--modifier-1-2));
+    padding: calc(var(--spacing-xs) * var(--modifier-1-1)) calc(var(--spacing-sm) * var(--modifier-1-2));
+    border-radius: calc(var(--radius-md) * var(--modifier-0-8));
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--font-xs);
+    transition: all var(--transition-normal) ease;
+    border: var(--base-border-width) solid var(--border);
+    background: var(--white);
+    color: var(--text-secondary);
+}
+
+.publication-link:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(var(--transform-skill-hover-y));
+    border-color: var(--primary-color);
+}
+
+.publication-link i {
+    font-size: calc(var(--font-xs) * var(--modifier-1-1));
+}

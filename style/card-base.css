@@ -1,0 +1,82 @@
+/* Base Card Styles for all card-based sections */
+.card-base {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  border: 1px solid #e5e7eb;
+  margin-bottom: 2rem;
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 1.5rem 0.5rem 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+  background: none;
+}
+
+.card-logo {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  margin-right: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #f3f4f6;
+}
+
+.card-info {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: #222;
+}
+
+.card-meta {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.card-desc {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.card-content {
+  padding: 0;
+}
+
+.card-tags {
+  padding: 0 1.5rem 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.card-tags .skill-tag {
+  background: #f3f4f6;
+  color: #374151;
+  border-radius: 8px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+}

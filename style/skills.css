@@ -1,0 +1,78 @@
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(var(--container-max-width) * var(--skills-grid-min-width-scale)), 1fr));
+    gap: var(--spacing-xl);
+}
+
+.skill-category {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-md);
+    border: var(--base-border-width) solid var(--border);
+}
+
+.skill-category h3 {
+    font-size: var(--font-md);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing-sm) * var(--modifier-0-8));
+}
+
+/* Skills Used in Experience Section */
+.skills-used .skill-tag {
+    background: var(--surface);
+    color: var(--text-secondary); /* Dark grey instead of black */
+    padding: calc(var(--spacing-xs) * var(--modifier-1-5)) var(--spacing-sm);
+    border-radius: var(--radius-xl);
+    font-size: calc(var(--font-xs) * var(--modifier-0-9));
+    font-weight: 500;
+    transition: all var(--transition-normal) ease;
+    display: inline-flex;
+    align-items: center;
+    gap: calc(var(--spacing-xs) * var(--modifier-1-5));
+    border: var(--base-border-width) solid var(--border);
+}
+
+.skills-used .skill-tag:hover {
+    background: var(--border);
+    transform: translateY(var(--transform-skill-hover-y));
+}
+
+/* Skills Section Tags */
+.skill-tags .skill-tag {
+    background: var(--white);
+    color: var(--text-primary);
+    padding: calc(var(--spacing-xs) * var(--modifier-1-5)) calc(var(--spacing-sm) * var(--modifier-1-2));
+    border-radius: var(--radius-xl);
+    font-size: calc(var(--font-xs) * var(--modifier-0-9));
+    font-weight: 500;
+    transition: all var(--transition-normal) ease;
+    display: inline-flex;
+    align-items: center;
+    gap: calc(var(--spacing-xs) * var(--modifier-1-5));
+    border: var(--base-border-width) solid var(--border);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.skill-tags .skill-tag i {
+    font-size: var(--font-xs);
+}
+
+.skill-tags .skill-tag .skill-icon {
+    width: calc(var(--font-sm) * var(--modifier-0-9));
+    height: calc(var(--font-sm) * var(--modifier-0-9));
+    /* No filter - shows colorful SVG icons */
+}
+
+.skill-tags .skill-tag:hover {
+    background: var(--surface);
+    transform: translateY(var(--transform-skill-hover-y));
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
