@@ -68,10 +68,6 @@
     font-size: calc(var(--font-md) * var(--modifier-0-95));
 }
 
-.social-link i {
-    font-size: calc(var(--font-md) * 0.95);
-}
-
 /* Footer */
 .footer {
     text-align: center;
