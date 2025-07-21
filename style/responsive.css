@@ -268,7 +268,7 @@
     }
     
     /* Style adjustments for publication cards */
-    .publication-title {
+    /* .publication-title {
         font-size: var(--font-xs);
     }
     
@@ -278,7 +278,7 @@
     
     .publication-date {
         font-size: calc(var(--font-xs) * var(--modifier-0-8));
-    }
+    } */
     
     /* Remove hover shadows */
     .social-link:hover,
