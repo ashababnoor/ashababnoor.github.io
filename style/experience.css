@@ -59,6 +59,7 @@
 .company-description {
     color: var(--text-secondary);
     font-size: calc(var(--font-sm) * var(--modifier-0-95));
+    line-height: normal; 
 }
 
 /* Positions */
