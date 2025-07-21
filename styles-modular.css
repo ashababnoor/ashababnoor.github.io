@@ -9,5 +9,6 @@
 @import url('./style/skills.css');     /* Skills section styles */
 @import url('./style/publications.css'); /* Publications section styles */
 @import url('./style/education.css');  /* Education section styles */
+@import url('./style/card-base.css');   /* Base card styles */
 @import url('./style/social.css');     /* Social links and footer */
 @import url('./style/responsive.css'); /* Responsive design and media queries */
