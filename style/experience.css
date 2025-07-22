@@ -119,9 +119,9 @@
     left: 0;
 }
 
-.position-description li:last-child {
+/* .position-description li:last-child {
     margin-bottom: 0;
-}
+} */
 
 .position-description li ul {
     margin-top: calc(var(--spacing-sm) * var(--modifier-0-8));
@@ -191,6 +191,6 @@
     user-select: none;
 }
 
-.expand-toggle-end {
+/* .expand-toggle-end {
     margin-top: calc(var(--spacing-sm) * var(--modifier-0-8));
-}
+} */

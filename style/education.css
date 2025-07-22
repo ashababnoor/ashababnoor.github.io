@@ -97,9 +97,9 @@
     margin-top: var(--spacing-lg);
 }
 
-.education-description {
+/* .education-description {
     margin-bottom: var(--spacing-lg);
-}
+} */
 
 .education-description ul {
     list-style: none;
@@ -124,9 +124,9 @@
     left: 0;
 }
 
-.education-description li:last-child {
+/* .education-description li:last-child {
     margin-bottom: 0;
-}
+} */
 
 .education-description li ul {
     margin-top: calc(var(--spacing-sm) * var(--modifier-0-8));
