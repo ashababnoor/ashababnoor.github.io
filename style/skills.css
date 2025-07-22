@@ -29,7 +29,7 @@
 .skills-used .skill-tag {
     background: var(--surface);
     color: var(--text-secondary); /* Dark grey instead of black */
-    padding: calc(var(--spacing-xs) * var(--modifier-1-5)) var(--spacing-sm);
+    padding: calc(var(--spacing-xs) * var(--modifier-1-0)) var(--spacing-sm);
     border-radius: var(--radius-xl);
     font-size: calc(var(--font-xs) * var(--modifier-0-9));
     font-weight: 500;
