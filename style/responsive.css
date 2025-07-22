@@ -63,12 +63,12 @@
     
     .location {
         display: block;
-        margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-5));
+        margin-bottom: calc(var(--spacing-xs) * var(--modifier-0-5));
     }
     
     .email-contact {
         display: block;
-        margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-5));
+        margin-bottom: calc(var(--spacing-xs) * var(--modifier-0-5));
     }
     
     .separator {
@@ -123,7 +123,7 @@
     }
     
     .title {
-        font-size: calc(var(--font-lg) * var(--modifier-tablet-text));
+        font-size: calc(var(--font-lg) * var(--modifier-0-85));
     }
     
     .section {
@@ -246,7 +246,7 @@
     }
     
     .title {
-        font-size: calc(var(--font-lg) * var(--modifier-mobile-text));
+        font-size: calc(var(--font-lg) * var(--modifier-0-85));
     }
     
     /* Make position list items more compact */
