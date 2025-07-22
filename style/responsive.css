@@ -253,6 +253,10 @@
     .position-description li {
         margin-bottom: calc(var(--spacing-xs) * var(--modifier-1-2));
     }
+
+    .education-description li {
+        margin-bottom: calc(var(--spacing-xs) * var(--modifier-1-2));
+    }
     
     /* Adjust company header for more compact layout */
     .company-header {
