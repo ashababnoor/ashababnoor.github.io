@@ -248,14 +248,21 @@
     .title {
         font-size: calc(var(--font-lg) * var(--modifier-0-85));
     }
+
+    .about-summary {
+        font-size: calc(var(--font-sm) * var(--modifier-0-95));
+        margin-top: 0;
+    }
     
     /* Make position list items more compact */
     .position-description li {
         margin-bottom: calc(var(--spacing-xs) * var(--modifier-1-2));
+        font-size: calc(var(--font-sm) * var(--modifier-0-95));
     }
 
     .education-description li {
         margin-bottom: calc(var(--spacing-xs) * var(--modifier-1-2));
+        font-size: calc(var(--font-sm) * var(--modifier-0-95));
     }
     
     /* Adjust company header for more compact layout */
@@ -264,7 +271,7 @@
         text-align: left;
         gap: var(--spacing-md);
         margin-bottom: var(--spacing-md);
-        padding-bottom: var(--spacing-sm);
+        padding-bottom: var(--spacing-md);
     }
     
     .company-name {

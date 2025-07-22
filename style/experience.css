@@ -64,7 +64,8 @@
 
 /* Positions */
 .position {
-    margin-bottom: var(--section-padding-desktop);
+    /* margin-bottom: var(--section-padding-desktop); */
+    margin-bottom: var(--spacing-xl);
     padding-bottom: var(--spacing-xl);
     border-bottom: var(--base-border-width) solid var(--position-separator);
 }
