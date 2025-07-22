@@ -79,3 +79,8 @@
 .footer img {
     vertical-align: middle;
 }
+
+.open-to-work {
+    font-style: italic;
+    color: var(--text-muted);
+}
