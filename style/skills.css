@@ -1,3 +1,11 @@
+/* Skills Used */
+.skills-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing-sm) * var(--modifier-0-8));
+    margin-top: var(--spacing-lg);
+}
+
 /* Skills Section */
 .skills-grid {
     display: grid;
