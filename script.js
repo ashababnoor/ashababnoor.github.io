@@ -195,21 +195,21 @@ function initializeExpandableContent() {
 // Update durations when page loads
 document.addEventListener('DOMContentLoaded', function() {
     // Update Pathao total duration
-    const pathaoStartDate = '2022-10-01'; // Oct 2022 when internship started
+    const pathaoStartDate = '2025-12-18'; // Oct 2022 when internship started
     const totalDuration = calculateDuration(pathaoStartDate);
-    const pathaoDurationElement = document.getElementById('pathao-duration');
+    const pathaoDurationElement = document.getElementById('current-company-duration');
     
     if (pathaoDurationElement) {
-        pathaoDurationElement.textContent = `Oct 2022 - Present · ${totalDuration}`;
+        pathaoDurationElement.textContent = `Dec 2025 - Present · ${totalDuration}`;
     }
     
-    // Update current position duration (Data Engineer II)
-    const currentPositionStartDate = '2024-07-01'; // Jul 2024
+    // Update current position duration (Software Engineer III)
+    const currentPositionStartDate = '2025-12-18'; // December 2024
     const currentPositionDuration = calculateDuration(currentPositionStartDate);
     const currentPositionElement = document.getElementById('current-position-duration');
     
     if (currentPositionElement) {
-        currentPositionElement.textContent = `Jul 2024 - Present · ${currentPositionDuration}`;
+        currentPositionElement.textContent = `Dec 2025 - Present · ${currentPositionDuration}`;
     }
     
     // Update copyright year
