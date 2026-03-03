@@ -1,11 +1,12 @@
 {
   "name": "Ahmed Shabab Noor - Portfolio",
   "short_name": "Shabab",
-  "description": "Portfolio of Ahmed Shabab Noor - Data Engineer II at Pathao | Data, Backend, Analytics & ML Expert",
+  "description": "Portfolio of Ahmed Shabab Noor - Software Engineer III at Fin.com | Data, Backend, Analytics & ML Expert",
   "start_url": "/",
   "display": "standalone",
   "display_override": ["standalone", "browser"],
   "background_color": "#fafbfc",
+  "theme_color": "#2563eb",
   "orientation": "portrait",
   "lang": "en",
   "icons": [

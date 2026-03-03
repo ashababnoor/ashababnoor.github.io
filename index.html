@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2563eb">
 
     <!-- Primary Meta Tags -->
     <title>Ahmed Shabab Noor - Data, Backend & Analytics Expert | Software Engineer III @ Fin.com | Ex Data Engineer II @ Pathao </title>
@@ -46,6 +47,10 @@
 
     <link rel="manifest" href="/site.webmanifest">
 
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/shabab.jpeg" as="image" type="image/jpeg">
+    <link rel="preload" href="styles-modular.css" as="style">
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X9NM4Y8HD4"></script>
     <script>
@@ -67,91 +72,246 @@
 
     <link rel="stylesheet" href="styles-modular.css">
     
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Structured Data (JSON-LD) — WebSite -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org/",
-      "@type": "Person",
-      "name": "Ahmed Shabab Noor",
-      "alternateName": ["Shabab", "Shabab Noor"],
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://ashababnoor.github.io/#website",
       "url": "https://ashababnoor.github.io/",
-      "image": "https://ashababnoor.github.io/assets/shabab.jpeg",
-      "sameAs": [
-        "https://linkedin.com/in/ashababnoor",
-        "https://github.com/ashababnoor",
-        "https://scholar.google.com/citations?user=b6chKnEAAAAJ"
-      ],
-      "jobTitle": "Software Engineer III",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Fin.com",
-        "url": "https://fin.com"
+      "name": "Ahmed Shabab Noor - Portfolio",
+      "description": "Portfolio and resume of Ahmed Shabab Noor, Software Engineer III at Fin.com",
+      "publisher": {
+        "@id": "https://ashababnoor.github.io/#person"
       },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dhaka",
-        "addressCountry": "Bangladesh"
+      "inLanguage": "en"
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD) — ProfilePage + Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "@id": "https://ashababnoor.github.io/#profilepage",
+      "url": "https://ashababnoor.github.io/",
+      "name": "Ahmed Shabab Noor - Professional Profile",
+      "dateCreated": "2024-06-01",
+      "dateModified": "2026-03-03",
+      "isPartOf": {
+        "@id": "https://ashababnoor.github.io/#website"
       },
-      "email": "ashababnoor@gmail.com",
-      "description": "Experienced Software Engineer specializing in scalable data platforms, machine learning, real-time backend services and analytics. Expert in Go, Python, SQL, dbt, BigQuery, and building data-driven solutions.",
-      "knowsAbout": [
-        "Data Engineering",
-        "Backend Development",
-        "Software Engineering",
-        "Machine Learning",
-        "Data Science",
-        "Big Data",
-        "Data Analytics",
-        "Analytics Engineering",
-        "Python Programming",
-        "Go Programming",
-        "BigQuery",
-        "SQL",
-        "dbt",
-        "Google Cloud Platform",
-        "ETL Pipelines",
-        "Data Analytics",
-        "Cloud Computing",
-        "Database Design",
-        "Docker",
-        "Kubernetes",
-        "PostgreSQL",
-        "Redis",
-        "Firebase"
-      ],
-      "alumniOf": [
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".about-summary", ".name", ".title", ".tagline"]
+      },
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://ashababnoor.github.io/#person",
+        "name": "Ahmed Shabab Noor",
+        "alternateName": ["Shabab", "Shabab Noor"],
+        "url": "https://ashababnoor.github.io/",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://ashababnoor.github.io/assets/shabab.jpeg",
+          "width": 500,
+          "height": 500
+        },
+        "sameAs": [
+          "https://linkedin.com/in/ashababnoor",
+          "https://github.com/ashababnoor",
+          "https://scholar.google.com/citations?user=b6chKnEAAAAJ"
+        ],
+        "jobTitle": "Software Engineer III",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Fin.com",
+          "url": "https://fin.com",
+          "description": "Stablecoin powered global payment infrastructure company"
+        },
+        "hasOccupation": [
+          {
+            "@type": "Occupation",
+            "name": "Software Engineer III",
+            "occupationLocation": {
+              "@type": "Country",
+              "name": "Bangladesh"
+            },
+            "description": "Building payment infrastructure for global money movement using Go, Docker, PostgreSQL, and microservices architecture.",
+            "skills": "Go, Docker, PostgreSQL, Microservices, AI Driven Development"
+          },
+          {
+            "@type": "Occupation",
+            "name": "Data Engineer II",
+            "occupationLocation": {
+              "@type": "Country",
+              "name": "Bangladesh"
+            },
+            "description": "Designed dynamic funnel analytics systems processing 500M+ data points, built transliteration services increasing Bangla search coverage by 15x, and developed personalization algorithms reducing checkout navigation time by 32%.",
+            "skills": "Go, Python, SQL, dbt, BigQuery, Redis, PostgreSQL, Firebase, Docker, Kubernetes, Machine Learning"
+          }
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "degree",
+            "name": "Bachelor of Science in Computer Science and Engineering",
+            "educationalLevel": "Bachelor's",
+            "recognizedBy": {
+              "@type": "EducationalOrganization",
+              "name": "United International University",
+              "url": "https://www.uiu.ac.bd/"
+            }
+          }
+        ],
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "United International University",
+            "url": "https://www.uiu.ac.bd/"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "Notre Dame College, Dhaka",
+            "url": "https://ndc.edu.bd/"
+          }
+        ],
+        "award": [
+          "Summa Cum Laude - CGPA 3.99/4.00",
+          "100% Academic Scholarship (9 trimesters)",
+          "4 Peer-Reviewed IEEE/Springer Publications"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dhaka",
+          "addressCountry": "Bangladesh"
+        },
+        "email": "ashababnoor@gmail.com",
+        "description": "Experienced Software Engineer specializing in scalable data platforms, machine learning, real-time backend services and analytics. Expert in Go, Python, SQL, dbt, BigQuery, and building data-driven solutions.",
+        "knowsAbout": [
+          "Data Engineering", "Backend Development", "Software Engineering",
+          "Machine Learning", "Data Science", "Big Data", "Data Analytics",
+          "Analytics Engineering", "Python Programming", "Go Programming",
+          "BigQuery", "SQL", "dbt", "Google Cloud Platform", "ETL Pipelines",
+          "Cloud Computing", "Database Design", "Docker", "Kubernetes",
+          "PostgreSQL", "Redis", "Firebase", "Natural Language Processing",
+          "A/B Testing", "Payment Infrastructure"
+        ],
+        "nationality": "Bangladeshi"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD) — Publications -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Publications by Ahmed Shabab Noor",
+      "numberOfItems": 4,
+      "itemListElement": [
         {
-          "@type": "EducationalOrganization",
-          "name": "United International University",
-          "url": "https://www.uiu.ac.bd/"
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "name": "Attention-Based Scene Graph Generation: A Review",
+            "author": { "@id": "https://ashababnoor.github.io/#person" },
+            "datePublished": "2023-02-06",
+            "publisher": { "@type": "Organization", "name": "IEEE" },
+            "isPartOf": {
+              "@type": "PublicationEvent",
+              "name": "2022 14th International Conference on Software, Knowledge, Information Management and Applications (SKIMA)"
+            },
+            "url": "https://ieeexplore.ieee.org/abstract/document/10029570"
+          }
         },
         {
-          "@type": "EducationalOrganization",
-          "name": "Notre Dame College, Dhaka",
-          "url": "https://ndc.edu.bd/"
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "name": "A novel method for imbalanced data classification based on label reassignment",
+            "author": { "@id": "https://ashababnoor.github.io/#person" },
+            "datePublished": "2022-12-20",
+            "publisher": { "@type": "Organization", "name": "IEEE" },
+            "isPartOf": {
+              "@type": "PublicationEvent",
+              "name": "IEEE Region 10 Conference (TENCON)"
+            },
+            "url": "https://ieeexplore.ieee.org/abstract/document/9978090"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "name": "Diabetes Mellitus prediction using Transfer Learning",
+            "author": { "@id": "https://ashababnoor.github.io/#person" },
+            "datePublished": "2023-06-11",
+            "publisher": { "@type": "Organization", "name": "Springer" },
+            "isPartOf": {
+              "@type": "PublicationEvent",
+              "name": "International Conference on Machine Intelligence and Emerging Technologies (MIET 2022)"
+            },
+            "url": "https://link.springer.com/chapter/10.1007/978-3-031-34619-4_7"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "name": "The impact of data locality on the performance of cluster-based under-sampling",
+            "author": { "@id": "https://ashababnoor.github.io/#person" },
+            "datePublished": "2023-06-11",
+            "publisher": { "@type": "Organization", "name": "Springer" },
+            "isPartOf": {
+              "@type": "PublicationEvent",
+              "name": "International Conference on Machine Intelligence and Emerging Technologies (MIET 2022)"
+            },
+            "url": "https://link.springer.com/chapter/10.1007/978-3-031-34622-4_16"
+          }
         }
-      ],
-      "nationality": "Bangladeshi"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD) — BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ashababnoor.github.io/"
+        }
+      ]
     }
     </script>
 </head>
 
 <body>
     <div class="container">
+        <main id="main-content">
         <!-- Header -->
         <header class="header">
             <div class="profile-section">
                 <div class="profile-left">
                     <div class="profile-img">
-                        <img src="assets/shabab.jpeg" alt="Ahmed Shabab Noor" class="profile-image">
+                        <img src="assets/shabab.jpeg" alt="Ahmed Shabab Noor" class="profile-image" width="500" height="500">
                         <!-- Image will go here when available, fallback gradient circle will show -->
                     </div>
                     <!-- Quick contact buttons -->
                     <div class="contact-buttons">
-                        <a href="https://linkedin.com/in/ashababnoor" class="btn btn-secondary linkedin" target="_blank">
+                        <a href="https://linkedin.com/in/ashababnoor" class="btn btn-secondary linkedin" target="_blank" rel="noopener noreferrer" aria-label="Connect with Ahmed Shabab Noor on LinkedIn">
                             <i class="fab fa-linkedin"></i> Connect
                         </a>
-                        <a href="mailto:ashababnoor@gmail.com" class="btn btn-secondary email">
+                        <a href="mailto:ashababnoor@gmail.com" class="btn btn-secondary email" aria-label="Send email to Ahmed Shabab Noor">
                             <i class="fas fa-envelope"></i> Email
                         </a>
                     </div>
@@ -167,6 +327,7 @@
                     </p>
                     <p class="about-summary">
                         Software Engineer specializing in scalable data platforms, real-time backend services, and advanced analytics. Skilled in building robust pipelines, ML solutions, and data-driven applications to deliver actionable insights. Love exploring new technologies and learning new things. Apart from work, I enjoy photography, food, and puzzles.
+                        <!-- Ahmed Shabab Noor is a Software Engineer III at Fin.com, where he builds payment infrastructure for global money movement. Previously, he spent over three years at Pathao, Bangladesh's leading on-demand digital platform, progressing from Data Engineering Intern to Data Engineer II. At Pathao, he designed dynamic funnel analytics systems processing 500M+ data points, built transliteration services that increased Bangla search coverage by 15x, and developed personalization algorithms that reduced checkout navigation time by 32%. He holds a Bachelor of Science in Computer Science and Engineering from United International University, graduating Summa Cum Laude with a 3.99/4.00 CGPA. He has published four peer-reviewed papers at IEEE and Springer conferences on machine learning topics including scene graph generation, imbalanced data classification, and transfer learning. He specializes in Go, Python, SQL, BigQuery, and cloud-native technologies. -->
                     </p>
                 </div>
             </div>
@@ -177,24 +338,24 @@
             <h2 class="section-title">Experience</h2>
 
             <!-- Company 2: Fin.com -->
-            <div class="company-card">
+            <article class="company-card">
                 <div class="company-header">
                     <div class="company-logo">
-                        <img src="assets/fin-logo.png" alt="Fin.com Logo" />
+                        <img src="assets/fin-logo.png" alt="Fin.com Logo" loading="lazy" width="800" height="800" />
                     </div>
                     <div class="company-info">
                         <h3 class="company-name">Fin.com</h3>
-                        <p class="company-duration" id="current-company-duration">Dec 2025 - Present · 0 yr 0 mos</p>
+                        <p class="company-duration" id="current-company-duration"><time datetime="2025-12">Dec 2025</time> - Present · <span class="dynamic-duration">0 yr 0 mos</span></p>
                         <p class="company-description">Stablecoin powered global payment infrastructure company</p>
                     </div>
                 </div>
-                
+
                 <div class="positions">
                     <div class="position">
                         <div class="position-header">
                             <div class="position-info">
                                 <h4 class="position-title">Software Engineer III</h4>
-                                <p class="position-duration" id="current-position-duration">Dec 2025 - Present · 0 yr 0 mos</p>
+                                <p class="position-duration" id="current-position-duration"><time datetime="2025-12">Dec 2025</time> - Present · <span class="dynamic-duration">0 yr 0 mos</span></p>
                                 <p class="position-type">Full-time</p>
                             </div>
                         </div>
@@ -212,17 +373,17 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
             
             <!-- Company 1: Pathao -->
-            <div class="company-card">
+            <article class="company-card">
                 <div class="company-header">
                     <div class="company-logo">
-                        <img src="assets/pathao-logo.png" alt="Pathao Logo" />
+                        <img src="assets/pathao-logo.png" alt="Pathao Logo" loading="lazy" width="1028" height="1028" />
                     </div>
                     <div class="company-info">
                         <h3 class="company-name">Pathao</h3>
-                        <p class="company-duration">Oct 2022 - Dec 2025 · 3 yr 3 mos</p>
+                        <p class="company-duration"><time datetime="2022-10">Oct 2022</time> - <time datetime="2025-12">Dec 2025</time> · 3 yr 3 mos</p>
                         <p class="company-description">On-demand digital platform and mobility company</p>
                     </div>
                 </div>
@@ -233,7 +394,7 @@
                         <div class="position-header">
                             <div class="position-info">
                                 <h4 class="position-title">Data Engineer II</h4>
-                                <p class="position-duration">Jul 2024 - Dec 2025 · 1 yr 6 mos</p>
+                                <p class="position-duration"><time datetime="2024-07">Jul 2024</time> - <time datetime="2025-12">Dec 2025</time> · 1 yr 6 mos</p>
                                 <p class="position-type">Full-time</p>
                             </div>
                         </div>
@@ -301,7 +462,7 @@
                         <div class="position-header">
                             <div class="position-info">
                                 <h4 class="position-title">Data Engineer I</h4>
-                                <p class="position-duration">Mar 2023 - Jun 2024 · 1 yr 4 mos</p>
+                                <p class="position-duration"><time datetime="2023-03">Mar 2023</time> - <time datetime="2024-06">Jun 2024</time> · 1 yr 4 mos</p>
                                 <p class="position-type">Full-time</p>
                             </div>
                         </div>
@@ -381,7 +542,7 @@
                         <div class="position-header">
                             <div class="position-info">
                                 <h4 class="position-title">Data Engineering Intern</h4>
-                                <p class="position-duration">Oct 2022 - Feb 2023 · 5 mos</p>
+                                <p class="position-duration"><time datetime="2022-10">Oct 2022</time> - <time datetime="2023-02">Feb 2023</time> · 5 mos</p>
                                 <p class="position-type">Internship</p>
                             </div>
                         </div>
@@ -402,8 +563,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-           
+            </article>
+
         </section>
 
         <!-- Skills Section -->
@@ -413,77 +574,77 @@
                 <div class="skill-category">
                     <h3>Programming Languages</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-icon" alt="Python"> Python</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" class="skill-icon" alt="Go"> Go</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-icon" alt="SQL"> SQL</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="skill-icon" alt="JavaScript"> JavaScript</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="skill-icon" alt="TypeScript"> TypeScript</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="skill-icon" alt="Java"> Java</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" class="skill-icon" alt="C"> C</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="skill-icon" alt="PHP"> PHP</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" class="skill-icon" alt="Bash"> Bash</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Python"> Python</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Go"> Go</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="SQL"> SQL</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="JavaScript"> JavaScript</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="TypeScript"> TypeScript</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Java"> Java</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="C"> C</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="PHP"> PHP</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Bash"> Bash</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
                     <h3>Cloud & Infrastructure</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" class="skill-icon" alt="Google Cloud Platform"> Google Cloud Platform</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="skill-icon" alt="Docker"> Docker</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" class="skill-icon" alt="Kubernetes"> Kubernetes</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/helm/helm-original.svg" class="skill-icon" alt="Helm"> Helm</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" class="skill-icon" alt="GitLab CI"> GitLab CI</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" class="skill-icon" alt="GitHub Actions"> GitHub Actions</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Google Cloud Platform"> Google Cloud Platform</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Docker"> Docker</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Kubernetes"> Kubernetes</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/helm/helm-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Helm"> Helm</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="GitLab CI"> GitLab CI</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="GitHub Actions"> GitHub Actions</span>
                     </div>
                 </div>
                 
                 <div class="skill-category">
                     <h3>Data Engineering & Analytics</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag"><img src="https://seeklogo.com/images/D/dbt-logo-500AB0BAA7-seeklogo.com.png" class="skill-icon" alt="dbt"> dbt</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" class="skill-icon" alt="BigQuery"> BigQuery</span>
-                        <span class="skill-tag"><img src="https://raw.githubusercontent.com/getredash/redash/master/client/app/assets/images/redash_icon_small.png" class="skill-icon" alt="Redash"> Redash</span>
-                        <span class="skill-tag"><img src="https://www.gstatic.com/analytics-lego/svg/ic_looker_studio.svg" class="skill-icon" alt="Looker Studio"> Looker Studio</span>
-                        <span class="skill-tag"><img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" class="skill-icon" alt="Tableau"> Tableau</span>
+                        <span class="skill-tag"><img src="https://seeklogo.com/images/D/dbt-logo-500AB0BAA7-seeklogo.com.png" class="skill-icon" loading="lazy" width="20" height="20" alt="dbt"> dbt</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="BigQuery"> BigQuery</span>
+                        <span class="skill-tag"><img src="https://raw.githubusercontent.com/getredash/redash/master/client/app/assets/images/redash_icon_small.png" class="skill-icon" loading="lazy" width="20" height="20" alt="Redash"> Redash</span>
+                        <span class="skill-tag"><img src="https://www.gstatic.com/analytics-lego/svg/ic_looker_studio.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Looker Studio"> Looker Studio</span>
+                        <span class="skill-tag"><img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Tableau"> Tableau</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
                     <h3>Databases & Datawarehousing</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" class="skill-icon" alt="BigQuery"> BigQuery</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="skill-icon" alt="PostgreSQL"> PostgreSQL</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-icon" alt="MySQL"> MySQL</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" class="skill-icon" alt="Redis"> Redis</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/neo4j/neo4j-original.svg" class="skill-icon" alt="Neo4j"> Neo4j</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="skill-icon" alt="Firebase"> Firebase</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="BigQuery"> BigQuery</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="PostgreSQL"> PostgreSQL</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="MySQL"> MySQL</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Redis"> Redis</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/neo4j/neo4j-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Neo4j"> Neo4j</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Firebase"> Firebase</span>
                     </div>
                 </div>                
                 
                 <div class="skill-category">
                     <h3>Data Science & Machine Learning</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" class="skill-icon" alt="Pandas"> Pandas</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" class="skill-icon" alt="NumPy"> NumPy</span>
-                        <span class="skill-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" class="skill-icon" alt="Scikit-learn"> Scikit-learn</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" class="skill-icon" alt="Jupyter"> Jupyter</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" class="skill-icon" alt="Matplotlib"> Matplotlib</span>
-                        <span class="skill-tag"><img src="https://plotly.github.io/documentation/all_static/images/icon-dash.png" class="skill-icon" alt="Plotly"> Plotly</span>
-                        <span class="skill-tag"><img src="https://plotly.github.io/documentation/all_static/images/icon-dash.png" class="skill-icon" alt="Dash"> Dash</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Pandas"> Pandas</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="NumPy"> NumPy</span>
+                        <span class="skill-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Scikit-learn"> Scikit-learn</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Jupyter"> Jupyter</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Matplotlib"> Matplotlib</span>
+                        <span class="skill-tag"><img src="https://plotly.github.io/documentation/all_static/images/icon-dash.png" class="skill-icon" loading="lazy" width="20" height="20" alt="Plotly"> Plotly</span>
+                        <span class="skill-tag"><img src="https://plotly.github.io/documentation/all_static/images/icon-dash.png" class="skill-icon" loading="lazy" width="20" height="20" alt="Dash"> Dash</span>
                     </div>
                 </div>
                 
                 <div class="skill-category">
                     <h3>Developer Tools & Platforms</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="skill-icon" alt="Git"> Git</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="skill-icon" alt="VS Code"> VS Code</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetbrains/jetbrains-original.svg" class="skill-icon" alt="JetBrains"> JetBrains IDEs</span>
-                        <span class="skill-tag"><img src="https://www.svgrepo.com/show/354202/postman-icon.svg" class="skill-icon" alt="Postman"> Postman</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="skill-icon" alt="Linux"> Linux</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" class="skill-icon" alt="macOS"> macOS</span>
-                        <span class="skill-tag"><img src="https://www.notion.so/front-static/logo-ios.png" class="skill-icon" alt="Notion"> Notion</span>
-                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" class="skill-icon" alt="Jira"> Jira</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Git"> Git</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="VS Code"> VS Code</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetbrains/jetbrains-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="JetBrains"> JetBrains IDEs</span>
+                        <span class="skill-tag"><img src="https://www.svgrepo.com/show/354202/postman-icon.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Postman"> Postman</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Linux"> Linux</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="macOS"> macOS</span>
+                        <span class="skill-tag"><img src="https://www.notion.so/front-static/logo-ios.png" class="skill-icon" loading="lazy" width="20" height="20" alt="Notion"> Notion</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" class="skill-icon" loading="lazy" width="20" height="20" alt="Jira"> Jira</span>
                     </div>
                 </div>
             </div>
@@ -493,65 +654,65 @@
         <section class="section publications">
             <h2 class="section-title">Publications</h2>
             <div class="publications-grid">
-                <div class="publication-card">
+                <article class="publication-card">
                     <div class="publication-header">
                         <div class="publication-content">
                             <h3 class="publication-title">Attention-Based Scene Graph Generation: A Review</h3>
                             <span class="publication-venue">IEEE - 2022 14th International Conference on Software, Knowledge, Information Management and Applications (SKIMA)</span>
                         </div>
-                        <span class="publication-date">Feb 6, 2023</span>
+                        <time class="publication-date" datetime="2023-02-06">Feb 6, 2023</time>
                     </div>
                     <div class="publication-actions">
-                        <a href="https://ieeexplore.ieee.org/abstract/document/10029570" class="publication-link" target="_blank">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10029570" class="publication-link" target="_blank" rel="noopener noreferrer" aria-label="View paper: Attention-Based Scene Graph Generation on IEEE">
                             <i class="fas fa-external-link-alt"></i> View Paper
                         </a>
                     </div>
-                </div>
+                </article>
 
-                <div class="publication-card">
+                <article class="publication-card">
                     <div class="publication-header">
                         <div class="publication-content">
                             <h3 class="publication-title">A novel method for imbalanced data classification based on label reassignment</h3>
                             <span class="publication-venue">IEEE Region 10 Conference (TENCON)</span>
                         </div>
-                        <span class="publication-date">Dec 20, 2022</span>
+                        <time class="publication-date" datetime="2022-12-20">Dec 20, 2022</time>
                     </div>
                     <div class="publication-actions">
-                        <a href="https://ieeexplore.ieee.org/abstract/document/9978090" class="publication-link" target="_blank">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9978090" class="publication-link" target="_blank" rel="noopener noreferrer" aria-label="View paper: Imbalanced data classification based on label reassignment on IEEE">
                             <i class="fas fa-external-link-alt"></i> View Paper
                         </a>
                     </div>
-                </div>
+                </article>
 
-                <div class="publication-card">
+                <article class="publication-card">
                     <div class="publication-header">
                         <div class="publication-content">
                             <h3 class="publication-title">Diabetes Mellitus prediction using Transfer Learning</h3>
                             <span class="publication-venue">International Conference on Machine Intelligence and Emerging Technologies (MIET 2022)</span>
                         </div>
-                        <span class="publication-date">Jun 11, 2023</span>
+                        <time class="publication-date" datetime="2023-06-11">Jun 11, 2023</time>
                     </div>
                     <div class="publication-actions">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-34619-4_7" class="publication-link" target="_blank">
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-34619-4_7" class="publication-link" target="_blank" rel="noopener noreferrer" aria-label="View paper: Diabetes Mellitus prediction using Transfer Learning on Springer">
                             <i class="fas fa-external-link-alt"></i> View Paper
                         </a>
                     </div>
-                </div>
+                </article>
 
-                <div class="publication-card">
+                <article class="publication-card">
                     <div class="publication-header">
                         <div class="publication-content">
                             <h3 class="publication-title">The impact of data locality on the performance of cluster-based under-sampling</h3>
                             <span class="publication-venue">International Conference on Machine Intelligence and Emerging Technologies (MIET 2022)</span>
                         </div>
-                        <span class="publication-date">Jun 11, 2023</span>
+                        <time class="publication-date" datetime="2023-06-11">Jun 11, 2023</time>
                     </div>
                     <div class="publication-actions">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-34622-4_16" class="publication-link" target="_blank">
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-34622-4_16" class="publication-link" target="_blank" rel="noopener noreferrer" aria-label="View paper: Impact of data locality on cluster-based under-sampling on Springer">
                             <i class="fas fa-external-link-alt"></i> View Paper
                         </a>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
@@ -560,16 +721,16 @@
             <h2 class="section-title">Education</h2>
             
             <!-- University: United International University -->
-            <div class="education-card">
+            <article class="education-card">
                 <div class="education-header">
                     <div class="education-logo">
-                        <img src="assets/uiu-logo.svg" alt="United International University Logo" />
+                        <img src="assets/uiu-logo.svg" alt="United International University Logo" loading="lazy" width="50" height="50" />
                     </div>
                     <div class="education-info">
                         <h3 class="institution-name">United International University</h3>
                         <h4 class="degree-title">Bachelor of Science in Computer Science and Engineering</h4>
                         <div class="education-meta">
-                            <span class="education-duration">Sep 2019 - Jan 2023 · 3 yrs 4 mos</span>
+                            <span class="education-duration"><time datetime="2019-09">Sep 2019</time> - <time datetime="2023-01">Jan 2023</time> · 3 yrs 4 mos</span>
                             <!-- <span class="education-separator"> · </span> -->
                         </div>
                         <p class="education-result">CGPA 3.99 out of 4.00, <em>Summa Cum Laude</em></p>
@@ -610,7 +771,7 @@
                         <span class="skill-tag">Communication</span>
                     </div>
                 </div>
-            </div>
+            </article>
 
             <!-- College: Notre Dame College -->
             <!-- <div class="education-card">
@@ -653,25 +814,29 @@
         <!-- Links Section -->
         <section class="section links">
             <h2 class="section-title">Connect With Me</h2>
+            <nav aria-label="Social media and contact links">
             <div class="social-links">
-                <a href="https://linkedin.com/in/ashababnoor" class="social-link linkedin" target="_blank">
+                <a href="https://linkedin.com/in/ashababnoor" class="social-link linkedin" target="_blank" rel="noopener noreferrer" aria-label="Visit Ahmed Shabab Noor's LinkedIn profile">
                     <i class="fab fa-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
-                <a href="https://github.com/ashababnoor" class="social-link github" target="_blank">
+                <a href="https://github.com/ashababnoor" class="social-link github" target="_blank" rel="noopener noreferrer" aria-label="Visit Ahmed Shabab Noor's GitHub profile">
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
                 </a>
-                <a href="https://scholar.google.com/citations?user=b6chKnEAAAAJ" class="social-link scholar" target="_blank">
+                <a href="https://scholar.google.com/citations?user=b6chKnEAAAAJ" class="social-link scholar" target="_blank" rel="noopener noreferrer" aria-label="Visit Ahmed Shabab Noor's Google Scholar profile">
                     <i class="fas fa-graduation-cap"></i>
                     <span>Google Scholar</span>
                 </a>
-                <a href="mailto:ashababnoor@gmail.com" class="social-link email">
+                <a href="mailto:ashababnoor@gmail.com" class="social-link email" aria-label="Send email to Ahmed Shabab Noor">
                     <i class="fas fa-envelope"></i>
                     <span>Email</span>
                 </a>
             </div>
+            </nav>
         </section>
+
+        </main>
 
         <!-- Footer -->
         <footer class="footer">
@@ -679,6 +844,6 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
