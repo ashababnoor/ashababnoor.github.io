@@ -1,4 +1,44 @@
 /* Publications Section */
+.publications-profiles {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.publication-profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: calc(var(--spacing-xs) * var(--modifier-1-2));
+    padding: calc(var(--spacing-xs) * var(--modifier-1-1)) calc(var(--spacing-sm) * var(--modifier-1-2));
+    border-radius: calc(var(--radius-md) * var(--modifier-0-8));
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--font-xs);
+    transition: all var(--transition-normal) ease;
+    border: var(--base-border-width) solid var(--border);
+    background: var(--white);
+}
+
+.publication-profile-link.scholar {
+    color: var(--scholar-blue);
+}
+
+.publication-profile-link.scholar:hover {
+    background: var(--scholar-blue);
+    color: var(--white);
+    border-color: var(--scholar-blue);
+}
+
+.publication-profile-link.orcid {
+    color: var(--orcid-green);
+}
+
+.publication-profile-link.orcid:hover {
+    background: var(--orcid-green);
+    color: var(--white);
+    border-color: var(--orcid-green);
+}
+
 .publications-grid {
     display: grid;
     gap: var(--spacing-md);

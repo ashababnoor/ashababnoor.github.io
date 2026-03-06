@@ -55,6 +55,15 @@
     color: var(--white);
 }
 
+.social-link.orcid {
+    color: var(--orcid-green);
+}
+
+.social-link.orcid:hover {
+    background: var(--orcid-green);
+    color: var(--white);
+}
+
 .social-link.email {
     color: var(--email-red);
 }
