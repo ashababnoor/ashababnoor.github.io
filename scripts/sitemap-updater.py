@@ -176,12 +176,13 @@ def update_sitemap():
     ET.register_namespace("", ns_uri)
 
     tree = load_existing_sitemap(SITEMAP_FILE)
-    pre_root = copy.deepcopy(tree.getroot())
     
     if tree:
         root = tree.getroot()
+        pre_root = copy.deepcopy(root)
     else:
         root = ET.Element("urlset", xmlns=ns_uri)
+        pre_root = copy.deepcopy(root)
 
     for path in PATHS_TO_CHECK:
         url = PATH_TO_URL.get(path)
