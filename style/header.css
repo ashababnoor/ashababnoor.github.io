@@ -62,13 +62,13 @@
 
 /* Dark mode toggle state */
 [data-theme="dark"] .toggle-track {
-    background: #475569;
-    border-color: #64748b;
+    background: #3f3f46;
+    border-color: #52525b;
 }
 
 [data-theme="dark"] .toggle-thumb {
     transform: translateX(1.3rem);
-    background: #1e293b;
+    background: #d4d4d8;
 }
 
 [data-theme="dark"] .toggle-icon-moon {
@@ -80,7 +80,7 @@
 }
 
 [data-theme="dark"] .theme-toggle:hover .toggle-track {
-    border-color: #94a3b8;
+    border-color: #71717a;
 }
 
 /* Header Section */
