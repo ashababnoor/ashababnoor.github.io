@@ -1,0 +1,53 @@
+# Ahmed Shabab Noor
+
+> Software Engineer III at Fin.com | Ex Data Engineer II at Pathao | Based in Dhaka, Bangladesh
+
+## About
+
+Ahmed Shabab Noor is a Software Engineer specializing in scalable backend systems, data platforms, machine learning, and analytics. He currently works as Software Engineer III at Fin.com, a stablecoin-powered global payment infrastructure company, where he builds payment infrastructure for global money movement using Go, Docker, PostgreSQL, and microservices architecture.
+
+Previously, he was Data Engineer II at Pathao (Bangladesh's largest super-app), where he designed dynamic funnel analytics systems processing 500M+ data points, built a Bangla transliteration service increasing search coverage by 15x, and developed personalization algorithms reducing checkout navigation time by 32%.
+
+He graduated Summa Cum Laude (CGPA 3.99/4.00) in Computer Science and Engineering from United International University with a 100% academic scholarship across 9 trimesters.
+
+## Contact
+
+- Email: ashababnoor@gmail.com
+- LinkedIn: https://linkedin.com/in/ashababnoor
+- GitHub: https://github.com/ashababnoor
+- Google Scholar: https://scholar.google.com/citations?user=b6chKnEAAAAJ
+- Website: https://ashababnoor.github.io/
+
+## Skills
+
+- Languages: Go, Python, SQL, JavaScript, TypeScript, Java, C, PHP, Bash
+- Cloud & Infrastructure: Google Cloud Platform, Docker, Kubernetes, Helm, GitLab CI, GitHub Actions, AWS, Kafka, Consul
+- Data Engineering & Analytics: dbt, BigQuery, Redash, Looker Studio, Tableau
+- Databases: BigQuery, PostgreSQL, MySQL, Redis, Neo4j, Firebase
+- Data Science & ML: Pandas, NumPy, Scikit-learn, Jupyter, Matplotlib, Plotly, Dash
+
+## Experience
+
+### Software Engineer III - Fin.com (Dec 2025 - Present)
+Stablecoin-powered global payment infrastructure company. Building payment infrastructure using Go, Docker, PostgreSQL, and microservices. Designed high-throughput transaction processing systems and developed automated compliance monitoring achieving 99.7% accuracy. Built real-time currency conversion engine handling 50+ currency pairs.
+
+### Data Engineer II - Pathao (Jul 2024 - Dec 2025)
+Designed dynamic funnel analytics system processing 500M+ data points. Built Bangla transliteration microservice increasing search coverage by 15x. Developed personalization algorithms reducing checkout navigation time by 32%. Designed A/B testing framework for data-driven product decisions. Built modular data models using dbt with optimized queries for cost savings.
+
+### Data Engineer I - Pathao (Mar 2023 - Jun 2024)
+Built ML models for ETA prediction in Dhaka and Chittagong, improving within-threshold rides from 20% to 60%. Developed address parsing service improving hub-level coverage by 10% and saving ~102K BDT/month. Built Bangla-to-English transliteration algorithm for address parsing. Redesigned Firebase user behavioral data pipeline processing 50-60M rows/day. Managed fraud detection systems for food vertical. Conducted A/B test analyses identifying ~$7K USD/month in potential savings. Optimized Redis storage reducing memory consumption by 72%.
+
+### Data Engineering Intern - Pathao (Oct 2022 - Feb 2023)
+Built CLI tools for data dictionary workflows. Developed first ML solution for ride pickup ETA prediction for Dhaka city. Researched data governance solutions. Worked on fraud detection using machine learning.
+
+## Education
+
+- B.Sc. in Computer Science and Engineering - United International University (Summa Cum Laude, CGPA 3.99/4.00, 100% Academic Scholarship)
+- Higher Secondary Certificate - Notre Dame College, Dhaka
+
+## Publications
+
+1. "Attention-Based Scene Graph Generation: A Review" - IEEE SKIMA 2022 (https://ieeexplore.ieee.org/abstract/document/10029570)
+2. "A novel method for imbalanced data classification based on label reassignment" - IEEE TENCON 2022 (https://ieeexplore.ieee.org/abstract/document/9978090)
+3. "Diabetes Mellitus prediction using Transfer Learning" - Springer MIET 2022 (https://link.springer.com/chapter/10.1007/978-3-031-34619-4_7)
+4. "The impact of data locality on the performance of cluster-based under-sampling" - Springer MIET 2022 (https://link.springer.com/chapter/10.1007/978-3-031-34622-4_16)
