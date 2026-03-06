@@ -15,6 +15,11 @@ body {
     color: var(--text-primary);
     line-height: var(--line-height-relaxed);
     font-size: var(--base-font-size);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] img:not(.profile-image):not(.skill-icon) {
+    filter: brightness(0.9);
 }
 
 .container {
