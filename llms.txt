@@ -10,13 +10,13 @@ Previously, he was Data Engineer II at Pathao (Bangladesh's largest super-app), 
 
 He graduated Summa Cum Laude (CGPA 3.99/4.00) in Computer Science and Engineering from United International University with a 100% academic scholarship across 9 trimesters.
 
-## Contact
+## Links
 
-- Email: ashababnoor@gmail.com
-- LinkedIn: https://linkedin.com/in/ashababnoor
-- GitHub: https://github.com/ashababnoor
-- Google Scholar: https://scholar.google.com/citations?user=b6chKnEAAAAJ
-- Website: https://ashababnoor.github.io/
+- [Portfolio & Resume](https://ashababnoor.github.io/): Full professional profile, work experience, skills, and publications
+- [LinkedIn](https://linkedin.com/in/ashababnoor): Professional network profile with endorsements and recommendations
+- [GitHub](https://github.com/ashababnoor): Open source projects and code samples
+- [Google Scholar](https://scholar.google.com/citations?user=b6chKnEAAAAJ): Academic publications and citation metrics (4 peer-reviewed papers in IEEE/Springer)
+- [Email](mailto:ashababnoor@gmail.com): ashababnoor@gmail.com — for professional inquiries
 
 ## Skills
 
