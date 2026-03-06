@@ -266,6 +266,10 @@
     .company-name {
         font-size: calc(var(--font-xl) * var(--modifier-1-0));
     }
+
+    .company-link {
+        font-size: 0.65em;
+    }
     
     /* Style adjustments for publication cards */
     /* .publication-title {
