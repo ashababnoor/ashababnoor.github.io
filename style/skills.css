@@ -71,6 +71,10 @@
     /* No filter - shows colorful SVG icons */
 }
 
+[data-theme="dark"] .skill-tags .skill-tag .skill-icon[alt="macOS"] {
+    filter: invert(1);
+}
+
 .skill-tags .skill-tag:hover {
     background: var(--surface);
     transform: translateY(var(--transform-skill-hover-y));
