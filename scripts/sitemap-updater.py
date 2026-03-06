@@ -158,6 +158,17 @@ def indent(elem, level=0):
 def write_pretty_xml(tree, filename):
     indent(tree.getroot())
     tree.write(filename, encoding="UTF-8", xml_declaration=True)
+    # Rewrite with double-quoted XML declaration and trailing newline
+    with open(filename, "r", encoding="utf-8") as f:
+        content = f.read()
+    content = content.replace(
+        "<?xml version='1.0' encoding='UTF-8'?>",
+        '<?xml version="1.0" encoding="UTF-8"?>'
+    )
+    if not content.endswith("\n"):
+        content += "\n"
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(content)
 
 
 def find_url_element(root, url, ns_uri):
