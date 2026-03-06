@@ -19,7 +19,14 @@
     --orcid-green: #A6CE39;
     --position-separator: #f0f0f0;
     --white: #ffffff;
-    
+
+    /* Toggle */
+    --toggle-track-bg: #e2e8f0;
+    --toggle-thumb-bg: #ffffff;
+    --toggle-icon-color: #64748b;
+    --toggle-sun-color: #fbbf24;
+    --toggle-hover-border: #a1a1aa;
+
     /* Shadows */
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -169,4 +176,11 @@
     --github-dark: rgba(255, 255, 255, 0.87);
     --shadow: none;
     --shadow-hover: none;
+
+    /* Toggle */
+    --toggle-track-bg: rgba(255, 255, 255, 0.12);
+    --toggle-thumb-bg: rgba(255, 255, 255, 0.87);
+    --toggle-icon-color: rgba(255, 255, 255, 0.38);
+    --toggle-sun-color: #fbbf24;
+    --toggle-hover-border: rgba(255, 255, 255, 0.25);
 }
