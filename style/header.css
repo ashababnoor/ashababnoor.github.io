@@ -100,6 +100,7 @@
 }
 
 .btn-secondary.linkedin {
+    --brand-color: var(--linkedin-blue);
     color: var(--linkedin-blue);
 }
 
@@ -109,12 +110,18 @@
 }
 
 .btn-secondary.resume {
+    --brand-color: var(--resume-green);
     color: var(--resume-green);
 }
 
 .btn-secondary.resume:hover {
     background: var(--resume-green);
     color: var(--white-constant);
+}
+
+.btn-secondary.email {
+    --brand-color: var(--email-red);
+    color: var(--email-red);
 }
 
 .btn-secondary.email:hover {

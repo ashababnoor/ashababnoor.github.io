@@ -29,6 +29,7 @@
 }
 
 .social-link.linkedin {
+    --brand-color: var(--linkedin-blue);
     color: var(--linkedin-blue);
 }
 
@@ -38,6 +39,7 @@
 }
 
 .social-link.github {
+    --brand-color: var(--github-dark);
     color: var(--github-dark);
 }
 
@@ -47,6 +49,7 @@
 }
 
 .social-link.scholar {
+    --brand-color: var(--scholar-blue);
     color: var(--scholar-blue);
 }
 
@@ -56,6 +59,7 @@
 }
 
 .social-link.orcid {
+    --brand-color: var(--orcid-green);
     color: var(--orcid-green);
 }
 
@@ -65,6 +69,7 @@
 }
 
 .social-link.email {
+    --brand-color: var(--email-red);
     color: var(--email-red);
 }
 
