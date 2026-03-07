@@ -120,18 +120,19 @@
     font-size: calc(var(--font-sm) * var(--modifier-1-0));
     font-style: italic;
     margin-bottom: var(--spacing-md);
+    text-align: justify;
 }
 
 .position-description ul {
     list-style: none;
     /* margin-bottom: var(--spacing-md); */
-    margin-left: calc(var(--spacing-sm) * var(--modifier-0-8));
+    margin-left: 0;
 }
 
 .position-description li {
     color: var(--text-secondary);
     margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-8));
-    padding-left: var(--spacing-lg);
+    padding-left: var(--spacing-md);
     position: relative;
     line-height: var(--line-height-tight);
     font-size: var(--font-sm);
