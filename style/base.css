@@ -22,6 +22,10 @@ body {
     filter: brightness(0.9);
 }
 
+[data-theme="dark"] .light-text-dark-mode {
+    color: color-mix(in srgb, currentColor, white 20%);
+}
+
 .container {
     max-width: var(--container-max-width);
     margin: 0 auto;

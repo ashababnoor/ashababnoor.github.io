@@ -34,7 +34,7 @@
 
 .social-link.linkedin:hover {
     background: var(--linkedin-blue);
-    color: var(--white);
+    color: var(--white-constant);
 }
 
 .social-link.github {
@@ -52,7 +52,7 @@
 
 .social-link.scholar:hover {
     background: var(--scholar-blue);
-    color: var(--white);
+    color: var(--white-constant);
 }
 
 .social-link.orcid {
@@ -61,7 +61,7 @@
 
 .social-link.orcid:hover {
     background: var(--orcid-green);
-    color: var(--white);
+    color: var(--white-constant);
 }
 
 .social-link.email {
@@ -70,7 +70,7 @@
 
 .social-link.email:hover {
     background: var(--email-red);
-    color: var(--white);
+    color: var(--white-constant);
 }
 
 .social-link i {

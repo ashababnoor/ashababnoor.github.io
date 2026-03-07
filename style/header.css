@@ -99,14 +99,27 @@
     gap: var(--spacing-md);
 }
 
+.btn-secondary.linkedin {
+    color: var(--linkedin-blue);
+}
+
 .btn-secondary.linkedin:hover {
     background: var(--linkedin-blue);
-    color: var(--white);
+    color: var(--white-constant);
+}
+
+.btn-secondary.resume {
+    color: var(--resume-green);
+}
+
+.btn-secondary.resume:hover {
+    background: var(--resume-green);
+    color: var(--white-constant);
 }
 
 .btn-secondary.email:hover {
     background: var(--email-red);
-    color: var(--white);
+    color: var(--white-constant);
 }
 
 .profile-img img {
@@ -209,10 +222,6 @@
     color: var(--primary-color);
 }
 
-/* .email-contact i {
-    color: var(--text-muted);
-} */
-
 .email-link {
     color: var(--text-muted);
     text-decoration: none;
@@ -221,6 +230,10 @@
 
 .email-link:hover {
     color: var(--primary-color);
+}
+
+[data-theme="dark"] .email-link:hover {
+    color: var(--primary-hover);
 }
 
 /* Contact Buttons */
@@ -252,7 +265,7 @@
 
 .btn-primary:hover {
     background: var(--primary-color);
-    color: var(--white);
+    color: var(--white-constant);
     transform: translateY(var(--transform-hover-y));
     box-shadow: var(--shadow-hover);
 }
@@ -263,7 +276,7 @@
 
 .btn-secondary:hover {
     background: var(--primary-color);
-    color: var(--white);
+    color: var(--white-constant);
     transform: translateY(var(--transform-hover-y));
     box-shadow: var(--shadow-hover);
 }

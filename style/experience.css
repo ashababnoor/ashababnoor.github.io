@@ -206,6 +206,10 @@
     color: var(--primary-color);
 }
 
+[data-theme="dark"] .expand-toggle:hover {
+    color: var(--primary-hover);
+}
+
 .expand-toggle:focus {
     outline: none;
 }

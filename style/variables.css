@@ -17,8 +17,10 @@
     --scholar-blue: #4285f4;
     --email-red: #ea4335;
     --orcid-green: #A6CE39;
+    --resume-green: #059669;
     --position-separator: #f0f0f0;
     --white: #ffffff;
+    --white-constant: #ffffff;
 
     /* Toggle */
     --toggle-track-bg: #e2e8f0;
@@ -158,8 +160,10 @@
 
 /* Dark Mode */
 [data-theme="dark"] {
-    --primary-color: #5b9cf5;
-    --primary-hover: #7db4f8;
+    /* --primary-color: #5b9cf5;
+    --primary-hover: #7db4f8; */
+    --primary-color: var(--text-secondary);
+    --primary-hover: var(--white-constant);
     --primary-light-color: #3b82f6;
     --secondary-color: #9ca3af;
     --secondary-light-color: #6b7280;
