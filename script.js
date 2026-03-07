@@ -17,6 +17,7 @@ function initThemeToggle() {
         const newTheme = isDark ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
+        this.blur();
     });
 }
 
@@ -197,7 +198,7 @@ function initializeExpandableContent() {
             expandableContainer.classList.add('collapsed');
             showMoreButton.style.display = 'flex';
             showLessButton.style.display = 'none';
-            
+
             // Scroll to show more button position
             showMoreButton.scrollIntoView({ 
                 behavior: 'smooth', 
