@@ -93,3 +93,13 @@
 .footer img {
     vertical-align: middle;
 }
+
+.muted-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition-normal) ease;
+}
+
+.muted-link:hover {
+    color: var(--primary-color);
+}
