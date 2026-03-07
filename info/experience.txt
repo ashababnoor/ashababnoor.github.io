@@ -1,10 +1,57 @@
 Experience
 ==========
 
-Company: Pathao (Oct 2022 - Present)
+Company: Fin.com (Dec 2025 - Present)
+Stablecoin powered global payment infrastructure company
+
+Software Engineer III (Dec 2025 - Present) [Full-time · Hybrid]
+- Designed and built a double-entry bookkeeping ledger microservice from scratch, serving as the core financial record-keeping system for a stablecoin payments platform.
+  - Architected the database schema (7 tables, 30+ indexes, partial unique constraints) and implemented a full Clean Architecture stack: REST API layer, service layer, and PostgreSQL repository layer.
+  - Implemented a cryptographic balance integrity system using SHA-256 hash chains — each balance update chains to the previous hash, creating a verifiable audit trail where any database tampering breaks the chain.
+  - All monetary amounts stored as integer cents to eliminate floating-point precision errors; supported 3 currencies at launch with extensible currency support.
+  - Wrote ~10,000 net lines of Go in a single month, delivering the service from design doc to production deployment.
+- Built the transaction processing engine supporting deposits, withdrawals, and automated reversals with proper double-entry accounting across 5 system wallet types.
+  - Every transaction creates balanced debit/credit journal entries across customer, master, partner, and platform accounts — enforcing the fundamental accounting equation.
+  - Implemented fee decomposition with dedicated journal entries, enabling per-transaction fee attribution and reconciliation.
+  - Designed an automated reversal system with complete reverse journal entries and full audit metadata, ensuring the ledger remains balanced at all times.
+  - Implemented concurrency-safe operations using pessimistic row-level locking with context-propagated database transactions ensuring atomicity across multi-account balance changes.
+- Architected an event-driven balance notification system using Kafka and a Redis-backed distributed task queue to broadcast balance changes to downstream services in real time.
+  - Built a production-grade Kafka connection manager with SASL authentication, TLS support, automatic reconnection, and background health checks.
+  - Implemented producer/consumer abstractions with Protocol Buffer serialization and Snappy compression. Events fire only after the database transaction commits to prevent phantom notifications.
+- Designed and built a complete Role-Based Access Control (RBAC) system from scratch for a multi-tenant developer portal, enforcing fine-grained permissions across 28+ scopes with a 3-tier role hierarchy.
+  - Implemented a wildcard scope matching engine supporting exact, namespace-level, and global wildcard patterns with full AND/OR logic.
+  - Built a cache-aside permission resolution layer using Redis with graceful degradation to PostgreSQL on cache failures, ensuring sub-millisecond permission checks.
+  - Wrote ~1,500 lines of unit tests covering scope matching, role hierarchy validation, cache behavior, and permission denial scenarios.
+- Architected and implemented a full team management system from scratch, supporting the complete member and invitation lifecycle — 13+ authenticated API endpoints and 3 public endpoints.
+  - Built a complete invitation lifecycle engine (create, accept, expire, revoke, resend) with capacity enforcement, cross-organization duplicate prevention, and automatic revocation of competing invitations.
+  - Implemented member status management with immediate access revocation — terminating all active OAuth sessions and enforcing status checks at the middleware layer on every authenticated request.
+  - Designed and implemented an asynchronous email notification pipeline for invitation workflows with delivery tracking via AWS SES, Redis-backed job processing, and a production-grade HTML email template with cross-client compatibility.
+- Built an API gateway/reverse proxy from scratch enforcing scope-based access control, environment isolation, and audit logging for all developer API traffic to the core payment processing service.
+  - Designed a regex-based scope-to-endpoint mapping system covering 45+ API endpoint patterns across 6 resource domains.
+  - Implemented mandatory environment header validation preventing cross-environment requests, with dynamic scope resolution fetched from the RBAC service.
+- Designed and built a multi-tenant API gateway/proxy service from scratch, enabling secure access to 3+ external financial APIs (payments, remittance, KYC) through a single authenticated entry point.
+  - Implemented cryptographic request signing for multiple APIs: HMAC-SHA256 with nonce-based replay protection for remittance, HMAC-SHA256 for KYC, and API-key auth with per-request idempotency keys for payments.
+  - Designed a defense-in-depth security architecture: HTTP Basic Auth, per-user service ACL with wildcards, sensitive URI firewall, and automatic credential stripping before forwarding.
+  - Built a hot-reloadable configuration system with Consul that swaps credentials, ACLs, and service definitions at runtime without restarts.
+  - Achieved near 1:1 test-to-production code ratio (~1,570 lines of tests for ~1,566 lines of production code).
+- Designed and built a cross-currency fee calculation engine from scratch, enabling real-time fee estimation for international money transfers across multiple currency corridors.
+  - Implemented bidirectional calculation: forward mode (sender specifies send amount) and reverse mode (system back-calculates required send amount inclusive of fees and FX conversion).
+  - Extended batch payment processing to support destination-amount transactions with integer-only fixed-point arithmetic, overflow guards, and commit-time validation against live FX rates.
+  - Optimized batch FX rate lookups from N individual queries to a single PostgreSQL DISTINCT ON query.
+- Designed and implemented a full fiat-to-crypto virtual account integration from scratch, enabling USD and EUR virtual account provisioning as a new payment rail.
+  - Implemented ES384 (ECDSA P-384) JWT request signing — dynamically constructing claims with HTTP method, URL path, SHA-256 body hash, and query parameters.
+  - Integrated KYC share tokens for the provider's KYC reliance flow and implemented webhook handlers for customer status events and inbound fiat deposits.
+  - Built a poll-based virtual account watcher with atomic state transitions, retry counting, and dead-letter failure states to advance records through the provider pipeline lifecycle.
+- Built Kafka event-driven communication infrastructure from scratch, establishing the asynchronous inter-service messaging backbone across the platform.
+  - Implemented producer/consumer abstractions with Protobuf serialization via a shared contract library, with event audit logging to PostgreSQL.
+  - Built an event-driven customer onboarding pipeline with Unit-of-Work integration for atomic transactional writes and idempotent customer creation to prevent duplicate records from event replays.
+
+---
+
+Company: Pathao (Oct 2022 - Dec 2025)
 On-demand digital platform and mobility company
 
-Data Engineer II (Jul 2024 - Present · 7 mos) [Full-time]
+Data Engineer II (Jul 2024 - Dec 2025 · 1 yr 6 mos) [Full-time · On-site]
 - Designed and developed a dynamic funnel analytics system for user activity across verticals.
   - Data aggregator merges data from various sources including Firebase, Pub/Sub, and transactional DBs (Postgres/MySQL) with deduplication at user-second granularity.
   - Dynamic set of queries generate funnels with different visualizations; 500M+ data points processed (and growing).
@@ -13,7 +60,7 @@ Data Engineer II (Jul 2024 - Present · 7 mos) [Full-time]
 - Completely redesigned and rebuilt the transliteration system as a standalone Go library.
   - Created a microservice for text transliteration with a real-time testing interface.
   - Supports bidirectional Bangla-English transliteration.
-  - Integrated into Food Search (15.3× more Bangla search coverage, 15.1× more order confirmations) and Ride Location Search (Bangla coverage improved from 78.8% to 96.2%, 17.4% gain).
+  - Integrated into Food Search (15.3x more Bangla search coverage, 15.1x more order confirmations) and Ride Location Search (Bangla coverage improved from 78.8% to 96.2%, 17.4% gain).
 - Developed a personalization microservice in Go for allowing users to have personalized user experiences across verticals.
   - Developed personalization algorithm for food home-screen restaurant collections, showing users restaurants that better match their preferences. This led to users taking 32.53% less time when navigating to checkout page.
   - Developed data pipelines with ETL to generate preference data and user profiles.
@@ -32,10 +79,10 @@ Data Engineer II (Jul 2024 - Present · 7 mos) [Full-time]
 - Assisted internal fraud analytics and investigations.
 - Regularly review and merge pull requests from team members on company self-hosted Gitlab.
 
-Data Engineer I (Mar 2023 - Jun 2024 · 1 yr 4 mos) [Full-time]
+Data Engineer I (Mar 2023 - Jun 2024 · 1 yr 4 mos) [Full-time · On-site]
 - Designed and implemented machine learning models for accurate ETA prediction in Dhaka and Chittagong.
   - Created prediction models for both pickup ETA and drop-off ETA.
-  - Improved Chittagong’s within-threshold rides from 20% to 60%.
+  - Improved Chittagong's within-threshold rides from 20% to 60%.
   - Built specialized ETA models for holidays (Eid, Ramadan).
   - Built comprehensive dashboards for monitoring ETA performance and debugging ETA related issues.
 - Contributed as a team member in developing a robust address parsing service for courier operations.
@@ -61,7 +108,7 @@ Data Engineer I (Mar 2023 - Jun 2024 · 1 yr 4 mos) [Full-time]
   - Developed dbt data models for cleaning and transforming Firebase data making it easier to analyze.
   - Developed a session generator that can fill missing Google Analytics session identifiers.
   - Extended the pipeline to process data generated from different sources, i.e., Pathao user app, driver app, courier agent app, courier merchant app/web-panel.
-  - Processes roughly 50–60 million rows per day (and growing).
+  - Processes roughly 50-60 million rows per day (and growing).
 - Conducted A/B test analysis to help stakeholders make data-driven decisions.
   - Performed A/B test analysis on user engagement metrics on 3rd party service providers, helping stakeholders make decisions to save $1,000 USD per month.
   - Performed A/B test analysis on Google Maps vs internal ETA identifying ~750K BDT/month (6K USD) potential savings.
@@ -70,9 +117,9 @@ Data Engineer I (Mar 2023 - Jun 2024 · 1 yr 4 mos) [Full-time]
 - Developed machine learning solutions for address data deduplication for in-house map service.
 - Taken data protection measures by hashing sensitive data.
 
-Data Engineering Intern (Oct 2022 - Feb 2023 · 5 mos) [Internship]
-- Built command-line tools for data dictionary workflows and log management.
+Data Engineering Intern (Oct 2022 - Feb 2023 · 5 mos) [Internship · On-site]
 - Developed first ever machine learning solution for ride pickup ETA prediction for Dhaka city.
+- Built command-line tools for data dictionary workflows and log management.
 - Researched and evaluated solutions for data governance (column-level access, advanced search and tagging).
 - Contributed to enhancements of the in-house map system.
 - Worked on fraud detection using machine learning.
