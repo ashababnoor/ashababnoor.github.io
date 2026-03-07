@@ -23,8 +23,6 @@
     /* Toggle */
     --toggle-track-bg: #e2e8f0;
     --toggle-thumb-bg: #ffffff;
-    --toggle-icon-color: #64748b;
-    --toggle-sun-color: #fbbf24;
     --toggle-hover-border: #a1a1aa;
 
     /* Shadows */
@@ -180,7 +178,5 @@
     /* Toggle */
     --toggle-track-bg: rgba(255, 255, 255, 0.12);
     --toggle-thumb-bg: rgba(255, 255, 255, 0.30);
-    --toggle-icon-color: rgba(255, 255, 255, 0.85);
-    --toggle-sun-color: #fbbf24;
     --toggle-hover-border: rgba(255, 255, 255, 0.25);
 }

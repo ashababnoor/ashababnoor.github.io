@@ -36,39 +36,7 @@
     background: var(--toggle-thumb-bg);
     border-radius: var(--radius-full);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: transform 0.25s ease-in-out;
-}
-
-.toggle-icon-moon,
-.toggle-icon-sun {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.55rem;
-    transition: opacity var(--transition-normal) ease;
-}
-
-.toggle-icon-moon {
-    right: 6px;
-    color: var(--toggle-icon-color);
-    opacity: 0;
-}
-
-.toggle-icon-sun {
-    left: 6px;
-    color: var(--toggle-sun-color);
-    opacity: 1;
-}
-
-[data-theme="dark"] .toggle-icon-sun {
-    opacity: 0;
-}
-
-[data-theme="dark"] .toggle-icon-moon {
-    opacity: 1;
 }
 
 .theme-toggle:hover .toggle-track {
