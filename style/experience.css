@@ -115,6 +115,13 @@
     margin-bottom: var(--spacing-md);
 }
 
+.position-summary {
+    color: var(--text-secondary);
+    font-size: calc(var(--font-sm) * var(--modifier-1-0));
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+}
+
 .position-description ul {
     list-style: none;
     /* margin-bottom: var(--spacing-md); */

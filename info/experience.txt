@@ -5,46 +5,24 @@ Company: Fin.com (Dec 2025 - Present)
 Stablecoin powered global payment infrastructure company
 
 Software Engineer III (Dec 2025 - Present) [Full-time · Hybrid]
-- Designed and built a double-entry bookkeeping ledger microservice from scratch, serving as the core financial record-keeping system for a stablecoin payments platform.
-  - Architected the database schema (7 tables, 30+ indexes, partial unique constraints) and implemented a full Clean Architecture stack: REST API layer, service layer, and PostgreSQL repository layer.
-  - Implemented a cryptographic balance integrity system using SHA-256 hash chains — each balance update chains to the previous hash, creating a verifiable audit trail where any database tampering breaks the chain.
-  - All monetary amounts stored as integer cents to eliminate floating-point precision errors; supported 3 currencies at launch with extensible currency support.
-  - Wrote ~10,000 net lines of Go in a single month, delivering the service from design doc to production deployment.
-- Built the transaction processing engine supporting deposits, withdrawals, and automated reversals with proper double-entry accounting across 5 system wallet types.
-  - Every transaction creates balanced debit/credit journal entries across customer, master, partner, and platform accounts — enforcing the fundamental accounting equation.
-  - Implemented fee decomposition with dedicated journal entries, enabling per-transaction fee attribution and reconciliation.
-  - Designed an automated reversal system with complete reverse journal entries and full audit metadata, ensuring the ledger remains balanced at all times.
-  - Implemented concurrency-safe operations using pessimistic row-level locking with context-propagated database transactions ensuring atomicity across multi-account balance changes.
-- Architected an event-driven balance notification system using Kafka and a Redis-backed distributed task queue to broadcast balance changes to downstream services in real time.
-  - Built a production-grade Kafka connection manager with SASL authentication, TLS support, automatic reconnection, and background health checks.
-  - Implemented producer/consumer abstractions with Protocol Buffer serialization and Snappy compression. Events fire only after the database transaction commits to prevent phantom notifications.
-- Designed and built a complete Role-Based Access Control (RBAC) system from scratch for a multi-tenant developer portal, enforcing fine-grained permissions across 28+ scopes with a 3-tier role hierarchy.
-  - Implemented a wildcard scope matching engine supporting exact, namespace-level, and global wildcard patterns with full AND/OR logic.
-  - Built a cache-aside permission resolution layer using Redis with graceful degradation to PostgreSQL on cache failures, ensuring sub-millisecond permission checks.
-  - Wrote ~1,500 lines of unit tests covering scope matching, role hierarchy validation, cache behavior, and permission denial scenarios.
-- Architected and implemented a full team management system from scratch, supporting the complete member and invitation lifecycle — 13+ authenticated API endpoints and 3 public endpoints.
-  - Built a complete invitation lifecycle engine (create, accept, expire, revoke, resend) with capacity enforcement, cross-organization duplicate prevention, and automatic revocation of competing invitations.
-  - Implemented member status management with immediate access revocation — terminating all active OAuth sessions and enforcing status checks at the middleware layer on every authenticated request.
-  - Designed and implemented an asynchronous email notification pipeline for invitation workflows with delivery tracking via AWS SES, Redis-backed job processing, and a production-grade HTML email template with cross-client compatibility.
-- Built an API gateway/reverse proxy from scratch enforcing scope-based access control, environment isolation, and audit logging for all developer API traffic to the core payment processing service.
-  - Designed a regex-based scope-to-endpoint mapping system covering 45+ API endpoint patterns across 6 resource domains.
-  - Implemented mandatory environment header validation preventing cross-environment requests, with dynamic scope resolution fetched from the RBAC service.
-- Designed and built a multi-tenant API gateway/proxy service from scratch, enabling secure access to 3+ external financial APIs (payments, remittance, KYC) through a single authenticated entry point.
-  - Implemented cryptographic request signing for multiple APIs: HMAC-SHA256 with nonce-based replay protection for remittance, HMAC-SHA256 for KYC, and API-key auth with per-request idempotency keys for payments.
-  - Designed a defense-in-depth security architecture: HTTP Basic Auth, per-user service ACL with wildcards, sensitive URI firewall, and automatic credential stripping before forwarding.
-  - Built a hot-reloadable configuration system with Consul that swaps credentials, ACLs, and service definitions at runtime without restarts.
-  - Achieved near 1:1 test-to-production code ratio (~1,570 lines of tests for ~1,566 lines of production code).
-- Designed and built a cross-currency fee calculation engine from scratch, enabling real-time fee estimation for international money transfers across multiple currency corridors.
+Early engineer building core platform infrastructure from the ground up, leveraging AI-driven development for rapid delivery.
+- Built a double-entry bookkeeping ledger microservice from scratch, serving as the core financial record-keeping system for customers.
+  - Implemented cryptographic balance integrity using SHA-256 hash chains, creating a tamper-evident audit trail for all account balances.
+  - Built the transaction processing engine supporting deposits, withdrawals, and automated reversals with balanced journal entries across multiple system wallet types.
+- Built a Role-Based Access Control (RBAC) system from scratch for the orchestration dashboard, with a 3-tier role hierarchy and Redis-cached permission resolution.
+  - Implemented a complete team management system with full member and invitation lifecycle, including capacity enforcement, cross-organization duplicate prevention, and async email notifications via AWS SES.
+  - Built a reverse proxy layer within the dashboard backend, enforcing scope-based access control and environment isolation on all API traffic to the core orchestration service.
+  - Extended the authentication system to support dual-path onboarding — self-signup and invitation-based team joining.
+- Built an internal API gateway service from scratch, enabling the team to securely call external financial APIs (payments, remittance, KYC) without sharing secrets or giving direct vendor access.
+  - Implemented per-user service ACLs, sensitive endpoint blocking, and cryptographic request signing tailored to each vendor's auth protocol.
+  - Built a hot-reloadable configuration system via Consul for swapping credentials and ACLs at runtime without restarts.
+- Designed and built a cross-currency fee calculation engine enabling real-time fee estimation for international money transfers.
   - Implemented bidirectional calculation: forward mode (sender specifies send amount) and reverse mode (system back-calculates required send amount inclusive of fees and FX conversion).
-  - Extended batch payment processing to support destination-amount transactions with integer-only fixed-point arithmetic, overflow guards, and commit-time validation against live FX rates.
-  - Optimized batch FX rate lookups from N individual queries to a single PostgreSQL DISTINCT ON query.
-- Designed and implemented a full fiat-to-crypto virtual account integration from scratch, enabling USD and EUR virtual account provisioning as a new payment rail.
-  - Implemented ES384 (ECDSA P-384) JWT request signing — dynamically constructing claims with HTTP method, URL path, SHA-256 body hash, and query parameters.
-  - Integrated KYC share tokens for the provider's KYC reliance flow and implemented webhook handlers for customer status events and inbound fiat deposits.
-  - Built a poll-based virtual account watcher with atomic state transitions, retry counting, and dead-letter failure states to advance records through the provider pipeline lifecycle.
-- Built Kafka event-driven communication infrastructure from scratch, establishing the asynchronous inter-service messaging backbone across the platform.
-  - Implemented producer/consumer abstractions with Protobuf serialization via a shared contract library, with event audit logging to PostgreSQL.
-  - Built an event-driven customer onboarding pipeline with Unit-of-Work integration for atomic transactional writes and idempotent customer creation to prevent duplicate records from event replays.
+  - Extended batch payment processing to support destination-amount transactions with fixed-point arithmetic and commit-time validation against live FX rates.
+- Worked on integrating partners and vendors for virtual account provisioning and payout disbursements, enabling users to on-ramp and off-ramp across different currencies (including USD, AED, EUR) as new payment rails.
+  - Implemented webhook handlers for customer status events and transaction events, and built a poll-based virtual account watcher with atomic state transitions to advance records through the provider pipeline lifecycle.
+- Built an automated trade settlement reporting system that runs on a configurable cron schedule, aggregating trade data into CSV exports and delivering them to stakeholders via email.
+- Built Kafka event-driven messaging infrastructure with Protobuf serialization, establishing the async inter-service communication backbone across the platform.
 
 ---
 
