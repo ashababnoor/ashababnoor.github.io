@@ -5,7 +5,7 @@ Company: Fin.com (Dec 2025 - Present)
 Stablecoin powered global payment infrastructure company
 
 Software Engineer III (Dec 2025 - Present) [Full-time · Hybrid]
-Early engineer building core platform infrastructure from the ground up, leveraging AI-driven development for rapid delivery.
+Early engineer building core platform services from the ground up, leveraging AI-driven development for rapid delivery.
 - Built a double-entry bookkeeping ledger microservice from scratch, serving as the core financial record-keeping system for customers.
   - Implemented cryptographic balance integrity using SHA-256 hash chains, creating a tamper-evident audit trail for all account balances.
   - Built the transaction processing engine supporting deposits, withdrawals, and automated reversals with balanced journal entries across multiple system wallet types.
