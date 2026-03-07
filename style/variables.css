@@ -179,8 +179,8 @@
 
     /* Toggle */
     --toggle-track-bg: rgba(255, 255, 255, 0.12);
-    --toggle-thumb-bg: rgba(255, 255, 255, 0.87);
-    --toggle-icon-color: rgba(255, 255, 255, 0.38);
+    --toggle-thumb-bg: rgba(255, 255, 255, 0.30);
+    --toggle-icon-color: rgba(255, 255, 255, 0.85);
     --toggle-sun-color: #fbbf24;
     --toggle-hover-border: rgba(255, 255, 255, 0.25);
 }

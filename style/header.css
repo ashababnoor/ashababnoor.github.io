@@ -21,9 +21,11 @@
     width: 3rem;
     height: 1.625rem;
     background: var(--toggle-track-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-radius: 1rem;
-    transition: background var(--transition-normal) ease;
-    border: var(--base-border-width) solid var(--border);
+    border: 1px solid var(--border);
+    transition: all var(--transition-normal) ease;
 }
 
 .toggle-thumb {
@@ -33,27 +35,40 @@
     height: 1.2rem;
     background: var(--toggle-thumb-bg);
     border-radius: var(--radius-full);
-    box-shadow: var(--shadow);
-    transition: transform var(--transition-normal) ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease-in-out;
 }
 
 .toggle-icon-moon,
 .toggle-icon-sun {
     position: absolute;
-    font-size: 0.65rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.55rem;
     transition: opacity var(--transition-normal) ease;
 }
 
 .toggle-icon-moon {
     right: 6px;
     color: var(--toggle-icon-color);
-    opacity: 1;
+    opacity: 0;
 }
 
 .toggle-icon-sun {
     left: 6px;
     color: var(--toggle-sun-color);
+    opacity: 1;
+}
+
+[data-theme="dark"] .toggle-icon-sun {
     opacity: 0;
+}
+
+[data-theme="dark"] .toggle-icon-moon {
+    opacity: 1;
 }
 
 .theme-toggle:hover .toggle-track {
@@ -63,14 +78,7 @@
 /* Dark mode toggle state */
 [data-theme="dark"] .toggle-thumb {
     transform: translateX(1.3rem);
-}
-
-[data-theme="dark"] .toggle-icon-moon {
-    opacity: 0;
-}
-
-[data-theme="dark"] .toggle-icon-sun {
-    opacity: 1;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
 }
 
 /* Header Section */
