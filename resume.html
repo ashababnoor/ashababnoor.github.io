@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  PDF Generation
+  ==============
+  The resume PDF is generated from `resume.html` using Chrome's headless mode.
+  Requires: Google Chrome
+
+  Generate:
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+      --headless \
+      --disable-gpu \
+      --no-pdf-header-footer \
+      --print-to-pdf="assets/ahmed-shabab-noor-resume.pdf" \
+      resume.html
+
+  On Linux, replace the Chrome path with `google-chrome` or `chromium`.
+  Output: assets/ahmed-shabab-noor-resume.pdf
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ahmed Shabab Noor - Resume</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 52px 48px 44px 48px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 9.5pt;
+            line-height: 1.4;
+            color: #1a1a1a;
+            text-align: justify;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        @media screen {
+            body {
+                max-width: 100ch;
+                margin: 24px auto;
+                padding: 0 16px;
+                padding-bottom: 16px;
+            }
+        }
+
+        /* Inline SVG icons */
+        .icon {
+            display: inline-block;
+            width: 11px;
+            height: 11px;
+            vertical-align: -1.5px;
+            margin-right: 2px;
+        }
+        .icon-ext {
+            width: 9px;
+            height: 9px;
+            vertical-align: -0.5px;
+            margin-left: 2px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+        }
+        .header, .header * {
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 22pt;
+            font-weight: 700;
+            color: #111;
+            letter-spacing: 0.3px;
+            margin-bottom: 2px;
+            line-height: 1.2;
+        }
+        .header .subtitle {
+            font-size: 10.5pt;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        .header .contact {
+            font-size: 8.5pt;
+            color: #333;
+            line-height: 1.5;
+        }
+        .header .contact a {
+            color: #222;
+            text-decoration: none;
+        }
+        .header .contact .sep {
+            margin: 0 5px;
+            color: #bbb;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 13px;
+        }
+        .section-title {
+            font-size: 10.5pt;
+            font-weight: 700;
+            color: #0A66C2;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-align: left;
+        }
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: #0A66C2;
+        }
+
+        /* Summary */
+        .summary-text {
+            font-size: 9pt;
+            color: #2a2a2a;
+            line-height: 1.45;
+        }
+
+        /* Experience */
+        .company {
+            margin-bottom: 10px;
+        }
+        .company-name-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1px;
+        }
+        .company-name-row h3 {
+            font-size: 10.5pt;
+            font-weight: 700;
+            color: #111;
+        }
+        .company-name-row .company-desc {
+            font-size: 8.5pt;
+            color: #666;
+            font-style: italic;
+        }
+        .position {
+            margin-top: 2px;
+            margin-bottom: 6px;
+        }
+        .position:last-child {
+            margin-bottom: 0;
+        }
+        .position-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .position-row .title {
+            font-size: 9.5pt;
+            font-weight: 600;
+            color: #222;
+        }
+        .position-row .duration {
+            font-size: 8.5pt;
+            color: #555;
+            white-space: nowrap;
+        }
+        .position ul {
+            margin: 2px 0 2px 16px;
+            padding: 0;
+        }
+        .position li {
+            margin-bottom: 1px;
+            font-size: 8.5pt;
+            color: #2a2a2a;
+            line-height: 1.4;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .skill-row {
+            font-size: 9pt;
+            color: #2a2a2a;
+            line-height: 1.45;
+        }
+        .skill-row strong {
+            color: #111;
+        }
+
+        /* Education */
+        .edu-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .edu-row h3 {
+            font-size: 10.5pt;
+            font-weight: 700;
+            color: #111;
+        }
+        .edu-row .duration {
+            font-size: 8.5pt;
+            color: #555;
+        }
+        .edu-degree {
+            font-size: 9.5pt;
+            font-weight: 600;
+            color: #222;
+        }
+        .edu-details {
+            font-size: 9pt;
+            color: #2a2a2a;
+        }
+        .edu-details ul {
+            margin: 2px 0 3px 16px;
+        }
+        .edu-details li {
+            margin-bottom: 1.5px;
+        }
+
+        /* Publications */
+        .pub-item {
+            margin-bottom: 3px;
+            font-size: 8.5pt;
+            line-height: 1.45;
+        }
+        .pub-item a.pub-title-link {
+            font-weight: 600;
+            color: #222;
+            text-decoration: none;
+        }
+        .pub-item .pub-venue {
+            font-style: italic;
+            color: #555;
+        }
+        .pub-item .pub-ext {
+            color: #0A66C2;
+            text-decoration: none;
+        }
+
+        /* Achievements */
+        .achievement-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+            font-size: 9pt;
+        }
+        .achievement-item .achievement-text {
+            color: #2a2a2a;
+        }
+        .achievement-item .achievement-text strong {
+            color: #111;
+        }
+        .achievement-item .achievement-meta {
+            font-size: 8.5pt;
+            color: #555;
+            white-space: nowrap;
+            margin-left: 12px;
+        }
+
+        /* References */
+        .ref-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+        }
+        .ref-item {
+            font-size: 8.5pt;
+            line-height: 1.45;
+        }
+        .ref-name {
+            font-weight: 600;
+            color: #111;
+            font-style: italic;
+        }
+        .ref-title {
+            color: #333;
+        }
+        .ref-org {
+            color: #555;
+        }
+        .ref-contact {
+            margin-top: 2px;
+            color: #2a2a2a;
+        }
+        .ref-contact a {
+            color: #222;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Ahmed Shabab Noor</h1>
+        <div class="subtitle">Software Engineer III @ Fin.com</div>
+        <div class="contact">
+            <!-- Location pin -->
+            <!-- <svg class="icon" viewBox="0 0 384 512" fill="#444"><path d="M192 0C86 0 0 86 0 192c0 136 192 320 192 320s192-184 192-320C384 86 298 0 192 0zm0 272c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80z"/></svg>
+            Dhaka, Bangladesh
+            <span class="sep">|</span> -->
+            <!-- Envelope -->
+            <svg class="icon" viewBox="0 0 512 512" fill="#444"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+            <a href="mailto:ashababnoor@gmail.com">ashababnoor@gmail.com</a>
+            <span class="sep">|</span>
+            <!-- LinkedIn -->
+            <svg class="icon" viewBox="0 0 448 512" fill="#444"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 01107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.83-48.3 93.97 0 111.31 61.9 111.31 142.3V448z"/></svg>
+            <a href="https://linkedin.com/in/ashababnoor">ashababnoor</a>
+            <span class="sep">|</span>
+            <!-- GitHub -->
+            <svg class="icon" viewBox="0 0 496 512" fill="#444"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.8-14.3-112.8-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg>
+            <a href="https://github.com/ashababnoor">ashababnoor</a>
+            <span class="sep">|</span>
+            <!-- Google Scholar -->
+            <svg class="icon" viewBox="0 0 512 512" fill="#444"><path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c45.9 0 86.9 20.7 114.4 53.3c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.7zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/></svg>
+            <a href="https://scholar.google.com/citations?user=b6chKnEAAAAJ">Ahmed Shabab Noor</a>
+            <span class="sep">|</span>
+            <!-- Link / Website -->
+            <svg class="icon" viewBox="0 0 640 512" fill="#444"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L405.3 351.5c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C189.5 251.2 196 330 246 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372.1 74 321.1 105.5 289.5L234.7 160.5c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.8l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C451 260.8 444 182 394 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg>
+            <a href="https://ashababnoor.github.io">ashababnoor.github.io</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Summary</div>
+        <p class="summary-text">Software Engineer specializing in scalable backend systems, data platforms, and advanced analytics. AI-native engineer who builds fast across any domain. Skilled in building robust pipelines, ML solutions, and data-driven applications to deliver actionable insights. Expert in Go, Python, SQL, dbt, BigQuery, and cloud-native technologies. Published researcher with 4 peer-reviewed papers at IEEE and Springer conferences. Passionate about exploring new technologies and solving complex engineering challenges.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Experience</div>
+
+        <div class="company">
+            <div class="company-name-row">
+                <h3>Fin.com</h3>
+                <span class="company-desc">Stablecoin powered global payment infrastructure</span>
+            </div>
+            <div class="position">
+                <div class="position-row">
+                    <span class="title">Software Engineer III</span>
+                    <span class="duration">Dec 2025 - Present</span>
+                </div>
+                <ul>
+                    <li>Early engineer building core platform services from the ground up, leveraging AI-driven development for rapid delivery.</li>
+                    <li>Built a double-entry bookkeeping ledger microservice from scratch with SHA-256 hash chain balance integrity and transaction processing engine supporting deposits, withdrawals, and automated reversals with balanced journal entries.</li>
+                    <li>Built RBAC system with 3-tier role hierarchy, Redis-cached permission resolution, complete team management with member and invitation lifecycle, capacity enforcement, and cross-organization duplicate prevention.</li>
+                    <li>Built a reverse proxy layer enforcing scope-based access control and environment isolation on all API traffic to the core orchestration service. Extended auth to support dual-path onboarding.</li>
+                    <li>Built internal API gateway for secure external financial API calls (payments, remittance, KYC) with per-user service ACLs, sensitive endpoint blocking, cryptographic request signing, and hot-reloadable Consul-based configuration.</li>
+                    <li>Designed cross-currency fee calculation engine with bidirectional calculation (forward/reverse mode) and extended batch payment processing with fixed-point arithmetic and commit-time validation against live FX rates.</li>
+                    <li>Integrated partners for virtual account provisioning and payout disbursements across USD, AED, EUR. Built webhook handlers for customer/transaction events and poll-based virtual account watcher with atomic state transitions.</li>
+                    <li>Built automated trade settlement reporting system aggregating trade data into CSV exports on configurable cron schedule, delivered via AWS SES.</li>
+                    <li>Built Kafka event-driven messaging infrastructure with Protobuf serialization, establishing the async inter-service communication backbone across the platform.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="company">
+            <div class="company-name-row">
+                <h3>Pathao</h3>
+                <span class="company-desc">On-demand digital platform and mobility company</span>
+            </div>
+
+            <div class="position">
+                <div class="position-row">
+                    <span class="title">Data Engineer II</span>
+                    <span class="duration">Jul 2024 - Dec 2025</span>
+                </div>
+                <ul>
+                    <li>Designed and developed a dynamic funnel analytics system merging data from Firebase, Pub/Sub, and transactional DBs with deduplication at user-second granularity. Processes 500M+ data points, saving ~$400K USD annually vs. market alternatives and 120+ man-hours/month.</li>
+                    <li>Completely redesigned and rebuilt the transliteration system as a standalone Go library with bidirectional Bangla-English support. Integrated into Food Search (15.3x more Bangla coverage, 15.1x more order confirmations) and Ride Location Search (78.8% to 96.2% Bangla coverage).</li>
+                    <li>Developed personalization microservice in Go with preference algorithms for food home-screen restaurant collections, reducing checkout navigation time by 32.53%. Built ETL pipelines for preference data and user profiles with smart caching.</li>
+                    <li>Built food search auto-suggestion POC, data pipelines for restaurant/dish/cuisine features, and performance benchmark dashboards for KPI tracking.</li>
+                    <li>Applied genetic algorithm to optimize string matching weights for address parsing, increasing area-level coverage by 2%. Enhanced missing place finder with multi-token support and rich notifications.</li>
+                    <li>Upgraded address history pipeline integrating partial orders data, adding ~2.7M new users' addresses and ~20M total addresses.</li>
+                    <li>Developed driver location ping analysis tools with map visualizations. Created monitoring dashboards for ETL pipelines and system health.</li>
+                </ul>
+            </div>
+
+            <div class="position">
+                <div class="position-row">
+                    <span class="title">Data Engineer I</span>
+                    <span class="duration">Mar 2023 - Jun 2024</span>
+                </div>
+                <ul>
+                    <li>Designed and implemented ML models for ETA prediction in Dhaka and Chittagong, improving Chittagong's within-threshold rides from 20% to 60%. Built specialized holiday ETA models and comprehensive debugging dashboards.</li>
+                    <li>Contributed to address parsing service using customer historical data, improving hub-level coverage by 10%, accuracy by 1.5%, and overall accuracy by 7.5% (saving ~102K BDT/month). Optimized Redis storage reducing memory by 72%, saving $120/month per VM.</li>
+                    <li>Developed Bangla-to-English transliteration algorithm improving hub-level coverage by 8%, district-level by 1%.</li>
+                    <li>Built missing place finder using NLP on user address data, discovering 784 new landmarks in 2 major cities.</li>
+                    <li>Redesigned Firebase user behavioral data pipeline with dbt models processing 50-60M rows/day across multiple app sources.</li>
+                    <li>Conducted A/B test analysis on engagement metrics and Google Maps vs internal ETA, identifying $1K/month and ~$6K/month potential savings.</li>
+                    <li>Managed fraud detection systems; developed ML solutions for address deduplication; built reusable dbt data models focused on quality and scalability.</li>
+                </ul>
+            </div>
+
+            <div class="position">
+                <div class="position-row">
+                    <span class="title">Data Engineering Intern</span>
+                    <span class="duration">Oct 2022 - Feb 2023</span>
+                </div>
+                <ul>
+                    <li>Developed first-ever ML solution for ride pickup ETA prediction for Dhaka city.</li>
+                    <li>Built CLI tools for data dictionary workflows and log management. Researched data governance solutions (column-level access, tagging).</li>
+                    <li>Contributed to in-house map system enhancements and worked on fraud detection using ML.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+            <div class="skill-row"><strong>Languages:</strong> Python, Go, SQL, JavaScript, TypeScript, Java, C, Bash</div>
+            <div class="skill-row"><strong>Cloud & Infra:</strong> GCP, AWS, Docker, Kubernetes, Helm, Kafka, Consul, GitLab CI, GitHub Actions</div>
+            <div class="skill-row"><strong>Data & Analytics:</strong> BigQuery, dbt, Redash, Looker Studio, Tableau</div>
+            <div class="skill-row"><strong>Databases:</strong> PostgreSQL, MySQL, Redis, Neo4j, Firebase</div>
+            <div class="skill-row"><strong>ML & Data Science:</strong> Pandas, NumPy, Scikit-learn, Matplotlib, Plotly</div>
+            <div class="skill-row"><strong>Tools:</strong> Git, VS Code, JetBrains IDEs, Postman, Jira, Notion</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education</div>
+        <div class="edu-row">
+            <h3>United International University</h3>
+            <span class="duration">Sep 2019 - Jan 2023</span>
+        </div>
+        <div class="edu-degree">Bachelor of Science in Computer Science and Engineering</div>
+        <div class="edu-details">
+            <ul>
+                <li>CGPA 3.99/4.00, <em>Summa Cum Laude</em>. Completed 4-year degree in 3 years 4 months (10 trimesters).</li>
+                <li>100% scholarship for academic excellence in 9 out of 10 trimesters.</li>
+                <li>Undergraduate Teaching Assistant for 7 courses across CS department in 4 trimesters.</li>
+                <li>4 peer-reviewed publications at IEEE and Springer conferences.</li>
+                <li>Vice President of the Robotics Club (2021-2022).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Publications</div>
+        <div class="pub-item">
+            <a class="pub-title-link" href="https://ieeexplore.ieee.org/abstract/document/10029570">Attention-Based Scene Graph Generation: A Review.</a>
+            <span class="pub-venue">IEEE SKIMA 2022.</span>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10029570" class="pub-ext"><svg class="icon icon-ext" viewBox="0 0 512 512" fill="#0A66C2"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></a>
+        </div>
+        <div class="pub-item">
+            <a class="pub-title-link" href="https://ieeexplore.ieee.org/abstract/document/9978090">A novel method for imbalanced data classification based on label reassignment.</a>
+            <span class="pub-venue">IEEE TENCON 2022.</span>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9978090" class="pub-ext"><svg class="icon icon-ext" viewBox="0 0 512 512" fill="#0A66C2"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></a>
+        </div>
+        <div class="pub-item">
+            <a class="pub-title-link" href="https://link.springer.com/chapter/10.1007/978-3-031-34619-4_7">Diabetes Mellitus prediction using Transfer Learning.</a>
+            <span class="pub-venue">Springer MIET 2022.</span>
+            <a href="https://link.springer.com/chapter/10.1007/978-3-031-34619-4_7" class="pub-ext"><svg class="icon icon-ext" viewBox="0 0 512 512" fill="#0A66C2"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></a>
+        </div>
+        <div class="pub-item">
+            <a class="pub-title-link" href="https://link.springer.com/chapter/10.1007/978-3-031-34622-4_16">The impact of data locality on the performance of cluster-based under-sampling.</a>
+            <span class="pub-venue">Springer MIET 2022.</span>
+            <a href="https://link.springer.com/chapter/10.1007/978-3-031-34622-4_16" class="pub-ext"><svg class="icon icon-ext" viewBox="0 0 512 512" fill="#0A66C2"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Achievements</div>
+        <div class="achievement-item">
+            <span class="achievement-text"><strong>Prof. Jamilur Reza Chowdhury Championship Award</strong> — Bangladesh Blockchain Olympiad 2024</span>
+            <span class="achievement-meta">Sep 2024</span>
+        </div>
+        <div class="achievement-item">
+            <span class="achievement-text"><strong>Summa Cum Laude Academic Honor</strong> — 6th Convocation, United International University</span>
+            <span class="achievement-meta">Feb 2024</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">References</div>
+        <div class="ref-grid">
+            <div class="ref-item">
+                <div class="ref-name">1. Abdullah Ibn Anwar</div>
+                <div class="ref-title">Senior Vice President</div>
+                <div class="ref-dept">Engineering</div>
+                <div class="ref-org">Pathao Limited</div>
+                <div class="ref-contact">
+                    <svg class="icon" viewBox="0 0 512 512" fill="#444" style="width:9px;height:9px;vertical-align:-1px;"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                    <a href="mailto:abdullah.anwar@pathao.com">abdullah.anwar@pathao.com</a><br>
+                    <svg class="icon" viewBox="0 0 448 512" fill="#444" style="width:9px;height:9px;vertical-align:-1px;"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 01107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.83-48.3 93.97 0 111.31 61.9 111.31 142.3V448z"/></svg>
+                    <a href="https://www.linkedin.com/in/abdullahibnanwar/">abdullahibnanwar</a>
+                </div>
+            </div>
+            <div class="ref-item">
+                <div class="ref-name">2. Prof. Dr. Dewan Md. Farid</div>
+                <div class="ref-title">Dean and Professor</div>
+                <div class="ref-dept">Department of CSE</div>
+                <div class="ref-org">Southeast University</div>
+                <div class="ref-contact">
+                    <svg class="icon" viewBox="0 0 512 512" fill="#444" style="width:9px;height:9px;vertical-align:-1px;"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                    <a href="mailto:dewanfarid@seu.edu.bd">dewanfarid@seu.edu.bd</a><br>
+                    <svg class="icon" viewBox="0 0 512 512" fill="#444" style="width:9px;height:9px;vertical-align:-1px;"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                    +880 1715-833499
+                </div>
+            </div>
+            <div class="ref-item">
+                <div class="ref-name">3. Dr. Suman Ahmmed</div>
+                <div class="ref-title">Head and Associate Professor</div>
+                <div class="ref-dept">Department of CSE</div>
+                <div class="ref-org">United International University</div>
+                <div class="ref-contact">
+                    <svg class="icon" viewBox="0 0 512 512" fill="#444" style="width:9px;height:9px;vertical-align:-1px;"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                    <a href="mailto:suman@cse.uiu.ac.bd">suman@cse.uiu.ac.bd</a><br>
+                    <svg class="icon" viewBox="0 0 512 512" fill="#444" style="width:9px;height:9px;vertical-align:-1px;"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                    +880 1765-049901
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

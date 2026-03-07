@@ -4,9 +4,7 @@
 
 ## About
 
-Ahmed Shabab Noor is a Software Engineer specializing in scalable backend systems, data platforms, machine learning, and analytics. He currently works as Software Engineer III at Fin.com, a stablecoin-powered global payment infrastructure company, where he builds payment infrastructure for global money movement using Go, Docker, PostgreSQL, and microservices architecture.
-
-Previously, he was Data Engineer II at Pathao (Bangladesh's largest super-app), where he designed dynamic funnel analytics systems processing 500M+ data points, built a Bangla transliteration service increasing search coverage by 15x, and developed personalization algorithms reducing checkout navigation time by 32%.
+Ahmed Shabab Noor is a Software Engineer specializing in scalable backend systems, data platforms, machine learning, and advanced analytics. AI-native engineer who builds fast across any domain. He currently works as Software Engineer III at Fin.com, a stablecoin-powered global payment infrastructure company. Previously, he was Data Engineer II at Pathao (Bangladesh's largest super-app), where he designed dynamic funnel analytics systems processing 500M+ data points, built a Bangla transliteration service increasing search coverage by 15x, and developed personalization algorithms reducing checkout navigation time by 32%. Expert in Go, Python, SQL, dbt, BigQuery, and cloud-native technologies.
 
 He graduated Summa Cum Laude (CGPA 3.99/4.00) in Computer Science and Engineering from United International University with a 100% academic scholarship across 9 trimesters.
 
