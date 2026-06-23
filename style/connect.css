@@ -1,0 +1,116 @@
+/* Connect Section */
+.connect-cta {
+    text-align: center;
+    padding: var(--spacing-md) var(--spacing-sm);
+}
+
+.connect-cta h2 {
+    font-size: var(--font-2xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.connect-cta p {
+    color: var(--text-secondary);
+    font-size: var(--font-sm);
+    max-width: 46ch;
+    margin: 0 auto var(--spacing-xl);
+}
+
+.connect-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+}
+
+.connect-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    text-decoration: none;
+    color: inherit;
+}
+
+.connect-icon {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: var(--radius-lg);
+    border: var(--base-border-width) solid var(--border);
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-xl);
+    color: var(--text-secondary);
+    transition: all var(--transition-normal) ease;
+}
+
+.connect-label {
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    transition: color var(--transition-normal) ease;
+}
+
+.connect-link:hover .connect-icon {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.connect-link:hover .connect-label {
+    color: var(--text-secondary);
+}
+
+.connect-link.github:hover .connect-icon {
+    background: var(--github-dark);
+    color: var(--white);
+    border-color: var(--github-dark);
+}
+
+.connect-link.linkedin:hover .connect-icon {
+    background: var(--linkedin-blue);
+    color: var(--white-constant);
+    border-color: var(--linkedin-blue);
+}
+
+.connect-link.scholar:hover .connect-icon {
+    background: var(--scholar-blue);
+    color: var(--white-constant);
+    border-color: var(--scholar-blue);
+}
+
+.connect-link.orcid:hover .connect-icon {
+    background: var(--orcid-green);
+    color: var(--white-constant);
+    border-color: var(--orcid-green);
+}
+
+.connect-link.email:hover .connect-icon {
+    background: var(--email-red);
+    color: var(--white-constant);
+    border-color: var(--email-red);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: var(--section-padding-desktop) 0;
+    color: var(--text-muted);
+    font-size: var(--font-xs);
+}
+
+.footer img {
+    vertical-align: middle;
+}
+
+.muted-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition-normal) ease;
+}
+
+.muted-link:hover {
+    color: var(--primary-color);
+}
