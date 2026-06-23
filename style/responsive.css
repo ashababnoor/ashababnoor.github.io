@@ -66,16 +66,18 @@
         margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-5));
     }
     
-    .email-contact {
+    .email-contact,
+    .github-contact {
         display: block;
         margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-5));
     }
-    
+
     .separator {
         display: none;
     }
-    
-    .email-contact i {
+
+    .email-contact i,
+    .github-contact i {
         color: var(--primary-color);
     }
     

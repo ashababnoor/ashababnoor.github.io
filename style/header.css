@@ -197,7 +197,8 @@
     display: inline-block;
 }
 
-.email-contact {
+.email-contact,
+.github-contact {
     color: var(--text-muted);
     font-size: calc(var(--font-sm) * var(--modifier-0-95));
     display: inline-block;
@@ -223,22 +224,26 @@
 }
 
 .location i,
-.email-contact i {
+.email-contact i,
+.github-contact i {
     margin-right: calc(var(--spacing-sm) * var(--modifier-0-8));
     color: var(--primary-color);
 }
 
-.email-link {
+.email-link,
+.github-link {
     color: var(--text-muted);
     text-decoration: none;
     transition: color var(--transition-normal) ease;
 }
 
-.email-link:hover {
+.email-link:hover,
+.github-link:hover {
     color: var(--primary-color);
 }
 
-[data-theme="dark"] .email-link:hover {
+[data-theme="dark"] .email-link:hover,
+[data-theme="dark"] .github-link:hover {
     color: var(--primary-hover);
 }
 
