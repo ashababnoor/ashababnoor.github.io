@@ -7,6 +7,7 @@
 .connect-cta h2 {
     font-size: var(--font-2xl);
     font-weight: 700;
+    line-height: var(--line-height-tight);
     color: var(--text-primary);
     margin-bottom: var(--spacing-sm);
 }

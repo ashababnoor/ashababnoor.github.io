@@ -140,8 +140,12 @@
         grid-template-columns: 1fr;
     }
     
+    /* Keep all five on one row, centered as a group (no stretch, no wrap) */
     .connect-links {
-        gap: var(--spacing-md);
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        justify-content: center;
+        gap: var(--spacing-lg);
     }
 
     .publication-header {
@@ -206,7 +210,27 @@
         background: var(--white);
         border: var(--base-border-width) solid var(--border);
         border-radius: var(--radius-md);
-        padding: var(--spacing-lg);
+        padding: var(--spacing-2xl) var(--spacing-lg);
+    }
+
+    /* Grid carries over from the tablet breakpoint; just tighten the gap */
+    .connect-links {
+        gap: var(--spacing-sm);
+    }
+
+    /* Drop the second sentence on phones; the icon row already says "reach me" */
+    .connect-more {
+        display: none;
+    }
+
+    .connect-icon {
+        width: 2.75rem;
+        height: 2.75rem;
+        font-size: var(--font-lg);
+    }
+
+    .connect-label {
+        font-size: calc(var(--font-xs) * var(--modifier-0-8));
     }
     
     .profile-section {
