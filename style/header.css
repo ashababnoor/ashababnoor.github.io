@@ -134,13 +134,12 @@
     height: 100%;
     border-radius: var(--radius-full);
     object-fit: cover;
-    /* border: var(--base-border-width) solid var(--border); */
     position: relative;
     z-index: var(--z-index-above);
 }
 
 /* Hide the fallback circle when image is present */
-.profile-img:has(img[src]:not([src=""]):not([src="#"])) ::before {
+.profile-img:has(img[src]:not([src=""]):not([src="#"]))::before {
     display: none;
 }
 
