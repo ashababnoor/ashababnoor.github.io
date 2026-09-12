@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /assets/temp/
-Disallow: /scss/
 Disallow: /info/
 
 # AI crawlers. A named group replaces the wildcard group rather than
@@ -23,7 +22,6 @@ User-agent: Bytespider
 User-agent: CCBot
 Allow: /
 Disallow: /assets/temp/
-Disallow: /scss/
 Disallow: /info/
 
 Sitemap: https://shababnoor.com/sitemap.xml

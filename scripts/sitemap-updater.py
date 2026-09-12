@@ -15,8 +15,8 @@ PATH_TO_URL = {
 
 RESOURCE_PATHS_TO_WATCH = [
     "style.css",
+    "style/",
     "script.js",
-    "scss/",
 ]
 
 SITEMAP_FILE = "sitemap.xml"
