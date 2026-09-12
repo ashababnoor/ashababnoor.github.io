@@ -2,6 +2,8 @@
 
 > Software Engineer III at Fin.com | Ex Data Engineer II at Pathao | Based in Dhaka, Bangladesh
 
+Last updated: 2026-09-13
+
 ## About
 
 Ahmed Shabab Noor is a Software Engineer specializing in scalable backend systems, data platforms, machine learning, and advanced analytics. AI-native engineer who builds fast across any domain. He currently works as Software Engineer III at Fin.com, a stablecoin-powered global payment infrastructure company. Previously, he was Data Engineer II at Pathao (Bangladesh's largest super-app), where he designed dynamic funnel analytics systems processing 500M+ data points, built a Bangla transliteration service increasing search coverage by 15x, and developed personalization algorithms reducing checkout navigation time by 32%. Expert in Go, Python, SQL, dbt, BigQuery, and cloud-native technologies.
@@ -28,7 +30,7 @@ He graduated Summa Cum Laude (CGPA 3.99/4.00) in Computer Science and Engineerin
 ## Experience
 
 ### Software Engineer III - Fin.com (Dec 2025 - Present)
-Stablecoin-powered global payment infrastructure company. Building payment infrastructure using Go, Docker, PostgreSQL, and microservices. Designed high-throughput transaction processing systems and developed automated compliance monitoring achieving 99.7% accuracy. Built real-time currency conversion engine handling 50+ currency pairs.
+Stablecoin-powered global payment infrastructure company. Early engineer building core backend services from the ground up, primarily in Go, leveraging AI-driven development for rapid delivery. Built a double-entry bookkeeping ledger microservice serving as the core financial record-keeping system, with SHA-256 hash-chain balance integrity for a tamper-evident audit trail. Built a Role-Based Access Control system with a 3-tier role hierarchy and Redis-cached permission resolution, plus team management and a reverse proxy enforcing scope-based access control on API traffic. Built an internal API gateway for securely calling external financial APIs (payments, remittance, KYC) without sharing secrets, with per-user service ACLs, cryptographic request signing, and hot-reloadable Consul configuration. Designed a cross-currency fee calculation engine supporting bidirectional forward and reverse calculation against live FX rates. Integrated partners for virtual account provisioning and payout disbursement across USD, AED and EUR rails.
 
 ### Data Engineer II - Pathao (Jul 2024 - Dec 2025)
 Designed dynamic funnel analytics system processing 500M+ data points. Built Bangla transliteration microservice increasing search coverage by 15x. Developed personalization algorithms reducing checkout navigation time by 32%. Designed A/B testing framework for data-driven product decisions. Built modular data models using dbt with optimized queries for cost savings.
@@ -50,3 +52,29 @@ Built CLI tools for data dictionary workflows. Developed first ML solution for r
 2. "A novel method for imbalanced data classification based on label reassignment" - IEEE TENCON 2022 (https://ieeexplore.ieee.org/abstract/document/9978090)
 3. "Diabetes Mellitus prediction using Transfer Learning" - Springer MIET 2022 (https://link.springer.com/chapter/10.1007/978-3-031-34619-4_7)
 4. "The impact of data locality on the performance of cluster-based under-sampling" - Springer MIET 2022 (https://link.springer.com/chapter/10.1007/978-3-031-34622-4_16)
+
+## Frequently Asked
+
+**Who is Ahmed Shabab Noor?**
+A software engineer based in Dhaka, Bangladesh. Currently Software Engineer III at Fin.com, building core backend services for stablecoin-powered payment infrastructure. Previously spent over three years at Pathao, Bangladesh's largest on-demand platform, moving from Data Engineering Intern to Data Engineer II.
+
+**What does he work on at Fin.com?**
+Core backend services for cross-border payments, primarily in Go: a double-entry bookkeeping ledger with SHA-256 hash-chain balance integrity, an RBAC system with Redis-cached permission resolution, an internal API gateway for calling vendor financial APIs without sharing secrets, and a cross-currency fee engine doing both forward and reverse calculation against live FX rates.
+
+**What did he build at Pathao?**
+Data and ML systems for a super-app: a dynamic funnel analytics system over 500M+ data points, a Bangla-to-English transliteration service that increased address search coverage 15x, personalization algorithms that cut checkout navigation time 32%, and ETA prediction models that raised within-threshold rides from 20% to 60%.
+
+**What technologies does he work with?**
+Primarily Go, Python and SQL. On the backend that means PostgreSQL, Redis, Consul, Docker and Kubernetes; on the data side, dbt, BigQuery and Google Cloud Platform.
+
+**What has he published?**
+Four peer-reviewed papers at IEEE and Springer conferences: attention-based scene graph generation, imbalanced data classification via label reassignment, diabetes prediction using transfer learning, and the impact of data locality on cluster-based under-sampling.
+
+**Where did he study?**
+United International University in Dhaka: BSc in Computer Science and Engineering, Summa Cum Laude, CGPA 3.99/4.00, on a full academic scholarship across nine trimesters. Before that, Notre Dame College, Dhaka.
+
+**Is he open to new opportunities?**
+Always open to interesting problems, collaborations, and good conversations.
+
+**How can you reach him?**
+Email hello@shababnoor.com, or through LinkedIn (linkedin.com/in/ashababnoor) and GitHub (github.com/ashababnoor).
