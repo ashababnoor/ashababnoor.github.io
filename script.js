@@ -32,10 +32,8 @@ function calculateDuration(startDate, endDate = null) {
     let years = end.getFullYear() - start.getFullYear();
     let months = end.getMonth() - start.getMonth();
     
-    // If we've started the next month (even by 1 day), count it as a full month
-    if (end.getDate() >= 1) {
-        months++;
-    }
+    // Count inclusively, like LinkedIn: any day in a month counts the whole month.
+    months++;
     
     if (months < 0) {
         years--;
@@ -225,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalDuration = calculateDuration(finStartDate);
     const companyDurationSpan = document.querySelector('#current-company-duration .dynamic-duration');
     if (companyDurationSpan) {
-        companyDurationSpan.textContent = totalDuration;
+        companyDurationSpan.textContent = ' · ' + totalDuration;
     }
 
     // Update current position duration (Software Engineer III)
@@ -233,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentPositionDuration = calculateDuration(currentPositionStartDate);
     const positionDurationSpan = document.querySelector('#current-position-duration .dynamic-duration');
     if (positionDurationSpan) {
-        positionDurationSpan.textContent = currentPositionDuration;
+        positionDurationSpan.textContent = ' · ' + currentPositionDuration;
     }
     
     // Update copyright year
