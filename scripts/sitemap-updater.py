@@ -10,7 +10,7 @@ PATHS_TO_CHECK = [
 ]
 
 PATH_TO_URL = {
-    "index.html": "https://ashababnoor.github.io/",
+    "index.html": "https://shababnoor.com/",
 }
 
 RESOURCE_PATHS_TO_WATCH = [
