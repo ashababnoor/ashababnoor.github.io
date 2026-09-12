@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://ashababnoor.github.io/sitemap.xml
+Sitemap: https://shababnoor.com/sitemap.xml
 
 # Block common bot files (optional)
 Disallow: /assets/temp/
