@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2563eb">
 
-    <title>404 &mdash; Page not found | Ahmed Shabab Noor</title>
+    <title>404 &ndash; Page not found | Ahmed Shabab Noor</title>
     <meta name="description" content="This page could not be found on shababnoor.com.">
     <meta name="robots" content="noindex, follow">
 
@@ -262,7 +262,7 @@
         if (location.protocol === 'file:') return;
 
         let path = location.pathname;
-        if (path.length > 48) path = path.slice(0, 47) + '…';
+        if (path.length > 20) path = path.slice(0, 20) + '...';
 
         document.querySelectorAll('.requested-path').forEach(function(el) {
             el.textContent = path;
