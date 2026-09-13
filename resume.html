@@ -56,6 +56,13 @@
                 padding-bottom: 16px;
             }
         }
+        /* PDF only: split fi/fl/ffi so extracted text stays searchable. */
+        @media print {
+            body {
+                font-variant-ligatures: none;
+                font-feature-settings: "liga" 0, "clig" 0;
+            }
+        }
 
         /* Inline SVG icons */
         .icon {
