@@ -178,6 +178,11 @@
             justify-content: space-between;
             align-items: baseline;
         }
+        /* Never end a page directly after a company or role heading. */
+        .company-name-row,
+        .position-row {
+            break-after: avoid;
+        }
         .position-row .title {
             font-size: 9.5pt;
             font-weight: 600;
