@@ -7,48 +7,49 @@
     position: absolute;
     top: var(--spacing-md);
     right: var(--spacing-md);
-    background: none;
-    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
     padding: 0;
+    background: var(--white);
+    border: var(--base-border-width) solid var(--border);
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
     cursor: pointer;
     z-index: 10;
     outline: none;
     -webkit-tap-highlight-color: transparent;
+    transition: color var(--transition-normal) ease,
+                border-color var(--transition-normal) ease;
 }
 
-.toggle-track {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 3rem;
-    height: 1.625rem;
-    background: var(--toggle-track-bg);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 1rem;
-    border: 1px solid var(--border);
-    transition: all var(--transition-normal) ease;
-}
-
-.toggle-thumb {
-    position: absolute;
-    left: 3px;
-    width: 1.2rem;
-    height: 1.2rem;
-    background: var(--toggle-thumb-bg);
-    border-radius: var(--radius-full);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-    transition: transform 0.25s ease-in-out;
-}
-
-.theme-toggle:hover .toggle-track {
+.theme-toggle:hover {
+    color: var(--text-primary);
     border-color: var(--toggle-hover-border);
 }
 
-/* Dark mode toggle state */
-[data-theme="dark"] .toggle-thumb {
-    transform: translateX(1.3rem);
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+.theme-toggle:focus-visible {
+    outline: calc(var(--base-border-width) * 2) solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.theme-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    display: block;
+}
+
+/* Each icon names the mode a click switches *to*, so the button always
+   shows the opposite of the current theme. */
+.theme-icon--to-light,
+[data-theme="dark"] .theme-icon--to-dark {
+    display: none;
+}
+
+[data-theme="dark"] .theme-icon--to-light {
+    display: block;
 }
 
 /* Header Section */

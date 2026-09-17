@@ -12,6 +12,13 @@ function initThemeToggle() {
     const toggle = document.getElementById('theme-toggle');
     if (!toggle) return;
 
+    function syncLabel() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+        toggle.setAttribute('aria-label', label);
+        toggle.setAttribute('title', label);
+    }
+
     toggle.addEventListener('mousedown', function(e) {
         e.preventDefault();
     });
@@ -21,7 +28,11 @@ function initThemeToggle() {
         const newTheme = isDark ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
+        syncLabel();
     });
+
+    // The theme is resolved before this runs, so the markup default may be stale.
+    syncLabel();
 }
 
 // Calculate total duration at Pathao

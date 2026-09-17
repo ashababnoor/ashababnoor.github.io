@@ -305,10 +305,14 @@
         <main id="main-content">
         <!-- Header -->
         <header class="header" id="about">
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-                <span class="toggle-track">
-                    <span class="toggle-thumb"></span>
-                </span>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode">
+                <svg class="theme-icon theme-icon--to-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M20.55 14.8A9 9 0 1 1 9.2 3.45A8.5 8.5 0 0 0 20.55 14.8Z"/>
+                </svg>
+                <svg class="theme-icon theme-icon--to-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                </svg>
             </button>
             <div class="profile-section" >
                 <div class="profile-left">
