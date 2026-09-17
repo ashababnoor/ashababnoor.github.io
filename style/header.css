@@ -277,8 +277,7 @@
 .btn-primary:hover {
     background: var(--primary-surface);
     color: var(--on-primary-surface);
-    border-color: var(--brand-color, var(--primary-surface));
-    transform: translateY(var(--transform-hover-y));
+    border-color: transparent;
     box-shadow: var(--shadow-hover);
 }
 
@@ -289,7 +288,6 @@
 .btn-secondary:hover {
     background: var(--primary-surface);
     color: var(--on-primary-surface);
-    border-color: var(--brand-color, var(--primary-surface));
-    transform: translateY(var(--transform-hover-y));
+    border-color: transparent;
     box-shadow: var(--shadow-hover);
 }

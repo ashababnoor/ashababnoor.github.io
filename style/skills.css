@@ -42,7 +42,6 @@
 
 .skills-used .skill-tag:hover {
     background: var(--border);
-    transform: translateY(var(--transform-skill-hover-y));
 }
 
 /* Skills Section Tags */
@@ -77,6 +76,5 @@
 
 .skill-tags .skill-tag:hover {
     background: var(--surface);
-    transform: translateY(var(--transform-skill-hover-y));
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
