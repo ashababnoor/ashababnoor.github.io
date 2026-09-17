@@ -30,6 +30,8 @@
     --on-github-dark: var(--white-constant);
 
     /* Toggle */
+    --toggle-icon: #8a8a8a;
+    --toggle-icon-hover: var(--text-secondary);
     --toggle-hover-border: #c1c9d1;
 
     /* Shadows */
@@ -179,5 +181,7 @@
     --shadow-hover: none;
 
     /* Toggle */
+    --toggle-icon: var(--text-secondary);
+    --toggle-icon-hover: var(--text-primary);
     --toggle-hover-border: rgba(255, 255, 255, 0.25);
 }
