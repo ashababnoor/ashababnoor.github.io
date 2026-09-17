@@ -97,6 +97,8 @@
 .publication-actions {
     display: flex;
     justify-content: flex-start;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
 }
 
 .publication-link {
@@ -122,4 +124,34 @@
 
 .publication-link i {
     font-size: calc(var(--font-xs) * var(--modifier-1-1));
+}
+
+/* Buttons inherit neither the page font nor a pointer, unlike the anchor
+   this shares its styling with. min-width holds the row steady while the
+   label swaps to the shorter "Copied". */
+.publication-copy {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.publication-copy-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+    flex: none;
+}
+
+.publication-copy:focus-visible {
+    outline: calc(var(--base-border-width) * 2) solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.publication-copy.is-copied {
+    background: var(--primary-surface);
+    color: var(--on-primary-surface);
+    border-color: transparent;
+}
+
+.publication-copy.is-failed {
+    color: var(--email-red);
+    border-color: var(--email-red);
 }

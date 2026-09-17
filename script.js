@@ -35,6 +35,91 @@ function initThemeToggle() {
     syncLabel();
 }
 
+// BibTeX copy buttons
+function readBibtex(el) {
+    // The entries are indented to sit nicely in the markup; strip the common
+    // leading whitespace so what lands on the clipboard is flush-left.
+    const raw = el.textContent.replace(/^\n/, '').replace(/\s+$/, '');
+    const lines = raw.split('\n');
+    const indents = lines.filter(function(l) { return l.trim(); })
+                         .map(function(l) { return l.match(/^ */)[0].length; });
+    const pad = indents.length ? Math.min.apply(null, indents) : 0;
+    return lines.map(function(l) { return l.slice(pad); }).join('\n');
+}
+
+function legacyCopy(text) {
+    const area = document.createElement('textarea');
+    area.value = text;
+    area.setAttribute('readonly', '');
+    area.style.position = 'fixed';
+    area.style.top = '-9999px';
+    document.body.appendChild(area);
+    area.select();
+    let copied = false;
+    try {
+        copied = document.execCommand('copy');
+    } catch (e) {
+        copied = false;
+    }
+    document.body.removeChild(area);
+    return copied;
+}
+
+function copyText(text) {
+    // The async API needs a secure context, which rules out opening the file
+    // straight off disk; fall back rather than fail silently.
+    if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text).then(function() {
+            return true;
+        }, function() {
+            return legacyCopy(text);
+        });
+    }
+    return Promise.resolve(legacyCopy(text));
+}
+
+const COPY_ICONS = {
+    copy: '<rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>' +
+          '<path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>',
+    done: '<path d="M20 6 9 17l-5-5"/>',
+    fail: '<path d="M18 6 6 18M6 6l12 12"/>'
+};
+
+function initBibtexCopy() {
+    document.querySelectorAll('.publication-copy').forEach(function(button) {
+        const label = button.querySelector('.publication-copy-label');
+        const icon = button.querySelector('.publication-copy-icon');
+        const source = document.getElementById(button.dataset.bibtex);
+        if (!label || !icon || !source) return;
+
+        const restingLabel = label.textContent;
+        let revert;
+
+        button.addEventListener('click', function() {
+            // Pin the resting width before the label changes, so the shorter
+            // "Copied" cannot shrink the button and shift View Paper.
+            if (!button.style.width) {
+                button.style.width = button.getBoundingClientRect().width + 'px';
+            }
+
+            copyText(readBibtex(source)).then(function(copied) {
+                clearTimeout(revert);
+                button.classList.toggle('is-copied', copied);
+                button.classList.toggle('is-failed', !copied);
+                icon.innerHTML = copied ? COPY_ICONS.done : COPY_ICONS.fail;
+                label.textContent = copied ? 'Copied' : 'Failed';
+
+                revert = setTimeout(function() {
+                    button.classList.remove('is-copied', 'is-failed');
+                    icon.innerHTML = COPY_ICONS.copy;
+                    label.textContent = restingLabel;
+                    button.style.width = '';
+                }, 2000);
+            });
+        });
+    });
+}
+
 // Calculate total duration at Pathao
 function calculateDuration(startDate, endDate = null) {
     const start = new Date(startDate);
@@ -253,6 +338,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize theme toggle
     initThemeToggle();
+    initBibtexCopy();
 
     // Initialize expandable content
     initializeExpandableContent();
