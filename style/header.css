@@ -13,7 +13,7 @@
     width: 2.25rem;
     height: 2.25rem;
     padding: 0;
-    background: var(--white);
+    background: var(--surface-raised);
     border: var(--base-border-width) solid var(--border);
     border-radius: var(--radius-full);
     color: var(--toggle-icon);
@@ -107,7 +107,7 @@
 
 .btn-secondary.linkedin:hover {
     background: var(--linkedin-blue);
-    color: var(--white-constant);
+    color: var(--white);
 }
 
 .btn-secondary.resume {
@@ -117,7 +117,7 @@
 
 .btn-secondary.resume:hover {
     background: var(--resume-green);
-    color: var(--white-constant);
+    color: var(--white);
 }
 
 .btn-secondary.email {
@@ -127,7 +127,7 @@
 
 .btn-secondary.email:hover {
     background: var(--email-red);
-    color: var(--white-constant);
+    color: var(--white);
 }
 
 .profile-img img {
@@ -159,7 +159,7 @@
     justify-content: center;
     font-size: calc(var(--profile-img-desktop) * var(--fallback-text-scale));
     font-weight: 700;
-    color: var(--white);
+    color: var(--surface-raised);
     box-sizing: border-box;
     z-index: var(--z-index-below);
 }
@@ -264,7 +264,7 @@
     font-size: var(--font-xs);
     transition: all var(--transition-normal) ease;
     border: var(--base-border-width) solid var(--border);
-    background: var(--white);
+    background: var(--surface-raised);
 }
 
 .btn-primary {

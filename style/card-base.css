@@ -1,6 +1,6 @@
 /* Base Card Styles for all card-based sections */
 .card-base {
-  background: var(--white, #fff);
+  background: var(--surface-raised, #fff);
   border-radius: 16px;
   box-shadow: var(--shadow, 0 2px 12px rgba(0,0,0,0.07));
   border: 1px solid var(--border, #e5e7eb);

@@ -16,7 +16,7 @@
     font-size: var(--font-xs);
     transition: all var(--transition-normal) ease;
     border: var(--base-border-width) solid var(--border);
-    background: var(--white);
+    background: var(--surface-raised);
 }
 
 .publication-profile-link.scholar {
@@ -25,7 +25,7 @@
 
 .publication-profile-link.scholar:hover {
     background: var(--scholar-blue);
-    color: var(--white-constant);
+    color: var(--white);
     border-color: var(--scholar-blue);
 }
 
@@ -35,7 +35,7 @@
 
 .publication-profile-link.orcid:hover {
     background: var(--orcid-green);
-    color: var(--white-constant);
+    color: var(--white);
     border-color: var(--orcid-green);
 }
 
@@ -49,7 +49,7 @@
     border: var(--base-border-width) solid var(--border);
     border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
-    background: var(--white);
+    background: var(--surface-raised);
     transition: all var(--transition-normal) ease;
 }
 
@@ -107,7 +107,7 @@
     font-size: var(--font-xs);
     transition: all var(--transition-normal) ease;
     border: var(--base-border-width) solid var(--border);
-    background: var(--white);
+    background: var(--surface-raised);
     color: var(--text-secondary);
 }
 
@@ -141,7 +141,7 @@
 }
 
 .publication-copy.is-failed {
-    background: var(--white);
+    background: var(--surface-raised);
     color: var(--email-red);
     border-color: var(--email-red);
 }

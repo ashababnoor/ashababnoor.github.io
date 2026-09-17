@@ -172,7 +172,7 @@
     
     /* Keep header box but make it stand out */
     .header {
-        background: var(--white);
+        background: var(--surface-raised);
         border-radius: var(--radius-md); /* Match inner cards' border radius */
         padding: var(--section-padding-mobile);
         margin-bottom: var(--spacing-xl);
@@ -207,7 +207,7 @@
 
     /* Connect block is its own card since the outer .section goes flat */
     .connect-cta {
-        background: var(--white);
+        background: var(--surface-raised);
         border: var(--base-border-width) solid var(--border);
         border-radius: var(--radius-md);
         padding: var(--spacing-2xl) var(--spacing-lg);
