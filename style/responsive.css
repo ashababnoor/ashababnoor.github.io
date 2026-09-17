@@ -328,20 +328,8 @@
     .theme-toggle {
         top: var(--spacing-md);
         right: var(--spacing-md);
-    }
-
-    .toggle-track {
-        width: 2.75rem;
-        height: 1.5rem;
-    }
-
-    .toggle-thumb {
-        width: 1.1rem;
-        height: 1.1rem;
-    }
-
-    [data-theme="dark"] .toggle-thumb {
-        transform: translateX(1.15rem);
+        width: 2rem;
+        height: 2rem;
     }
 }
 

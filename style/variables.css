@@ -30,8 +30,6 @@
     --on-github-dark: var(--white-constant);
 
     /* Toggle */
-    --toggle-track-bg: #e2e8f0;
-    --toggle-thumb-bg: #ffffff;
     --toggle-hover-border: #a1a1aa;
 
     /* Shadows */
@@ -190,7 +188,5 @@
     --shadow-hover: none;
 
     /* Toggle */
-    --toggle-track-bg: rgba(255, 255, 255, 0.12);
-    --toggle-thumb-bg: rgba(255, 255, 255, 0.30);
     --toggle-hover-border: rgba(255, 255, 255, 0.25);
 }
