@@ -25,7 +25,7 @@
 
 .publication-profile-link.scholar:hover {
     background: var(--scholar-blue);
-    color: var(--white);
+    color: var(--white-constant);
     border-color: var(--scholar-blue);
 }
 
@@ -35,7 +35,7 @@
 
 .publication-profile-link.orcid:hover {
     background: var(--orcid-green);
-    color: var(--white);
+    color: var(--white-constant);
     border-color: var(--orcid-green);
 }
 
@@ -115,10 +115,10 @@
 }
 
 .publication-link:hover {
-    background: var(--primary-color);
-    color: var(--white);
+    background: var(--primary-surface);
+    color: var(--on-primary-surface);
     transform: translateY(var(--transform-skill-hover-y));
-    border-color: var(--primary-color);
+    border-color: var(--primary-surface);
 }
 
 .publication-link i {
