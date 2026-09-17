@@ -118,7 +118,7 @@
     background: var(--primary-surface);
     color: var(--on-primary-surface);
     transform: translateY(var(--transform-skill-hover-y));
-    border-color: var(--primary-surface);
+    border-color: transparent;
 }
 
 .publication-link i {
