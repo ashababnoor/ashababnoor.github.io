@@ -141,6 +141,7 @@
 }
 
 .publication-copy.is-failed {
+    background: var(--white);
     color: var(--email-red);
     border-color: var(--email-red);
 }
