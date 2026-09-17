@@ -66,7 +66,7 @@
 
 .connect-link.github:hover .connect-icon {
     background: var(--github-dark);
-    color: var(--white);
+    color: var(--on-github-dark);
     border-color: var(--github-dark);
 }
 

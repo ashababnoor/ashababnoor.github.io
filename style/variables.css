@@ -22,6 +22,13 @@
     --white: #ffffff;
     --white-constant: #ffffff;
 
+    /* Filled-control surfaces. Kept separate from --primary-color, which is an
+       accent *text* colour: text wants alpha so it blends over any backdrop,
+       fills must be opaque or a translucent border double-composites over them. */
+    --primary-surface: var(--primary-color);
+    --on-primary-surface: var(--white-constant);
+    --on-github-dark: var(--white-constant);
+
     /* Toggle */
     --toggle-track-bg: #e2e8f0;
     --toggle-thumb-bg: #ffffff;
@@ -175,7 +182,10 @@
     --text-muted: rgba(255, 255, 255, 0.38);
     --white: #1e1e1e;
     --position-separator: rgba(255, 255, 255, 0.08);
-    --github-dark: rgba(255, 255, 255, 0.87);
+    --primary-surface: #ededed;
+    --on-primary-surface: #1e1e1e;
+    --github-dark: #ededed;
+    --on-github-dark: #1e1e1e;
     --shadow: none;
     --shadow-hover: none;
 
