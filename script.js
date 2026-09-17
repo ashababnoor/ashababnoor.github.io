@@ -87,7 +87,7 @@ const COPY_ICONS = {
 function initBibtexCopy() {
     document.querySelectorAll('.publication-copy').forEach(function(button) {
         const label = button.querySelector('.publication-copy-label');
-        const icon = button.querySelector('.publication-copy-icon');
+        const icon = button.querySelector('[data-copy-icon]');
         const source = document.getElementById(button.dataset.bibtex);
         if (!label || !icon || !source) return;
 
@@ -105,12 +105,12 @@ function initBibtexCopy() {
                 clearTimeout(revert);
                 button.classList.toggle('is-copied', copied);
                 button.classList.toggle('is-failed', !copied);
-                icon.className = (copied ? COPY_ICONS.done : COPY_ICONS.fail) + ' publication-copy-icon';
+                icon.className = copied ? COPY_ICONS.done : COPY_ICONS.fail;
                 label.textContent = copied ? 'Copied' : 'Failed';
 
                 revert = setTimeout(function() {
                     button.classList.remove('is-copied', 'is-failed');
-                    icon.className = COPY_ICONS.copy + ' publication-copy-icon';
+                    icon.className = COPY_ICONS.copy;
                     label.textContent = restingLabel;
                     button.style.width = '';
                 }, 2000);
