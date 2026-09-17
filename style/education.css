@@ -8,11 +8,6 @@
     transition: all var(--transition-normal) ease;
 }
 
-/* .education-card:hover {
-    box-shadow: var(--shadow-hover);
-    transform: translateY(var(--transform-hover-y));
-} */
-
 .education-card:last-child {
     margin-bottom: 0;
 }
@@ -47,7 +42,6 @@
 }
 
 .institution-name {
-    /* font-size: calc(var(--font-2xl) * 0.85); */
     font-size: var(--font-lg);
     font-weight: 700;
     margin-bottom: calc(var(--spacing-xs) * var(--modifier-0-8));
@@ -55,10 +49,8 @@
 }
 
 .degree-title {
-    /* font-size: var(--font-lg); */
     font-size: calc(var(--font-md) * var(--modifier-0-95));
     font-weight: 500;
-    /* color: var(--text-secondary); */
     margin-bottom: calc(var(--spacing-xs) * var(--modifier-0-8));
     line-height: var(--line-height-tight);
 }

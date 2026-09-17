@@ -42,10 +42,6 @@
     --base-radius: 8px;
     --base-border-width: 1px;
     
-    /* Breakpoints */
-    --breakpoint-tablet: 768px;
-    --breakpoint-mobile: 480px;
-    
     /* Spacing Scale Modifiers */
     --spacing-scale-xs: 0.25;
     --spacing-scale-sm: 0.5;
@@ -80,7 +76,6 @@
     /* Logo and Icon Scale Modifiers */
     --company-logo-scale: 3.125;
     --fallback-text-scale: 0.2;
-    --border-multiplier-fallback: 3;
     --section-title-border-multiplier: 2;
     
     /* Typography Modifiers */
@@ -93,8 +88,6 @@
     --transition-fast: 0.2s;
     --transition-normal: 0.3s;
     --transition-slow: 0.5s;
-    --transform-hover-y: -2px;
-    --transform-skill-hover-y: -1px;
     
     /* Z-Index Scale */
     --z-index-below: 1;
@@ -165,8 +158,6 @@
 
 /* Dark Mode */
 [data-theme="dark"] {
-    /* --primary-color: #5b9cf5;
-    --primary-hover: #7db4f8; */
     --primary-color: var(--text-secondary);
     --primary-hover: var(--white-constant);
     --primary-light-color: #3b82f6;

@@ -53,11 +53,6 @@
     transition: all var(--transition-normal) ease;
 }
 
-/* .publication-card:hover {
-    box-shadow: var(--shadow-hover);
-    transform: translateY(var(--transform-hover-y));
-} */
-
 .publication-header {
     display: flex;
     justify-content: space-between;
@@ -126,9 +121,8 @@
     font-size: calc(var(--font-xs) * var(--modifier-1-1));
 }
 
-/* Buttons inherit neither the page font nor a pointer, unlike the anchor
-   this shares its styling with. min-width holds the row steady while the
-   label swaps to the shorter "Copied". */
+/* A button inherits neither the page font nor a pointer, unlike the anchor
+   it shares its styling with. */
 .publication-copy {
     font-family: inherit;
     cursor: pointer;

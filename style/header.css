@@ -65,14 +65,14 @@
 .profile-section {
     display: flex;
     gap: var(--section-padding-desktop);
-    align-items: stretch; /* changed from flex-start to stretch for full-height children */
+    align-items: stretch; /* so .profile-left and .profile-info run full height */
 }
 
 .profile-left {
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* added to push contact buttons to bottom when extra space */
+    justify-content: space-between; /* pins the contact buttons to the bottom */
     align-items: center;
     gap: var(--spacing-md);
 }
@@ -160,12 +160,9 @@
     font-size: calc(var(--profile-img-desktop) * var(--fallback-text-scale));
     font-weight: 700;
     color: var(--white);
-    /* border: calc(var(--base-border-width) * var(--border-multiplier-fallback)) solid var(--primary-color); */
     box-sizing: border-box;
     z-index: var(--z-index-below);
 }
-
-/* Show gradient circle only when no image is present */
 
 .profile-info {
     flex: 1;
@@ -183,7 +180,6 @@
     font-size: var(--font-lg);
     font-weight: 500;
     color: var(--text-secondary);
-    /* margin-bottom: calc(var(--spacing-sm) * var(--modifier-0-8)); */
 }
 
 .tagline {
