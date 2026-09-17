@@ -6,7 +6,7 @@
 }
 
 .skill-category {
-    background: var(--white);
+    background: var(--surface-raised);
     padding: var(--spacing-xl);
     border-radius: var(--radius-md);
     border: var(--base-border-width) solid var(--border);
@@ -46,7 +46,7 @@
 
 /* Skills Section Tags */
 .skill-tags .skill-tag {
-    background: var(--white);
+    background: var(--surface-raised);
     color: var(--text-primary);
     padding: calc(var(--spacing-xs) * var(--modifier-1-5)) calc(var(--spacing-sm) * var(--modifier-1-2));
     border-radius: var(--radius-xl);

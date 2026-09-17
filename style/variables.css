@@ -7,6 +7,7 @@
     --secondary-light-color: #999;
     --background: #fafbfc;
     --surface: #f8f9fa;
+    --surface-raised: #ffffff;
     --border: #e1e5e9;
     --text-primary: #000000;
     --text-secondary: #666666;
@@ -20,16 +21,17 @@
     --resume-green: #059669;
     --position-separator: #f0f0f0;
     --white: #ffffff;
-    --white-constant: #ffffff;
 
     /* Filled-control surfaces. Kept separate from --primary-color, which is an
        accent *text* colour: text wants alpha so it blends over any backdrop,
        fills must be opaque or a translucent border double-composites over them. */
     --primary-surface: var(--primary-color);
-    --on-primary-surface: var(--white-constant);
-    --on-github-dark: var(--white-constant);
+    --on-primary-surface: var(--white);
+    --on-github-dark: var(--white);
 
     /* Toggle */
+    --toggle-icon: #8a8a8a;
+    --toggle-icon-hover: var(--text-secondary);
     --toggle-hover-border: #c1c9d1;
 
     /* Shadows */
@@ -41,10 +43,6 @@
     --base-spacing: 1rem;
     --base-radius: 8px;
     --base-border-width: 1px;
-    
-    /* Breakpoints */
-    --breakpoint-tablet: 768px;
-    --breakpoint-mobile: 480px;
     
     /* Spacing Scale Modifiers */
     --spacing-scale-xs: 0.25;
@@ -80,7 +78,6 @@
     /* Logo and Icon Scale Modifiers */
     --company-logo-scale: 3.125;
     --fallback-text-scale: 0.2;
-    --border-multiplier-fallback: 3;
     --section-title-border-multiplier: 2;
     
     /* Typography Modifiers */
@@ -93,8 +90,6 @@
     --transition-fast: 0.2s;
     --transition-normal: 0.3s;
     --transition-slow: 0.5s;
-    --transform-hover-y: -2px;
-    --transform-skill-hover-y: -1px;
     
     /* Z-Index Scale */
     --z-index-below: 1;
@@ -165,20 +160,19 @@
 
 /* Dark Mode */
 [data-theme="dark"] {
-    /* --primary-color: #5b9cf5;
-    --primary-hover: #7db4f8; */
     --primary-color: var(--text-secondary);
-    --primary-hover: var(--white-constant);
+    --primary-hover: var(--white);
     --primary-light-color: #3b82f6;
     --secondary-color: #9ca3af;
     --secondary-light-color: #6b7280;
     --background: #121212;
     --surface: #1e1e1e;
+    /* Equal to --surface, so cards do not read as raised in dark mode. */
+    --surface-raised: #1e1e1e;
     --border: rgba(255, 255, 255, 0.12);
     --text-primary: rgba(255, 255, 255, 0.87);
     --text-secondary: rgba(255, 255, 255, 0.60);
     --text-muted: rgba(255, 255, 255, 0.38);
-    --white: #1e1e1e;
     --position-separator: rgba(255, 255, 255, 0.08);
     --primary-surface: #ededed;
     --on-primary-surface: #1e1e1e;
@@ -188,5 +182,7 @@
     --shadow-hover: none;
 
     /* Toggle */
+    --toggle-icon: var(--text-secondary);
+    --toggle-icon-hover: var(--text-primary);
     --toggle-hover-border: rgba(255, 255, 255, 0.25);
 }

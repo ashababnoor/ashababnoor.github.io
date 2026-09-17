@@ -40,7 +40,7 @@
     height: 3.25rem;
     border-radius: var(--radius-lg);
     border: var(--base-border-width) solid var(--border);
-    background: var(--white);
+    background: var(--surface-raised);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,25 +71,25 @@
 
 .connect-link.linkedin:hover .connect-icon {
     background: var(--linkedin-blue);
-    color: var(--white-constant);
+    color: var(--white);
     border-color: var(--linkedin-blue);
 }
 
 .connect-link.scholar:hover .connect-icon {
     background: var(--scholar-blue);
-    color: var(--white-constant);
+    color: var(--white);
     border-color: var(--scholar-blue);
 }
 
 .connect-link.orcid:hover .connect-icon {
     background: var(--orcid-green);
-    color: var(--white-constant);
+    color: var(--white);
     border-color: var(--orcid-green);
 }
 
 .connect-link.email:hover .connect-icon {
     background: var(--email-red);
-    color: var(--white-constant);
+    color: var(--white);
     border-color: var(--email-red);
 }
 
