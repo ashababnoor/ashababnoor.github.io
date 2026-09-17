@@ -134,11 +134,6 @@
     cursor: pointer;
 }
 
-.publication-copy-icon {
-    width: 0.875rem;
-    height: 0.875rem;
-    flex: none;
-}
 
 .publication-copy:focus-visible {
     outline: calc(var(--base-border-width) * 2) solid var(--primary-color);

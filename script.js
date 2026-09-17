@@ -79,10 +79,9 @@ function copyText(text) {
 }
 
 const COPY_ICONS = {
-    copy: '<rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>' +
-          '<path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>',
-    done: '<path d="M20 6 9 17l-5-5"/>',
-    fail: '<path d="M18 6 6 18M6 6l12 12"/>'
+    copy: 'far fa-copy',
+    done: 'fas fa-check',
+    fail: 'fas fa-xmark'
 };
 
 function initBibtexCopy() {
@@ -106,12 +105,12 @@ function initBibtexCopy() {
                 clearTimeout(revert);
                 button.classList.toggle('is-copied', copied);
                 button.classList.toggle('is-failed', !copied);
-                icon.innerHTML = copied ? COPY_ICONS.done : COPY_ICONS.fail;
+                icon.className = (copied ? COPY_ICONS.done : COPY_ICONS.fail) + ' publication-copy-icon';
                 label.textContent = copied ? 'Copied' : 'Failed';
 
                 revert = setTimeout(function() {
                     button.classList.remove('is-copied', 'is-failed');
-                    icon.innerHTML = COPY_ICONS.copy;
+                    icon.className = COPY_ICONS.copy + ' publication-copy-icon';
                     label.textContent = restingLabel;
                     button.style.width = '';
                 }, 2000);
