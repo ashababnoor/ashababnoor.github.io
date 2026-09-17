@@ -278,7 +278,6 @@
     background: var(--primary-surface);
     color: var(--on-primary-surface);
     border-color: transparent;
-    transform: translateY(var(--transform-hover-y));
     box-shadow: var(--shadow-hover);
 }
 
@@ -290,6 +289,5 @@
     background: var(--primary-surface);
     color: var(--on-primary-surface);
     border-color: transparent;
-    transform: translateY(var(--transform-hover-y));
     box-shadow: var(--shadow-hover);
 }
