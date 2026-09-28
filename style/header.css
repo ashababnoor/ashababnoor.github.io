@@ -199,6 +199,7 @@
     color: var(--text-muted);
     font-size: calc(var(--font-sm) * var(--modifier-0-95));
     display: inline-block;
+    overflow-wrap: anywhere;
 }
 
 .separator {

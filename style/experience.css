@@ -21,6 +21,10 @@
     border-bottom: var(--base-border-width) solid var(--border);
 }
 
+.company-info {
+    min-width: 0;
+}
+
 .company-logo {
     height: auto; /* keep auto to match image size */
     display: flex;

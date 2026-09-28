@@ -39,7 +39,7 @@
     --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
     
     /* Base Sizing */
-    --base-font-size: 16px;
+    --base-font-size: 1rem;
     --base-spacing: 1rem;
     --base-radius: 8px;
     --base-border-width: 1px;
@@ -146,7 +146,7 @@
     /* Profile Image Sizes */
     --profile-img-desktop: calc(var(--base-spacing) * var(--profile-img-scale-desktop));
     --profile-img-tablet: calc(var(--base-spacing) * var(--profile-img-scale-tablet));
-    --profile-img-mobile: calc(var(--base-spacing) * var(--profile-img-scale-mobile));
+    --profile-img-mobile: min(calc(var(--base-spacing) * var(--profile-img-scale-mobile)), 55vw);
     
     /* Company Logo Size */
     --company-logo-size: calc(var(--base-spacing) * var(--company-logo-scale));
