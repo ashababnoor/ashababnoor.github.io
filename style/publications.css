@@ -129,11 +129,6 @@
 }
 
 
-.publication-copy:focus-visible {
-    outline: calc(var(--base-border-width) * 2) solid var(--primary-color);
-    outline-offset: 2px;
-}
-
 .publication-copy.is-copied {
     background: var(--primary-surface);
     color: var(--on-primary-surface);

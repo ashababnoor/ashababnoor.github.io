@@ -19,7 +19,6 @@
     color: var(--toggle-icon);
     cursor: pointer;
     z-index: 10;
-    outline: none;
     -webkit-tap-highlight-color: transparent;
     transition: color var(--transition-normal) ease,
                 border-color var(--transition-normal) ease;
@@ -28,11 +27,6 @@
 .theme-toggle:hover {
     color: var(--toggle-icon-hover);
     border-color: var(--toggle-hover-border);
-}
-
-.theme-toggle:focus-visible {
-    outline: calc(var(--base-border-width) * 2) solid var(--primary-color);
-    outline-offset: 2px;
 }
 
 .theme-icon {

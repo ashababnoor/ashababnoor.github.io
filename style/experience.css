@@ -195,6 +195,7 @@
     width: 100%;
     text-align: center;
     position: relative;
+    border-radius: var(--radius-sm);
 }
 
 .expand-toggle:hover {
@@ -203,10 +204,6 @@
 
 [data-theme="dark"] .expand-toggle:hover {
     color: var(--primary-hover);
-}
-
-.expand-toggle:focus {
-    outline: none;
 }
 
 .expand-toggle i {
