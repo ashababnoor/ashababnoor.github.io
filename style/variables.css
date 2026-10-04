@@ -10,8 +10,8 @@
     --surface-raised: #ffffff;
     --border: #e1e5e9;
     --text-primary: #000000;
-    --text-secondary: #666666;
-    --text-muted: #999999;
+    --text-secondary: #525252;
+    --text-muted: #6b7280;
     --success: #057642;
     --linkedin-blue: #0A66C2;
     --github-dark: #24292e;
@@ -171,8 +171,8 @@
     --surface-raised: #1e1e1e;
     --border: rgba(255, 255, 255, 0.12);
     --text-primary: rgba(255, 255, 255, 0.87);
-    --text-secondary: rgba(255, 255, 255, 0.60);
-    --text-muted: rgba(255, 255, 255, 0.38);
+    --text-secondary: rgba(255, 255, 255, 0.70);
+    --text-muted: rgba(255, 255, 255, 0.55);
     --position-separator: rgba(255, 255, 255, 0.08);
     --primary-surface: #ededed;
     --on-primary-surface: #1e1e1e;
