@@ -297,7 +297,7 @@
         font-size: calc(var(--font-xl) * var(--modifier-1-0));
     }
 
-    .company-link {
+    .company-name-link i {
         font-size: 0.65em;
     }
     
