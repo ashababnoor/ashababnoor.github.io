@@ -1,0 +1,41 @@
+# Deploys the site to GitHub Pages, with CSS and JS URLs versioned by scripts/version-assets.sh.
+# No build step: the site is plain files, so the checkout is published as is.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# A newer push waits for the running deploy, and replaces any older one still queued.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # One job, since each job is billed as at least a minute. 1 CPU costs a third of ubuntu-latest.
+    runs-on: ubuntu-slim
+    timeout-minutes: 5
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - run: bash scripts/version-assets.sh
+
+      # Skips .git, .github and other dotfiles.
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+
+      - id: deployment
+        uses: actions/deploy-pages@v5

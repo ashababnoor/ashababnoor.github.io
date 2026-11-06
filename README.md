@@ -9,6 +9,10 @@ Welcome to my personal portfolio website! A modern, responsive portfolio showcas
 
 I'm Ahmed Shabab Noor, a Software Engineer based in Dhaka, Bangladesh. I specialize in scalable backend systems, data platforms, machine learning, and advanced analytics. Currently Software Engineer III at Fin.com, previously Data Engineer II at Pathao.
 
+## 🛠️ Development
+
+Every push to `main` deploys through GitHub Actions (`.github/workflows/pages.yml`). There is no build: the workflow adds a `?v=` content version to the CSS and JS URLs (`scripts/version-assets.sh`) so visitors never get stale files, then publishes the files as they are.
+
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
