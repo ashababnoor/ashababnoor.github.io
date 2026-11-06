@@ -1,4 +1,8 @@
 :root {
+    /* Matches the browser's scrollbars and controls to the theme. "only" also stops
+       Chrome's Auto Dark Mode re-colouring the light theme (it turns mask icons black). */
+    color-scheme: only light;
+
     /* Colors */
     --primary-color: #2563eb;
     --primary-hover: #1e40af;
@@ -167,6 +171,7 @@
 
 /* Dark Mode */
 [data-theme="dark"] {
+    color-scheme: dark;
     --primary-color: var(--text-secondary);
     --primary-hover: var(--white);
     --primary-light-color: #3b82f6;
