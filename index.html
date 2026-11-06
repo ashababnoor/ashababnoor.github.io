@@ -345,7 +345,7 @@
                     </p>
                 </div>
             </div>
-            <!-- Ask AI strip: links are filled in from the ask-ai-assistants block at the end of the page -->
+            <!-- Ask AI strip: prompts come from #ask-ai-assistants -->
             <div class="ask-ai-strip">
                 <div class="ask-ai-row">
                     <p class="ask-ai-strip-label" id="ask-ai-strip-label">Ask AI about me</p>
@@ -990,8 +990,7 @@
             </div> -->
         </section>
 
-        <!-- Ask AI Section: hidden for now, since the strip in the header covers it. Uncomment to bring it back.
-             Links are filled in from the ask-ai-assistants block at the end of the page.
+        <!-- Ask AI section: hidden while the header strip covers it. Uncomment to restore.
         <section class="section" id="ask-ai" aria-labelledby="ask-ai-title">
             <div class="connect-cta">
                 <h2 id="ask-ai-title">Ask AI about me</h2>
@@ -1069,9 +1068,8 @@
         </footer>
     </div>
 
-    <!-- Ask AI assistants, used by every [data-ask-ai] link.
-         To change a question, edit its "prompt". "url" is where the assistant opens, with {prompt} where the question goes.
-         To add an assistant: add an entry here, a link with its data-ask-ai key, and its icon and colour in style/ask-ai.css. -->
+    <!-- Ask AI prompts, keyed by data-ask-ai. {prompt} in "url" is replaced with the prompt.
+         New assistant: add an entry, a link with its key, and its icon and colour in style/ask-ai.css. -->
     <script type="application/json" id="ask-ai-assistants">
     {
         "google-ai": {

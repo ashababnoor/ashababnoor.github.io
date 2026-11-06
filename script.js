@@ -132,13 +132,13 @@ function readAskAiAssistants() {
 function initAskAiLinks() {
     const assistants = readAskAiAssistants();
 
-    // Links keep their fallback href (the assistant's home page) unless their entry is complete.
+    // Incomplete entries keep the fallback href (the assistant's home page).
     document.querySelectorAll('[data-ask-ai]').forEach(function(link) {
         const assistant = assistants[link.dataset.askAi];
         if (!assistant || !assistant.prompt || !assistant.url || assistant.url.indexOf('{prompt}') === -1) return;
 
         const encoded = encodeURIComponent(assistant.prompt.trim().replace(/\s+/g, ' '));
-        // A function replacement keeps "$" in a prompt from being read as a pattern.
+        // A function, so a "$" in the prompt is not read as a replacement pattern.
         link.href = assistant.url.replace('{prompt}', function() { return encoded; });
     });
 }

@@ -1,7 +1,5 @@
-/* Ask AI
-   Each assistant's icon and brand colour are set once on its [data-ask-ai]
-   key; the header strip and the tiles near the end both read them.
-   Icons: Lobe Icons (https://lobehub.com/icons), pinned to one version. */
+/* Ask AI: icon and brand colour per [data-ask-ai] key.
+   Icons: Lobe Icons (https://lobehub.com/icons), pinned version. */
 [data-ask-ai="google-ai"] {
     --ask-ai-icon: url('https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.102.0/icons/google.svg');
     --ask-ai-brand: var(--google-blue);
@@ -45,7 +43,7 @@
 .ask-ai-strip {
     container-type: inline-size;
     margin-top: var(--section-padding-desktop);
-    /* Same as the header's bottom padding at every breakpoint, so the row sits midway between the rule and the card edge */
+    /* Copies the header padding, so the row sits midway between the rule and the card edge */
     padding-top: inherit;
     border-top: var(--base-border-width) solid var(--border);
 }
@@ -89,7 +87,7 @@
     box-shadow: var(--shadow-hover);
 }
 
-/* Icons only once the label and named buttons no longer fit on one line (about 38.5em) */
+/* Icon-only once the named buttons no longer fit on one line (about 38.5em) */
 @container (max-width: 40em) {
     .ask-ai-pill {
         width: 2.5rem;
@@ -116,7 +114,7 @@
     }
 }
 
-/* Tiles near the end */
+/* Bottom section tiles (commented out in index.html) */
 .ask-ai-links {
     margin: 0;
     padding: 0;
@@ -129,7 +127,7 @@
     border-color: var(--ask-ai-brand);
 }
 
-/* The header stacks and centres its content below 768px */
+/* Centred to match the stacked header */
 @media (max-width: 768px) {
     .ask-ai-row,
     .ask-ai-pills {
