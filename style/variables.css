@@ -19,6 +19,11 @@
     --email-red: #ea4335;
     --orcid-green: #A6CE39;
     --resume-green: #059669;
+    --openai-dark: #000000;
+    --claude-orange: #c15f3c;
+    --perplexity-teal: #20808d;
+    --xai-dark: #000000;
+    --google-blue: #4285f4;
     --position-separator: #f0f0f0;
     --white: #ffffff;
 
@@ -28,6 +33,8 @@
     --primary-surface: var(--primary-color);
     --on-primary-surface: var(--white);
     --on-github-dark: var(--white);
+    --on-openai-dark: var(--white);
+    --on-xai-dark: var(--white);
 
     /* Toggle */
     --toggle-icon: #8a8a8a;
@@ -178,6 +185,10 @@
     --on-primary-surface: #1e1e1e;
     --github-dark: #ededed;
     --on-github-dark: #1e1e1e;
+    --openai-dark: #ededed;
+    --on-openai-dark: #1e1e1e;
+    --xai-dark: #ededed;
+    --on-xai-dark: #1e1e1e;
     --shadow: none;
     --shadow-hover: none;
 
