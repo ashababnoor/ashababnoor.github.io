@@ -1,0 +1,138 @@
+/* Ask AI
+   Each assistant's icon and brand colour are set once on its [data-ask-ai]
+   key; the header strip and the tiles near the end both read them.
+   Icons: Lobe Icons (https://lobehub.com/icons), pinned to one version. */
+[data-ask-ai="google-ai"] {
+    --ask-ai-icon: url('https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.102.0/icons/google.svg');
+    --ask-ai-brand: var(--google-blue);
+    --ask-ai-on-brand: var(--white);
+}
+
+[data-ask-ai="chatgpt"] {
+    --ask-ai-icon: url('https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.102.0/icons/openai.svg');
+    --ask-ai-brand: var(--openai-dark);
+    --ask-ai-on-brand: var(--on-openai-dark);
+}
+
+[data-ask-ai="grok"] {
+    --ask-ai-icon: url('https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.102.0/icons/grok.svg');
+    --ask-ai-brand: var(--xai-dark);
+    --ask-ai-on-brand: var(--on-xai-dark);
+}
+
+[data-ask-ai="claude"] {
+    --ask-ai-icon: url('https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.102.0/icons/claude.svg');
+    --ask-ai-brand: var(--claude-orange);
+    --ask-ai-on-brand: var(--white);
+}
+
+[data-ask-ai="perplexity"] {
+    --ask-ai-icon: url('https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.102.0/icons/perplexity.svg');
+    --ask-ai-brand: var(--perplexity-teal);
+    --ask-ai-on-brand: var(--white);
+}
+
+.ask-ai-icon {
+    flex-shrink: 0;
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    -webkit-mask: var(--ask-ai-icon) center / contain no-repeat;
+    mask: var(--ask-ai-icon) center / contain no-repeat;
+}
+
+/* Header strip */
+.ask-ai-strip {
+    container-type: inline-size;
+    margin-top: var(--section-padding-desktop);
+    /* Same as the header's bottom padding at every breakpoint, so the row sits midway between the rule and the card edge */
+    padding-top: inherit;
+    border-top: var(--base-border-width) solid var(--border);
+}
+
+.ask-ai-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-sm) var(--spacing-md);
+}
+
+.ask-ai-strip-label {
+    margin: 0;
+    font-size: var(--font-sm);
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.ask-ai-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ask-ai-pill {
+    color: var(--text-secondary);
+}
+
+.ask-ai-pill .ask-ai-icon {
+    width: 1.15em;
+    height: 1.15em;
+}
+
+.ask-ai-pill:hover {
+    background: var(--ask-ai-brand);
+    color: var(--ask-ai-on-brand);
+    border-color: transparent;
+    box-shadow: var(--shadow-hover);
+}
+
+/* Icons only once the label and named buttons no longer fit on one line (about 38.5em) */
+@container (max-width: 40em) {
+    .ask-ai-pill {
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0;
+    }
+
+    .ask-ai-pill .ask-ai-icon {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+
+    .ask-ai-pill-label {
+        display: none;
+    }
+}
+
+@media (pointer: coarse) {
+    @container (max-width: 40em) {
+        .ask-ai-pill {
+            width: 2.75rem;
+            height: 2.75rem;
+        }
+    }
+}
+
+/* Tiles near the end */
+.ask-ai-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ask-ai-links .connect-link:hover .connect-icon {
+    background: var(--ask-ai-brand);
+    color: var(--ask-ai-on-brand);
+    border-color: var(--ask-ai-brand);
+}
+
+/* The header stacks and centres its content below 768px */
+@media (max-width: 768px) {
+    .ask-ai-row,
+    .ask-ai-pills {
+        justify-content: center;
+    }
+}

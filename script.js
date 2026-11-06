@@ -117,6 +117,32 @@ function initBibtexCopy() {
     });
 }
 
+// Ask AI links
+function readAskAiAssistants() {
+    const source = document.getElementById('ask-ai-assistants');
+    if (!source) return {};
+    try {
+        return JSON.parse(source.textContent);
+    } catch (error) {
+        console.error('Ask AI: the ask-ai-assistants block is not valid JSON.', error);
+        return {};
+    }
+}
+
+function initAskAiLinks() {
+    const assistants = readAskAiAssistants();
+
+    // Links keep their fallback href (the assistant's home page) unless their entry is complete.
+    document.querySelectorAll('[data-ask-ai]').forEach(function(link) {
+        const assistant = assistants[link.dataset.askAi];
+        if (!assistant || !assistant.prompt || !assistant.url || assistant.url.indexOf('{prompt}') === -1) return;
+
+        const encoded = encodeURIComponent(assistant.prompt.trim().replace(/\s+/g, ' '));
+        // A function replacement keeps "$" in a prompt from being read as a pattern.
+        link.href = assistant.url.replace('{prompt}', function() { return encoded; });
+    });
+}
+
 function calculateDuration(startDate, endDate = null) {
     const start = new Date(startDate);
     const end = endDate ? new Date(endDate) : new Date();
@@ -317,6 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     initThemeToggle();
     initBibtexCopy();
+    initAskAiLinks();
 
     initializeExpandableContent();
 });

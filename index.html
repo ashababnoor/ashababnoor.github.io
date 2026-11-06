@@ -345,6 +345,44 @@
                     </p>
                 </div>
             </div>
+            <!-- Ask AI strip: links are filled in from the ask-ai-assistants block at the end of the page -->
+            <div class="ask-ai-strip">
+                <div class="ask-ai-row">
+                    <p class="ask-ai-strip-label" id="ask-ai-strip-label">Ask AI about me</p>
+                    <ul class="ask-ai-pills" aria-labelledby="ask-ai-strip-label">
+                        <li>
+                            <a href="https://www.google.com/search?udm=50" class="btn ask-ai-pill" data-ask-ai="google-ai" target="_blank" rel="noopener" aria-label="Ask Google AI Mode about Ahmed Shabab Noor" title="Ask Google AI Mode">
+                                <span class="ask-ai-icon" aria-hidden="true"></span>
+                                <span class="ask-ai-pill-label">Google AI</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://chatgpt.com/" class="btn ask-ai-pill" data-ask-ai="chatgpt" target="_blank" rel="noopener" aria-label="Ask ChatGPT about Ahmed Shabab Noor" title="Ask ChatGPT">
+                                <span class="ask-ai-icon" aria-hidden="true"></span>
+                                <span class="ask-ai-pill-label">ChatGPT</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://claude.ai/new" class="btn ask-ai-pill" data-ask-ai="claude" target="_blank" rel="noopener" aria-label="Ask Claude about Ahmed Shabab Noor" title="Ask Claude">
+                                <span class="ask-ai-icon" aria-hidden="true"></span>
+                                <span class="ask-ai-pill-label">Claude</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://grok.com/" class="btn ask-ai-pill" data-ask-ai="grok" target="_blank" rel="noopener" aria-label="Ask Grok about Ahmed Shabab Noor" title="Ask Grok">
+                                <span class="ask-ai-icon" aria-hidden="true"></span>
+                                <span class="ask-ai-pill-label">Grok</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.perplexity.ai/" class="btn ask-ai-pill" data-ask-ai="perplexity" target="_blank" rel="noopener" aria-label="Ask Perplexity about Ahmed Shabab Noor" title="Ask Perplexity">
+                                <span class="ask-ai-icon" aria-hidden="true"></span>
+                                <span class="ask-ai-pill-label">Perplexity</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </header>
 
         <!-- Experience Section -->
@@ -952,6 +990,47 @@
             </div> -->
         </section>
 
+        <!-- Ask AI Section: hidden for now, since the strip in the header covers it. Uncomment to bring it back.
+             Links are filled in from the ask-ai-assistants block at the end of the page.
+        <section class="section" id="ask-ai" aria-labelledby="ask-ai-title">
+            <div class="connect-cta">
+                <h2 id="ask-ai-title">Ask AI about me</h2>
+                <p>Want a second opinion? Each button opens a new chat with a question about my work already written in.</p>
+                <ul class="connect-links ask-ai-links">
+                    <li>
+                        <a href="https://www.google.com/search?udm=50" class="connect-link" data-ask-ai="google-ai" target="_blank" rel="noopener" aria-label="Ask Google AI Mode about Ahmed Shabab Noor">
+                            <span class="connect-icon"><span class="ask-ai-icon" aria-hidden="true"></span></span>
+                            <span class="connect-label">Google AI</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://chatgpt.com/" class="connect-link" data-ask-ai="chatgpt" target="_blank" rel="noopener" aria-label="Ask ChatGPT about Ahmed Shabab Noor">
+                            <span class="connect-icon"><span class="ask-ai-icon" aria-hidden="true"></span></span>
+                            <span class="connect-label">ChatGPT</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://claude.ai/new" class="connect-link" data-ask-ai="claude" target="_blank" rel="noopener" aria-label="Ask Claude about Ahmed Shabab Noor">
+                            <span class="connect-icon"><span class="ask-ai-icon" aria-hidden="true"></span></span>
+                            <span class="connect-label">Claude</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://grok.com/" class="connect-link" data-ask-ai="grok" target="_blank" rel="noopener" aria-label="Ask Grok about Ahmed Shabab Noor">
+                            <span class="connect-icon"><span class="ask-ai-icon" aria-hidden="true"></span></span>
+                            <span class="connect-label">Grok</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.perplexity.ai/" class="connect-link" data-ask-ai="perplexity" target="_blank" rel="noopener" aria-label="Ask Perplexity about Ahmed Shabab Noor">
+                            <span class="connect-icon"><span class="ask-ai-icon" aria-hidden="true"></span></span>
+                            <span class="connect-label">Perplexity</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section> -->
+
         <!-- Links Section -->
         <section class="section" id="connect">
             <div class="connect-cta">
@@ -989,6 +1068,34 @@
             <p>&copy; <span id="current-year"></span> Ahmed Shabab Noor. All rights reserved · <a href="/resume.html" class="muted-link">Resume</a></p>
         </footer>
     </div>
+
+    <!-- Ask AI assistants, used by every [data-ask-ai] link.
+         To change a question, edit its "prompt". "url" is where the assistant opens, with {prompt} where the question goes.
+         To add an assistant: add an entry here, a link with its data-ask-ai key, and its icon and colour in style/ask-ai.css. -->
+    <script type="application/json" id="ask-ai-assistants">
+    {
+        "google-ai": {
+            "url": "https://www.google.com/search?udm=50&q={prompt}",
+            "prompt": "Who is Ahmed Shabab Noor, the software engineer at Fin.com and formerly Pathao? Summarize his experience, notable results, publications and education from shababnoor.com."
+        },
+        "chatgpt": {
+            "url": "https://chatgpt.com/?q={prompt}",
+            "prompt": "Read shababnoor.com and linkedin.com/in/ashababnoor and tell me about Ahmed Shabab Noor, the software engineer in Dhaka. Cover what he has built at Fin.com and Pathao, the measurable results, how quickly he progressed, and his research. Finish with the kinds of roles he'd be strongest in."
+        },
+        "claude": {
+            "url": "https://claude.ai/new?q={prompt}",
+            "prompt": "Please read https://shababnoor.com and give me an honest overview of Ahmed Shabab Noor as an engineer: the systems he has built, the impact they had, how his responsibilities grew from intern to Software Engineer III, and what stands out compared with engineers at a similar level. Cite the pages you used."
+        },
+        "grok": {
+            "url": "https://grok.com/?q={prompt}",
+            "prompt": "Give me a quick rundown on Ahmed Shabab Noor (shababnoor.com), software engineer at Fin.com: what he works on, his biggest wins at Pathao, and why a team would want him on board."
+        },
+        "perplexity": {
+            "url": "https://www.perplexity.ai/search?q={prompt}",
+            "prompt": "Ahmed Shabab Noor, software engineer at Fin.com, formerly Pathao, Dhaka: career summary, key projects and measurable results, publications, and education. Use shababnoor.com, LinkedIn and Google Scholar."
+        }
+    }
+    </script>
 
     <script src="script.js" defer></script>
 </body>
