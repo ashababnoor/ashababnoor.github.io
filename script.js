@@ -347,3 +347,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initializeExpandableContent();
 });
+
+// Re-enables transitions once the page has loaded (see .preload in base.css).
+window.addEventListener('load', function() {
+    requestAnimationFrame(function() {
+        document.documentElement.classList.remove('preload');
+    });
+});

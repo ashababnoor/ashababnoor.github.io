@@ -67,6 +67,10 @@
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="X68iRV0YiH-yB2ZpNRoz8Q2pcPspH28psga4I8XoN1M" />
 
+    <!-- Turns transitions off until the page has loaded (see .preload in style/base.css). Added here, not in
+         the markup, so visitors without JavaScript keep their transitions. script.js removes it on load. -->
+    <script>document.documentElement.classList.add('preload');</script>
+
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
