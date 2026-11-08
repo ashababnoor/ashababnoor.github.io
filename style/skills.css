@@ -72,8 +72,26 @@
     /* No filter - shows colorful SVG icons */
 }
 
-[data-theme="dark"] .skill-tags .skill-tag .skill-icon[alt="macOS"] {
+[data-theme="dark"] .skill-tags .skill-tag .skill-icon[alt="macOS"],
+[data-theme="dark"] .skill-tags .skill-tag .skill-icon[alt="Notion"],
+[data-theme="dark"] .skill-tags .skill-tag .skill-icon[alt="Kafka"],
+[data-theme="dark"] .skill-tags .skill-tag .skill-icon[alt="GitHub Copilot"],
+[data-theme="dark"] .skill-tags .skill-tag .skill-icon[alt="ChatGPT"],
+[data-theme="dark"] .skill-tags .skill-tag .skill-icon[alt="MCP"],
+[data-theme="dark"] .skill-tags .skill-tag .skill-icon[alt="Ollama"] {
     filter: invert(1);
+}
+
+/* Multi-colour marks drawn in dark ink: a light chip keeps their brand colours legible */
+[data-theme="dark"] .skill-tags .skill-tag .skill-icon[alt="AWS"],
+[data-theme="dark"] .skill-tags .skill-tag .skill-icon[alt="Bash"],
+[data-theme="dark"] .skill-tags .skill-tag .skill-icon[alt="Helm"],
+[data-theme="dark"] .skill-tags .skill-tag .skill-icon[alt="MySQL"],
+[data-theme="dark"] .skill-tags .skill-tag .skill-icon[alt="Neo4j"],
+[data-theme="dark"] .skill-tags .skill-tag .skill-icon[alt="Pandas"] {
+    background: #fff;
+    border-radius: var(--radius-sm);
+    padding: 1px;
 }
 
 @media (hover: hover) {
