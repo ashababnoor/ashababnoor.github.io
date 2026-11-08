@@ -55,42 +55,43 @@
     transition: color var(--transition-normal) ease;
 }
 
-.connect-link:hover .connect-icon {
-    box-shadow: var(--shadow-hover);
+.connect-link.github {
+    --connect-hover-bg: var(--github-dark);
+    --connect-hover-color: var(--on-github-dark);
 }
 
-.connect-link:hover .connect-label {
-    color: var(--text-secondary);
+.connect-link.linkedin {
+    --connect-hover-bg: var(--linkedin-blue);
+    --connect-hover-color: var(--white);
 }
 
-.connect-link.github:hover .connect-icon {
-    background: var(--github-dark);
-    color: var(--on-github-dark);
-    border-color: var(--github-dark);
+.connect-link.scholar {
+    --connect-hover-bg: var(--scholar-blue);
+    --connect-hover-color: var(--white);
 }
 
-.connect-link.linkedin:hover .connect-icon {
-    background: var(--linkedin-blue);
-    color: var(--white);
-    border-color: var(--linkedin-blue);
+.connect-link.orcid {
+    --connect-hover-bg: var(--orcid-green);
+    --connect-hover-color: var(--white);
 }
 
-.connect-link.scholar:hover .connect-icon {
-    background: var(--scholar-blue);
-    color: var(--white);
-    border-color: var(--scholar-blue);
+.connect-link.email {
+    --connect-hover-bg: var(--email-red);
+    --connect-hover-color: var(--white);
 }
 
-.connect-link.orcid:hover .connect-icon {
-    background: var(--orcid-green);
-    color: var(--white);
-    border-color: var(--orcid-green);
-}
+/* Every .connect-link gets its hover here. Brands only set the two tokens above. */
+@media (hover: hover) {
+    .connect-link:hover .connect-icon {
+        background: var(--connect-hover-bg, var(--surface-raised));
+        color: var(--connect-hover-color, var(--text-secondary));
+        border-color: var(--connect-hover-bg, var(--border));
+        box-shadow: var(--shadow-hover);
+    }
 
-.connect-link.email:hover .connect-icon {
-    background: var(--email-red);
-    color: var(--white);
-    border-color: var(--email-red);
+    .connect-link:hover .connect-label {
+        color: var(--text-secondary);
+    }
 }
 
 /* Footer */
@@ -111,6 +112,8 @@
     transition: color var(--transition-normal) ease;
 }
 
-.muted-link:hover {
-    color: var(--primary-color);
+@media (hover: hover) {
+    .muted-link:hover {
+        color: var(--primary-color);
+    }
 }

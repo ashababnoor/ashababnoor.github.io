@@ -51,8 +51,10 @@
     text-decoration: none;
 }
 
-.company-name-link:hover i {
-    color: inherit;
+@media (hover: hover) {
+    .company-name-link:hover i {
+        color: inherit;
+    }
 }
 
 .company-name-link i {
@@ -154,8 +156,10 @@
     color: var(--secondary-light-color);
 }
 
-.position-description li:hover {
-    color: var(--text-primary);
+@media (hover: hover) {
+    .position-description li:hover {
+        color: var(--text-primary);
+    }
 }
 
 /* Expandable Content Styles */
@@ -197,12 +201,14 @@
     border-radius: var(--radius-sm);
 }
 
-.expand-toggle:hover {
-    color: var(--primary-color);
-}
+@media (hover: hover) {
+    .expand-toggle:hover {
+        color: var(--primary-color);
+    }
 
-[data-theme="dark"] .expand-toggle:hover {
-    color: var(--primary-hover);
+    [data-theme="dark"] .expand-toggle:hover {
+        color: var(--primary-hover);
+    }
 }
 
 .expand-toggle i {

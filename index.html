@@ -51,7 +51,7 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="assets/shabab.jpeg" as="image" type="image/jpeg">
+    <link rel="preload" href="assets/shabab-v3.webp" as="image" type="image/webp">
     <link rel="preload" href="style.css" as="style">
 
     <!-- Google Analytics -->
@@ -66,6 +66,10 @@
     
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="X68iRV0YiH-yB2ZpNRoz8Q2pcPspH28psga4I8XoN1M" />
+
+    <!-- Turns transitions off until the page has loaded (see .preload in style/base.css). Added here, not in
+         the markup, so visitors without JavaScript keep their transitions. script.js removes it on load. -->
+    <script>document.documentElement.classList.add('preload');</script>
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -117,7 +121,7 @@
         "url": "https://shababnoor.com/",
         "image": {
           "@type": "ImageObject",
-          "url": "https://shababnoor.com/assets/shabab.jpeg",
+          "url": "https://shababnoor.com/assets/shabab-v3.webp",
           "width": 500,
           "height": 500
         },
@@ -318,7 +322,7 @@
             <div class="profile-section" >
                 <div class="profile-left">
                     <div class="profile-img">
-                        <img src="assets/shabab.jpeg" alt="Ahmed Shabab Noor" class="profile-image" width="500" height="500">
+                        <img src="assets/shabab-v3.webp" alt="Ahmed Shabab Noor" class="profile-image" width="500" height="500">
                     </div>
                     <!-- Quick contact buttons -->
                     <div class="contact-buttons">
@@ -1037,13 +1041,13 @@
                 <h2>Let's connect</h2>
                 <p>Always open to interesting problems, collaborations, and good conversations.<span class="connect-more"> Reach me wherever you prefer.</span></p>
                 <nav class="connect-links" aria-label="Social media and contact links">
-                    <a href="https://github.com/ashababnoor" class="connect-link github" target="_blank" rel="noopener" aria-label="Visit Ahmed Shabab Noor's GitHub profile">
-                        <span class="connect-icon"><i class="fab fa-github"></i></span>
-                        <span class="connect-label">GitHub</span>
-                    </a>
                     <a href="https://linkedin.com/in/ashababnoor" class="connect-link linkedin" target="_blank" rel="noopener" aria-label="Visit Ahmed Shabab Noor's LinkedIn profile">
                         <span class="connect-icon"><i class="fab fa-linkedin-in"></i></span>
                         <span class="connect-label">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/ashababnoor" class="connect-link github" target="_blank" rel="noopener" aria-label="Visit Ahmed Shabab Noor's GitHub profile">
+                        <span class="connect-icon"><i class="fab fa-github"></i></span>
+                        <span class="connect-label">GitHub</span>
                     </a>
                     <a href="https://scholar.google.com/citations?user=mD402DsAAAAJ" class="connect-link scholar" target="_blank" rel="noopener" aria-label="Visit Ahmed Shabab Noor's Google Scholar profile">
                         <span class="connect-icon"><i class="fas fa-graduation-cap"></i></span>

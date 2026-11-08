@@ -301,12 +301,6 @@
         font-size: 0.65em;
     }
     
-    .connect-link:hover .connect-icon,
-    .btn:hover,
-    .skill-tag:hover {
-        box-shadow: none;
-    }
-
     .theme-toggle {
         top: var(--spacing-md);
         right: var(--spacing-md);

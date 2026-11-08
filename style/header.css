@@ -24,9 +24,11 @@
                 border-color var(--transition-normal) ease;
 }
 
-.theme-toggle:hover {
-    color: var(--toggle-icon-hover);
-    border-color: var(--toggle-hover-border);
+@media (hover: hover) {
+    .theme-toggle:hover {
+        color: var(--toggle-icon-hover);
+        border-color: var(--toggle-hover-border);
+    }
 }
 
 .theme-icon {
@@ -96,32 +98,23 @@
 
 .btn-secondary.linkedin {
     --brand-color: var(--linkedin-blue);
+    --btn-hover-bg: var(--linkedin-blue);
+    --btn-hover-color: var(--white);
     color: var(--linkedin-blue);
-}
-
-.btn-secondary.linkedin:hover {
-    background: var(--linkedin-blue);
-    color: var(--white);
 }
 
 .btn-secondary.resume {
     --brand-color: var(--resume-green);
+    --btn-hover-bg: var(--resume-green);
+    --btn-hover-color: var(--white);
     color: var(--resume-green);
-}
-
-.btn-secondary.resume:hover {
-    background: var(--resume-green);
-    color: var(--white);
 }
 
 .btn-secondary.email {
     --brand-color: var(--email-red);
+    --btn-hover-bg: var(--email-red);
+    --btn-hover-color: var(--white);
     color: var(--email-red);
-}
-
-.btn-secondary.email:hover {
-    background: var(--email-red);
-    color: var(--white);
 }
 
 .profile-img img {
@@ -229,14 +222,16 @@
     transition: color var(--transition-normal) ease;
 }
 
-.email-link:hover,
-.github-link:hover {
-    color: var(--primary-color);
-}
+@media (hover: hover) {
+    .email-link:hover,
+    .github-link:hover {
+        color: var(--primary-color);
+    }
 
-[data-theme="dark"] .email-link:hover,
-[data-theme="dark"] .github-link:hover {
-    color: var(--primary-hover);
+    [data-theme="dark"] .email-link:hover,
+    [data-theme="dark"] .github-link:hover {
+        color: var(--primary-hover);
+    }
 }
 
 /* Contact Buttons */
@@ -266,20 +261,17 @@
     color: var(--primary-color);
 }
 
-.btn-primary:hover {
-    background: var(--primary-surface);
-    color: var(--on-primary-surface);
-    border-color: transparent;
-    box-shadow: var(--shadow-hover);
-}
-
 .btn-secondary {
     color: var(--text-secondary);
 }
 
-.btn-secondary:hover {
-    background: var(--primary-surface);
-    color: var(--on-primary-surface);
-    border-color: transparent;
-    box-shadow: var(--shadow-hover);
+/* Every .btn gets its hover here. Variants only set --btn-hover-bg and --btn-hover-color.
+   Keep this after the variants: their resting colour has the same specificity. */
+@media (hover: hover) {
+    .btn:hover {
+        background: var(--btn-hover-bg, var(--primary-surface));
+        color: var(--btn-hover-color, var(--on-primary-surface));
+        border-color: transparent;
+        box-shadow: var(--shadow-hover);
+    }
 }
