@@ -1,31 +1,31 @@
 /* Ask AI: icon and brand colour per [data-ask-ai] key.
-   Icons: Lobe Icons (https://lobehub.com/icons), pinned version. */
+   Icons: Lobe Icons (https://lobehub.com/icons) v1.102.0, saved in assets/icons/ask-ai/. */
 [data-ask-ai="google-ai"] {
-    --ask-ai-icon: url('https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.102.0/icons/google.svg');
+    --ask-ai-icon: url('../assets/icons/ask-ai/google.svg');
     --ask-ai-brand: var(--google-blue);
     --ask-ai-on-brand: var(--white);
 }
 
 [data-ask-ai="chatgpt"] {
-    --ask-ai-icon: url('https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.102.0/icons/openai.svg');
+    --ask-ai-icon: url('../assets/icons/ask-ai/openai.svg');
     --ask-ai-brand: var(--openai-dark);
     --ask-ai-on-brand: var(--on-openai-dark);
 }
 
 [data-ask-ai="grok"] {
-    --ask-ai-icon: url('https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.102.0/icons/grok.svg');
+    --ask-ai-icon: url('../assets/icons/ask-ai/grok.svg');
     --ask-ai-brand: var(--xai-dark);
     --ask-ai-on-brand: var(--on-xai-dark);
 }
 
 [data-ask-ai="claude"] {
-    --ask-ai-icon: url('https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.102.0/icons/claude.svg');
+    --ask-ai-icon: url('../assets/icons/ask-ai/claude.svg');
     --ask-ai-brand: var(--claude-orange);
     --ask-ai-on-brand: var(--white);
 }
 
 [data-ask-ai="perplexity"] {
-    --ask-ai-icon: url('https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.102.0/icons/perplexity.svg');
+    --ask-ai-icon: url('../assets/icons/ask-ai/perplexity.svg');
     --ask-ai-brand: var(--perplexity-teal);
     --ask-ai-on-brand: var(--white);
 }
