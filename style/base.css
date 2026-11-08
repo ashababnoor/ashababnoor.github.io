@@ -1,4 +1,7 @@
-/* Base Styles */
+/* Base Styles
+   Hover: a tap on a touch screen leaves :hover stuck, so :hover rules go inside
+   @media (hover: hover). Buttons (.btn), social icons (.connect-link) and publication
+   links already do this: set --btn-hover-*, --connect-hover-* or --pub-hover-*. */
 * {
     margin: 0;
     padding: 0;
@@ -31,8 +34,10 @@ body {
     color: color-mix(in srgb, var(--brand-color), white 15%);
 }
 
-[data-theme="dark"] .light-text-dark-mode.light-text-dark-mode:hover {
-    background-color: var(--brand-color);
+@media (hover: hover) {
+    [data-theme="dark"] .light-text-dark-mode.light-text-dark-mode:hover {
+        color: var(--btn-hover-color);
+    }
 }
 
 .container {

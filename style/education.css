@@ -129,8 +129,10 @@
     color: var(--secondary-light-color);
 }
 
-.education-description li:hover {
-    color: var(--text-primary);
+@media (hover: hover) {
+    .education-description li:hover {
+        color: var(--text-primary);
+    }
 }
 
 .education-skills {

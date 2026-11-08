@@ -72,19 +72,14 @@
 }
 
 .ask-ai-pill {
+    --btn-hover-bg: var(--ask-ai-brand);
+    --btn-hover-color: var(--ask-ai-on-brand);
     color: var(--text-secondary);
 }
 
 .ask-ai-pill .ask-ai-icon {
     width: 1.15em;
     height: 1.15em;
-}
-
-.ask-ai-pill:hover {
-    background: var(--ask-ai-brand);
-    color: var(--ask-ai-on-brand);
-    border-color: transparent;
-    box-shadow: var(--shadow-hover);
 }
 
 /* Icon-only once the named buttons no longer fit on one line (about 38.5em) */
@@ -121,10 +116,9 @@
     list-style: none;
 }
 
-.ask-ai-links .connect-link:hover .connect-icon {
-    background: var(--ask-ai-brand);
-    color: var(--ask-ai-on-brand);
-    border-color: var(--ask-ai-brand);
+.ask-ai-links .connect-link {
+    --connect-hover-bg: var(--ask-ai-brand);
+    --connect-hover-color: var(--ask-ai-on-brand);
 }
 
 /* Centred to match the stacked header */

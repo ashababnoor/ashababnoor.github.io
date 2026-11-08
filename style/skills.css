@@ -40,8 +40,10 @@
     border: var(--base-border-width) solid var(--border);
 }
 
-.skills-used .skill-tag:hover {
-    background: var(--border);
+@media (hover: hover) {
+    .skills-used .skill-tag:hover {
+        background: var(--border);
+    }
 }
 
 /* Skills Section Tags */
@@ -74,7 +76,9 @@
     filter: invert(1);
 }
 
-.skill-tags .skill-tag:hover {
-    background: var(--surface);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+@media (hover: hover) {
+    .skill-tags .skill-tag:hover {
+        background: var(--surface);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
 }
