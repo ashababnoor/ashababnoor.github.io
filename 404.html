@@ -30,14 +30,23 @@
     </script>
 
     <!-- Theme, applied before paint so dark mode does not flash white.
-         Mirrors the toggle block at the top of script.js. -->
+         A saved choice from the toggle wins; without one the page follows the OS setting, live.
+         Mirrored in index.html. -->
     <script>
     (function() {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.setAttribute('data-theme', 'dark');
+        var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+        function saved() {
+            try { return localStorage.getItem('theme'); } catch (e) { return null; }
+        }
+        function apply(dark) {
+            document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        }
+        var choice = saved();
+        apply(choice ? choice === 'dark' : mq && mq.matches);
+        if (mq && mq.addEventListener) {
+            mq.addEventListener('change', function(e) {
+                if (!saved()) apply(e.matches);
+            });
         }
     })();
     </script>

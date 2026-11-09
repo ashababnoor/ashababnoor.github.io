@@ -1,13 +1,5 @@
-// Theme toggle
-(function() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        document.documentElement.setAttribute('data-theme', savedTheme);
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    }
-})();
-
+// Theme toggle. The theme itself is resolved by the inline script in each page's
+// <head> (index.html, 404.html) so it applies before paint; this only handles the toggle.
 function initThemeToggle() {
     const toggle = document.getElementById('theme-toggle');
     if (!toggle) return;
@@ -27,7 +19,7 @@ function initThemeToggle() {
         const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
         const newTheme = isDark ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
+        try { localStorage.setItem('theme', newTheme); } catch (e) {}
         syncLabel();
     });
 

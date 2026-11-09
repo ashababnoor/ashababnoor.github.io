@@ -71,6 +71,27 @@
          the markup, so visitors without JavaScript keep their transitions. script.js removes it on load. -->
     <script>document.documentElement.classList.add('preload');</script>
 
+    <!-- Theme, applied before paint so dark mode does not flash white. A saved choice from the toggle wins;
+         without one the page follows the OS setting, live. Mirrored in 404.html. -->
+    <script>
+    (function() {
+        var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+        function saved() {
+            try { return localStorage.getItem('theme'); } catch (e) { return null; }
+        }
+        function apply(dark) {
+            document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        }
+        var choice = saved();
+        apply(choice ? choice === 'dark' : mq && mq.matches);
+        if (mq && mq.addEventListener) {
+            mq.addEventListener('change', function(e) {
+                if (!saved()) apply(e.matches);
+            });
+        }
+    })();
+    </script>
+
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
