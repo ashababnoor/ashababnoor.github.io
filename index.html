@@ -436,51 +436,68 @@
                                 <p class="position-type">Full-time · Hybrid</p>
                             </div>
                         </div>
-                        <p class="position-summary">Early engineer building core backend services from the ground up, leveraging AI-driven development for rapid delivery.</p>
+                        <p class="position-summary">Early engineer building core backend services and the internal admin panel from the ground up, leveraging AI-driven development for rapid delivery.</p>
                         <div class="position-description">
                             <ul>
-                                <li>Built a double-entry bookkeeping ledger microservice from scratch, serving as the core financial record-keeping system for customers.
+                                <li>Built the company's internal admin panel end to end, in production: a Go backend and a Next.js dashboard used by ~12 people across the operations, compliance and finance teams.
                                     <ul>
-                                        <li>Implemented cryptographic balance integrity using SHA-256 hash chains, creating a tamper-evident audit trail for all account balances.</li>
-                                        <li>Built the transaction processing engine supporting deposits, withdrawals, and automated reversals with balanced journal entries across multiple system wallet types.</li>
+                                        <li>Browse customers, beneficiaries and transactions across all clients, re-run stuck payouts, update customers, and configure the payment routing engine.</li>
+                                        <li>Let operators credit client wallets as payments arrive, handling recurring top-ups of ~$3M every month from the largest client.</li>
+                                        <li>Every sensitive action (money movement, activation, access changes) needs a one-time OTP code and leaves an audit trail. Also includes rate limiting and secure session handling.</li>
+                                        <li>Moved the services onto the company's shared platform and a Kubernetes deployment pipeline.</li>
+                                        <li>Replaced ad hoc database queries and engineer requests with searchable views of organizations, customers, transactions, beneficiaries, and other banking details.</li>
+                                        <li>Turned multi-step, engineer-assisted operations work into self-serve, audited actions, saving the teams an estimated 300 hours a month.</li>
+                                        <li>Established the dashboard's design system and component library, and shipped ~20 production releases.</li>
                                     </ul>
                                 </li>
-                                <li>Built a Role-Based Access Control (RBAC) system from scratch for the orchestration dashboard, with a 3-tier role hierarchy and Redis-cached permission resolution.
+                                <li>Built organization management and access control for the developer platform.
                                     <ul>
-                                        <li>Implemented a complete team management system with full member and invitation lifecycle, including capacity enforcement, cross-organization duplicate prevention, and async email notifications via AWS SES.</li>
-                                        <li>Built a reverse proxy layer within the dashboard backend, enforcing scope-based access control and environment isolation on all API traffic to the core orchestration service.</li>
-                                        <li>Extended the authentication system to support dual-path onboarding — self-signup and invitation-based team joining.</li>
+                                        <li>Admin-created organizations (one per company domain), role-based permissions, team invitations, and a sandbox-to-production activation flow.</li>
+                                        <li>A killswitch that revokes an organization's access in one action across all services, with matching revoke/restore controls in the dashboard.</li>
+                                        <li>A reverse proxy that enforces permissions and environment separation on all API traffic.</li>
                                     </ul>
                                 </li>
-                                <li>Built an internal API gateway service from scratch, enabling the team to securely call external financial APIs (payments, remittance, KYC) without sharing secrets or giving direct vendor access.
+                                <li>Built the treasury system, now in production, for moving the company's own money between bank accounts and crypto wallets, across the backend, the admin API and the dashboard.
                                     <ul>
-                                        <li>Implemented per-user service ACLs, sensitive endpoint blocking, and cryptographic request signing tailored to each vendor's auth protocol.</li>
-                                        <li>Built a hot-reloadable configuration system via Consul for swapping credentials and ACLs at runtime without restarts.</li>
+                                        <li>Operators see accounts and live balances and send ACH and wire transfers (crypto transfers built with a teammate).</li>
+                                        <li>Transfers run asynchronously and safely: the ledger is debited first, a payment is retried only when the outcome is unknown, and a refused payment is reversed automatically.</li>
                                     </ul>
                                 </li>
-                                <li>Designed and built a cross-currency fee calculation engine enabling real-time fee estimation for international money transfers.
+                                <li>Built an analytics API and dashboards for platform volume, transactions, onboarding funnels and compliance metrics.
                                     <ul>
-                                        <li>Implemented bidirectional calculation: forward mode (sender specifies send amount) and reverse mode (system back-calculates required send amount inclusive of fees and FX conversion).</li>
-                                        <li>Extended batch payment processing to support destination-amount transactions with fixed-point arithmetic and commit-time validation against live FX rates.</li>
+                                        <li>New charts can be added without backend changes, and the system never adds different currencies together.</li>
                                     </ul>
                                 </li>
-                                <li>Worked on integrating partners and vendors for virtual account provisioning and payout disbursements, enabling users to on-ramp and off-ramp across different currencies (including USD, AED, EUR) as new payment rails.
+                                <li>Built, with a teammate, a &ldquo;request for information&rdquo; flow for customer verification: API clients see exactly what data was rejected, then fix and resubmit it in one call.
                                     <ul>
-                                        <li>Implemented webhook handlers for customer status events and transaction events, and built a poll-based virtual account watcher with atomic state transitions to advance records through the provider pipeline lifecycle.</li>
+                                        <li>Mapped ~140 vendor rejection codes to clear reasons.</li>
                                     </ul>
                                 </li>
-                                <li>Built an automated trade settlement reporting system that runs on a configurable cron schedule, aggregating trade data into CSV exports and delivering them to stakeholders via email (AWS SES).</li>
-                                <li>Built Kafka event-driven messaging infrastructure with Protobuf serialization, establishing the async inter-service communication backbone across the platform.</li>
+                                <li>Built the core double-entry ledger service from scratch, the system of record for customer balances and transactions.
+                                    <ul>
+                                        <li>Balances are chained with SHA-256 hashes so any tampering can be detected.</li>
+                                        <li>Later moved crypto deposits and withdrawals to Kafka events.</li>
+                                    </ul>
+                                </li>
+                                <li>Built an internal API gateway so the team can call external financial APIs (payments, remittance, KYC) without sharing secrets, with per-user access rules and vendor-specific request signing.</li>
+                                <li>Built a fee calculation engine for international transfers that works in both directions: from the amount sent, or from the amount the recipient should receive, including fees and FX. Extended batch payments to support recipient-amount transfers.</li>
+                                <li>Worked on the on/off-ramp for virtual bank accounts (USD, EUR, AED) and partner payouts, including webhook handling, messaging between services, and an automated daily trade-settlement report emailed to stakeholders.</li>
                             </ul>
                         </div>
                         <div class="skills-used">
                             <span class="skill-tag">AI Driven Development</span>
                             <span class="skill-tag">Go</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">React</span>
                             <span class="skill-tag">PostgreSQL</span>
                             <span class="skill-tag">Kafka</span>
                             <span class="skill-tag">Redis</span>
                             <span class="skill-tag">Protocol Buffers</span>
                             <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">GitLab CI</span>
+                            <span class="skill-tag">ArgoCD</span>
                             <span class="skill-tag">Consul</span>
                             <span class="skill-tag">Cryptography</span>
                             <span class="skill-tag">RBAC</span>
