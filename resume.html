@@ -359,7 +359,7 @@
 
     <div class="section">
         <div class="section-title">Summary</div>
-        <p class="summary-text">Software Engineer specializing in scalable backend systems, data platforms, and advanced analytics. AI-native engineer who builds fast across any domain. Skilled in building robust pipelines, ML solutions, and data-driven applications to deliver actionable insights. Expert in Go, Python, SQL, dbt, BigQuery, and cloud-native technologies. Published researcher with 4 peer-reviewed papers at IEEE and Springer conferences. Passionate about exploring new technologies and solving complex engineering challenges.</p>
+        <p class="summary-text">Software Engineer specializing in scalable backend systems, payment infrastructure, data platforms, and advanced analytics. AI-native engineer who builds fast across any domain. Skilled in building robust pipelines, ML solutions, and data-driven applications to deliver actionable insights. Expert in Go, Python, SQL, dbt, BigQuery, and cloud-native technologies. Published researcher with 4 peer-reviewed papers at IEEE and Springer conferences. Passionate about exploring new technologies and solving complex engineering challenges.</p>
     </div>
 
     <div class="section">
@@ -376,15 +376,13 @@
                     <span class="duration">Dec 2025 - Present</span>
                 </div>
                 <ul>
-                    <li>Early engineer building core backend services from the ground up, leveraging AI-driven development for rapid delivery.</li>
-                    <li>Built a double-entry bookkeeping ledger microservice from scratch with SHA-256 hash chain balance integrity and transaction processing engine supporting deposits, withdrawals, and automated reversals with balanced journal entries.</li>
-                    <li>Built RBAC system with 3-tier role hierarchy, Redis-cached permission resolution, complete team management with member and invitation lifecycle, capacity enforcement, and cross-organization duplicate prevention.</li>
-                    <li>Built a reverse proxy layer enforcing scope-based access control and environment isolation on all API traffic to the core orchestration service. Extended auth to support dual-path onboarding.</li>
-                    <li>Built internal API gateway for secure external financial API calls (payments, remittance, KYC) with per-user service ACLs, sensitive endpoint blocking, cryptographic request signing, and hot-reloadable Consul-based configuration.</li>
-                    <li>Designed cross-currency fee calculation engine with bidirectional calculation (forward/reverse mode) and extended batch payment processing with fixed-point arithmetic and commit-time validation against live FX rates.</li>
-                    <li>Integrated partners for virtual account provisioning and payout disbursements across USD, AED, EUR. Built webhook handlers for customer/transaction events and poll-based virtual account watcher with atomic state transitions.</li>
-                    <li>Built automated trade settlement reporting system aggregating trade data into CSV exports on configurable cron schedule, delivered via AWS SES.</li>
-                    <li>Built Kafka event-driven messaging infrastructure with Protobuf serialization, establishing the async inter-service communication backbone across the platform.</li>
+                    <li>Built the company's internal admin panel end to end (Go backend and Next.js dashboard), used in production by ~12 people across operations, compliance and finance teams, with OTP-gated, audited actions for money movement and access changes, saving an estimated 300 hours a month. Handles recurring client top-ups of ~$3M every month from the largest client.</li>
+                    <li>Built the treasury system for moving company funds between bank accounts and crypto wallets across ACH and wire: asynchronous, idempotent, with ledger-first debits and automatic reversal on refusal.</li>
+                    <li>Built an analytics API and dashboards for platform volume, onboarding funnels and compliance metrics.</li>
+                    <li>Built organization management and access control for the developer platform: RBAC, invitations, sandbox-to-production activation, a reverse proxy enforcing permissions, and an organization-wide killswitch.</li>
+                    <li>Built, with a teammate, a verification request-for-information flow that lets API clients fix and resubmit rejected KYC/KYB data.</li>
+                    <li>Built the core double-entry ledger from scratch with tamper-evident, hash-chained balances.</li>
+                    <li>Built an internal API gateway for external financial APIs, and on/off-ramp integrations across USD, AED and EUR.</li>
                 </ul>
             </div>
         </div>

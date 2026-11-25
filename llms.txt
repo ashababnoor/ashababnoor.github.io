@@ -2,7 +2,7 @@
 
 > Software Engineer III at Fin.com | Ex Data Engineer II at Pathao | Based in Dhaka, Bangladesh
 
-Last updated: 2026-09-13
+Last updated: 2026-11-25
 
 ## About
 
@@ -30,7 +30,7 @@ He graduated Summa Cum Laude (CGPA 3.99/4.00) in Computer Science and Engineerin
 ## Experience
 
 ### Software Engineer III - Fin.com (Dec 2025 - Present)
-Stablecoin-powered global payment infrastructure company. Early engineer building core backend services from the ground up, primarily in Go, leveraging AI-driven development for rapid delivery. Built a double-entry bookkeeping ledger microservice serving as the core financial record-keeping system, with SHA-256 hash-chain balance integrity for a tamper-evident audit trail. Built a Role-Based Access Control system with a 3-tier role hierarchy and Redis-cached permission resolution, plus team management and a reverse proxy enforcing scope-based access control on API traffic. Built an internal API gateway for securely calling external financial APIs (payments, remittance, KYC) without sharing secrets, with per-user service ACLs, cryptographic request signing, and hot-reloadable Consul configuration. Designed a cross-currency fee calculation engine supporting bidirectional forward and reverse calculation against live FX rates. Integrated partners for virtual account provisioning and payout disbursement across USD, AED and EUR rails.
+Stablecoin-powered global payment infrastructure company. Early engineer building core backend services and the internal admin panel from the ground up, primarily in Go and Next.js, leveraging AI-driven development for rapid delivery. Built the company's internal admin panel end to end (Go backend, Next.js dashboard), used in production by ~12 people across operations, compliance and finance teams, with OTP-gated, audited actions for money movement and access changes, including crediting client wallets as payments arrive (recurring top-ups of ~$3M every month from the largest client), replacing ad hoc database queries and engineer requests and saving an estimated 300 hours a month. Built organization management and access control for the developer platform: role-based permissions, team invitations, sandbox-to-production activation, a reverse proxy enforcing permissions and environment separation, and an organization-wide access killswitch. Built the treasury system for moving company funds between bank accounts and crypto wallets over ACH and wire, with ledger-first debits and automatic reversal on refusal. Built an analytics API and dashboards for platform volume, onboarding funnels and compliance metrics. Built, with a teammate, a request-for-information flow letting API clients fix and resubmit rejected KYC/KYB data. Built the core double-entry ledger service from scratch with SHA-256 hash-chain balance integrity. Built an internal API gateway for securely calling external financial APIs without sharing secrets, a bidirectional cross-currency fee calculation engine, and partner integrations for virtual account provisioning and payouts across USD, AED and EUR rails.
 
 ### Data Engineer II - Pathao (Jul 2024 - Dec 2025)
 Designed dynamic funnel analytics system processing 500M+ data points. Built Bangla transliteration microservice increasing search coverage by 15x. Developed personalization algorithms reducing checkout navigation time by 32%. Designed A/B testing framework for data-driven product decisions. Built modular data models using dbt with optimized queries for cost savings.
@@ -59,7 +59,7 @@ Built CLI tools for data dictionary workflows. Developed first ML solution for r
 A software engineer based in Dhaka, Bangladesh. Currently Software Engineer III at Fin.com, building core backend services for stablecoin-powered payment infrastructure. Previously spent over three years at Pathao, Bangladesh's largest on-demand platform, moving from Data Engineering Intern to Data Engineer II.
 
 **What does he work on at Fin.com?**
-Core backend services for cross-border payments, primarily in Go: a double-entry bookkeeping ledger with SHA-256 hash-chain balance integrity, an RBAC system with Redis-cached permission resolution, an internal API gateway for calling vendor financial APIs without sharing secrets, and a cross-currency fee engine doing both forward and reverse calculation against live FX rates.
+An internal admin panel (Go backend and Next.js dashboard) used by operations, compliance and finance teams, a treasury system for moving company funds over ACH, wire and crypto, org management and access control with an organization-wide killswitch, an analytics API and dashboards, a double-entry bookkeeping ledger with SHA-256 hash-chain balance integrity, an internal API gateway for calling vendor financial APIs without sharing secrets, and a cross-currency fee engine doing both forward and reverse calculation against live FX rates.
 
 **What did he build at Pathao?**
 Data and ML systems for a super-app: a dynamic funnel analytics system over 500M+ data points, a Bangla-to-English transliteration service that increased address search coverage 15x, personalization algorithms that cut checkout navigation time 32%, and ETA prediction models that raised within-threshold rides from 20% to 60%.
